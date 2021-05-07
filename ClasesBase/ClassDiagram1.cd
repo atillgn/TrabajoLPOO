@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ClasesBase.Edificio">
+    <Position X="7" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAGAAAAAoAAAACAAAAAAAAAAAAAAAAAAAAAACAABgAg=</HashCode>
+      <FileName>Edificio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Usuario">
+    <Position X="1" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AQIAAAEAAAAAAEAAAAJAAgAAAACAAAAAAAgAAAAIAAA=</HashCode>
+      <FileName>Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Departamento">
+    <Position X="4.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>EACAABAAgAAEECAAAJCwAAiAgEAICAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Departamento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Inquilino">
+    <Position X="9.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>CACAAAAAAAAAAAAAABAAAAQQAAAEAAAAAAAAAAgAgAA=</HashCode>
+      <FileName>Inquilino.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Alquiler">
+    <Position X="11.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAAIAgAACIAAACCAAAAgAgAAAAgAAAAAIAAAACgAAAg=</HashCode>
+      <FileName>Alquiler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClasesBase.Rol">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAACAAAAAAAAAAAAAIACA=</HashCode>
+      <FileName>Rol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

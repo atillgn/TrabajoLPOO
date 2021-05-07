@@ -1,0 +1,11 @@
+E:\usuarios\alumno\Escritorio\LPOO\LPOO1_GRUPO_08\ClasesBase\bin\Debug\ClasesBase.dll
+E:\usuarios\alumno\Escritorio\LPOO\LPOO1_GRUPO_08\ClasesBase\bin\Debug\ClasesBase.pdb
+E:\usuarios\alumno\Escritorio\LPOO\LPOO1_GRUPO_08\ClasesBase\obj\Debug\ClasesBase.dll
+E:\usuarios\alumno\Escritorio\LPOO\LPOO1_GRUPO_08\ClasesBase\obj\Debug\ClasesBase.pdb
+E:\usuarios\alumno\Escritorio\LPOO\LPOO1_GRUPO_08\ClasesBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2010\Projects\LPOO1_GRUPO_08\ClasesBase\bin\Debug\ClasesBase.dll
+C:\Users\admin\Documents\Visual Studio 2010\Projects\LPOO1_GRUPO_08\ClasesBase\bin\Debug\ClasesBase.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\LPOO1_GRUPO_08\ClasesBase\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\admin\Documents\Visual Studio 2010\Projects\LPOO1_GRUPO_08\ClasesBase\obj\Debug\ClasesBase.dll
+C:\Users\admin\Documents\Visual Studio 2010\Projects\LPOO1_GRUPO_08\ClasesBase\obj\Debug\ClasesBase.pdb
+C:\Users\admin\Documents\Visual Studio 2010\Projects\LPOO1_GRUPO_08\ClasesBase\bin\Debug\ClasesBase.dll.config
