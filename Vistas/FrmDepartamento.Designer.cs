@@ -50,6 +50,10 @@
             this.cmbDptoDisposicion = new System.Windows.Forms.ComboBox();
             this.cmbDptoTipo = new System.Windows.Forms.ComboBox();
             this.btnDptoConfirmar = new System.Windows.Forms.Button();
+            this.dgvDepartamentos = new System.Windows.Forms.DataGridView();
+            this.optAmbiente = new System.Windows.Forms.RadioButton();
+            this.optDisposicion = new System.Windows.Forms.RadioButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDepartamentos)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDptoCodigo
@@ -240,11 +244,46 @@
             this.btnDptoConfirmar.UseVisualStyleBackColor = true;
             this.btnDptoConfirmar.Click += new System.EventHandler(this.btnDptoConfirmar_Click);
             // 
+            // dgvDepartamentos
+            // 
+            this.dgvDepartamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDepartamentos.Location = new System.Drawing.Point(367, 176);
+            this.dgvDepartamentos.Name = "dgvDepartamentos";
+            this.dgvDepartamentos.Size = new System.Drawing.Size(405, 150);
+            this.dgvDepartamentos.TabIndex = 11;
+            // 
+            // optAmbiente
+            // 
+            this.optAmbiente.AutoSize = true;
+            this.optAmbiente.Location = new System.Drawing.Point(437, 340);
+            this.optAmbiente.Name = "optAmbiente";
+            this.optAmbiente.Size = new System.Drawing.Size(69, 17);
+            this.optAmbiente.TabIndex = 12;
+            this.optAmbiente.TabStop = true;
+            this.optAmbiente.Text = "Ambiente";
+            this.optAmbiente.UseVisualStyleBackColor = true;
+            this.optAmbiente.CheckedChanged += new System.EventHandler(this.optAmbiente_CheckedChanged);
+            // 
+            // optDisposicion
+            // 
+            this.optDisposicion.AutoSize = true;
+            this.optDisposicion.Location = new System.Drawing.Point(572, 340);
+            this.optDisposicion.Name = "optDisposicion";
+            this.optDisposicion.Size = new System.Drawing.Size(79, 17);
+            this.optDisposicion.TabIndex = 13;
+            this.optDisposicion.TabStop = true;
+            this.optDisposicion.Text = "Disposicion";
+            this.optDisposicion.UseVisualStyleBackColor = true;
+            this.optDisposicion.CheckedChanged += new System.EventHandler(this.optDisposicion_CheckedChanged);
+            // 
             // FrmDepartamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 369);
+            this.ClientSize = new System.Drawing.Size(797, 369);
+            this.Controls.Add(this.optDisposicion);
+            this.Controls.Add(this.optAmbiente);
+            this.Controls.Add(this.dgvDepartamentos);
             this.Controls.Add(this.btnDptoConfirmar);
             this.Controls.Add(this.cmbDptoTipo);
             this.Controls.Add(this.cmbDptoDisposicion);
@@ -272,6 +311,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alta Departamento";
             this.Load += new System.EventHandler(this.FrmDepartamento_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDepartamentos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,5 +341,8 @@
         private System.Windows.Forms.ComboBox cmbDptoDisposicion;
         private System.Windows.Forms.ComboBox cmbDptoTipo;
         private System.Windows.Forms.Button btnDptoConfirmar;
+        private System.Windows.Forms.DataGridView dgvDepartamentos;
+        private System.Windows.Forms.RadioButton optAmbiente;
+        private System.Windows.Forms.RadioButton optDisposicion;
     }
 }

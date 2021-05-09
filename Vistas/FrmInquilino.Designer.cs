@@ -149,11 +149,11 @@
             // 
             // btnInqOrdenar
             // 
-            this.btnInqOrdenar.Location = new System.Drawing.Point(379, 229);
+            this.btnInqOrdenar.Location = new System.Drawing.Point(324, 229);
             this.btnInqOrdenar.Name = "btnInqOrdenar";
-            this.btnInqOrdenar.Size = new System.Drawing.Size(75, 23);
+            this.btnInqOrdenar.Size = new System.Drawing.Size(130, 23);
             this.btnInqOrdenar.TabIndex = 13;
-            this.btnInqOrdenar.Text = "Ordenar";
+            this.btnInqOrdenar.Text = "s";
             this.btnInqOrdenar.UseVisualStyleBackColor = true;
             this.btnInqOrdenar.Click += new System.EventHandler(this.btnInqOrdenar_Click);
             // 

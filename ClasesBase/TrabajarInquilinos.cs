@@ -22,8 +22,9 @@ namespace ClasesBase
             SqlCommand cmd = new SqlCommand();
             sPattern = sPattern.Replace(' ', '%');
             cmd.Parameters.AddWithValue("@pattern", "%" + sPattern + "%");
-            cmd.CommandText = "SELECT Inq_Codigo AS 'Codigo',Inq_Apellido AS 'Apellido',Inq_Nombre AS 'Nombre',Inq_Telefono AS 'Telefono'FROM Inquilino WHERE Inq_Nombre+' '+Inq_Apellido LIKE @pattern OR Inq_Apellido+' '+Inq_Nombre LIKE @pattern";
-            cmd.CommandType = CommandType.Text;
+
+            cmd.CommandText = "MostrarInquilinos";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = con;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -33,13 +34,14 @@ namespace ClasesBase
 
             return dt;
         }
+
         public static DataTable list_inquilinosord()
         {
             SqlConnection con = connect();
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT Inq_Codigo AS 'Codigo',Inq_Apellido AS 'Apellido',Inq_Nombre AS 'Nombre',Inq_Telefono AS 'Telefono'FROM Inquilino ORDER BY Inq_Apellido";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "ConsultarInquilinosApellido";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = con;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -49,6 +51,7 @@ namespace ClasesBase
 
             return dt;
         }
+
         public static void insert_inquilino(Inquilino inquilino)
         {
             SqlConnection con = connect();

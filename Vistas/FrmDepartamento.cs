@@ -44,6 +44,7 @@ namespace Vistas
 
             cmbDptoDisposicion.Items.Add("Frente");
             cmbDptoDisposicion.Items.Add("Frente");
+            
         }
 
         private void btnDptoConfirmar_Click(object sender, EventArgs e)
@@ -149,5 +150,16 @@ namespace Vistas
                 e.Handled = true;
             }
         }
+
+        private void optAmbiente_CheckedChanged(object sender, EventArgs e)
+        {
+            dgvDepartamentos.DataSource = TrabajarDepartamento.ConsultarAmbiente();
+        }
+
+        private void optDisposicion_CheckedChanged(object sender, EventArgs e)
+        {
+            dgvDepartamentos.DataSource = TrabajarDepartamento.ConsultarDisposicion();
+        }
+
     }
 }

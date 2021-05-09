@@ -43,6 +43,7 @@
     <Compile Include="Alquiler.cs" />
     <Compile Include="ListAlquiler.cs" />
     <Compile Include="TrabajarAlquiler.cs" />
+    <Compile Include="TrabajarDepartamento.cs" />
     <Compile Include="TrabajarInquilinos.cs" />
     <Compile Include="VerificarLogin.cs" />
     <Compile Include="Departamento.cs" />
