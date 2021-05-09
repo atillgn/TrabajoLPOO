@@ -27,8 +27,8 @@ namespace ClasesBase.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;AttachDbFilename=\"C:\\Users\\admin\\Documents\\Visual Studio" +
-            " 2010\\Projects\\LPOO1_GRUPO_08\\datos.mdf\";Integrated Security=True;Connect Timeou" +
-            "t=30;User Instance=True")]
+            " 2010\\Projects\\TrabajoLPOO\\datos.mdf\";Integrated Security=True;Connect Timeout=3" +
+            "0;User Instance=True")]
         public string datosConnectionString {
             get {
                 return ((string)(this["datosConnectionString"]));
