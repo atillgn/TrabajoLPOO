@@ -40,6 +40,7 @@
             this.dgvInquilinos = new System.Windows.Forms.DataGridView();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.btnBusqueda = new System.Windows.Forms.Button();
+            this.btnInqOrdenar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInquilinos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -146,11 +147,22 @@
             this.btnBusqueda.UseVisualStyleBackColor = true;
             this.btnBusqueda.Click += new System.EventHandler(this.btnBusqueda_Click);
             // 
+            // btnInqOrdenar
+            // 
+            this.btnInqOrdenar.Location = new System.Drawing.Point(379, 229);
+            this.btnInqOrdenar.Name = "btnInqOrdenar";
+            this.btnInqOrdenar.Size = new System.Drawing.Size(75, 23);
+            this.btnInqOrdenar.TabIndex = 13;
+            this.btnInqOrdenar.Text = "Ordenar";
+            this.btnInqOrdenar.UseVisualStyleBackColor = true;
+            this.btnInqOrdenar.Click += new System.EventHandler(this.btnInqOrdenar_Click);
+            // 
             // FrmInquilino
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(651, 259);
+            this.Controls.Add(this.btnInqOrdenar);
             this.Controls.Add(this.btnBusqueda);
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.dgvInquilinos);
@@ -188,5 +200,6 @@
         private System.Windows.Forms.DataGridView dgvInquilinos;
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Button btnBusqueda;
+        private System.Windows.Forms.Button btnInqOrdenar;
     }
 }

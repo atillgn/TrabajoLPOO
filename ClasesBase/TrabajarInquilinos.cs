@@ -21,8 +21,24 @@ namespace ClasesBase
 
             SqlCommand cmd = new SqlCommand();
             sPattern = sPattern.Replace(' ', '%');
-            cmd.CommandText = "SELECT Inq_Codigo AS 'Codigo', Inq_Apellido AS 'Apellido',Inq_Nombre AS 'Nombre',Inq_Telefono AS 'Telefono' FROM Inquilino WHERE Inq_Nombre+' '+Inq_Apellido LIKE @pattern OR Inq_Apellido+' '+Inq_Nombre LIKE @pattern";
             cmd.Parameters.AddWithValue("@pattern", "%" + sPattern + "%");
+            cmd.CommandText = "SELECT Inq_Codigo AS 'Codigo',Inq_Apellido AS 'Apellido',Inq_Nombre AS 'Nombre',Inq_Telefono AS 'Telefono'FROM Inquilino WHERE Inq_Nombre+' '+Inq_Apellido LIKE @pattern OR Inq_Apellido+' '+Inq_Nombre LIKE @pattern";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+        public static DataTable list_inquilinosord()
+        {
+            SqlConnection con = connect();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "SELECT Inq_Codigo AS 'Codigo',Inq_Apellido AS 'Apellido',Inq_Nombre AS 'Nombre',Inq_Telefono AS 'Telefono'FROM Inquilino ORDER BY Inq_Apellido";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con;
 

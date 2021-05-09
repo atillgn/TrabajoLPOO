@@ -131,5 +131,11 @@ namespace Vistas
             String pattern = txtBusqueda.Text;
             load_inquilinos(pattern);
         }
+
+        private void btnInqOrdenar_Click(object sender, EventArgs e)
+        {
+            //dgvInquilinos.Sort(dgvInquilinos.Columns[1], ListSortDirection.Ascending);
+            dgvInquilinos.DataSource = TrabajarInquilinos.list_inquilinosord();
+        }
     }
 }
