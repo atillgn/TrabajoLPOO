@@ -32,12 +32,14 @@ namespace ClasesBase
             return dt;
         }
         
-        public static DataTable list_alquileresP(String edificio,String tipo_departamento) 
+        public static DataTable list_alquileresP(String edificio,DateTime fecha_inicio, DateTime fecha_final,String tipo_departamento) 
         {
             SqlConnection con = connect();
 
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "MostrarAlquileresPar";
+            cmd.Parameters.AddWithValue("@fecha_i", fecha_inicio);
+            cmd.Parameters.AddWithValue("@fecha_f", fecha_final);
             cmd.Parameters.AddWithValue("@edificio" ,edificio);
             cmd.Parameters.AddWithValue("@tipo_dpto",tipo_departamento);
             cmd.CommandType = CommandType.StoredProcedure;

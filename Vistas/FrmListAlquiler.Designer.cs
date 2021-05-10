@@ -71,9 +71,9 @@
             // cmbEdifList
             // 
             this.cmbEdifList.FormattingEnabled = true;
-            this.cmbEdifList.Location = new System.Drawing.Point(735, 38);
+            this.cmbEdifList.Location = new System.Drawing.Point(690, 38);
             this.cmbEdifList.Name = "cmbEdifList";
-            this.cmbEdifList.Size = new System.Drawing.Size(121, 21);
+            this.cmbEdifList.Size = new System.Drawing.Size(200, 21);
             this.cmbEdifList.TabIndex = 1;
             // 
             // lblAlqList
@@ -96,24 +96,26 @@
             // 
             // dtpDesde
             // 
-            this.dtpDesde.Location = new System.Drawing.Point(656, 96);
+            this.dtpDesde.Location = new System.Drawing.Point(690, 96);
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(200, 20);
             this.dtpDesde.TabIndex = 4;
+            this.dtpDesde.ValueChanged += new System.EventHandler(this.dtpDesde_ValueChanged);
             // 
             // dtpHasta
             // 
-            this.dtpHasta.Location = new System.Drawing.Point(656, 122);
+            this.dtpHasta.Location = new System.Drawing.Point(690, 122);
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(200, 20);
             this.dtpHasta.TabIndex = 5;
+            this.dtpHasta.ValueChanged += new System.EventHandler(this.dtpHasta_ValueChanged);
             // 
             // cmbAlqTipoDpto
             // 
             this.cmbAlqTipoDpto.FormattingEnabled = true;
-            this.cmbAlqTipoDpto.Location = new System.Drawing.Point(735, 183);
+            this.cmbAlqTipoDpto.Location = new System.Drawing.Point(690, 183);
             this.cmbAlqTipoDpto.Name = "cmbAlqTipoDpto";
-            this.cmbAlqTipoDpto.Size = new System.Drawing.Size(121, 21);
+            this.cmbAlqTipoDpto.Size = new System.Drawing.Size(200, 21);
             this.cmbAlqTipoDpto.TabIndex = 6;
             // 
             // lblAlqTipoDpto
@@ -129,7 +131,7 @@
             // 
             this.btnAlqBuscar.Location = new System.Drawing.Point(656, 242);
             this.btnAlqBuscar.Name = "btnAlqBuscar";
-            this.btnAlqBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnAlqBuscar.Size = new System.Drawing.Size(128, 23);
             this.btnAlqBuscar.TabIndex = 8;
             this.btnAlqBuscar.Text = "Buscar";
             this.btnAlqBuscar.UseVisualStyleBackColor = true;
@@ -139,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 277);
+            this.ClientSize = new System.Drawing.Size(902, 277);
             this.Controls.Add(this.btnAlqBuscar);
             this.Controls.Add(this.lblAlqTipoDpto);
             this.Controls.Add(this.cmbAlqTipoDpto);

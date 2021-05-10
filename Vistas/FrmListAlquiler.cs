@@ -41,7 +41,18 @@ namespace Vistas
 
         private void btnAlqBuscar_Click(object sender, EventArgs e)
         {
-            dgvAlquileres.DataSource = ListAlquiler.list_alquileresP(cmbEdifList.Text, cmbAlqTipoDpto.Text);
+            dgvAlquileres.DataSource = ListAlquiler.list_alquileresP(cmbEdifList.Text, dtpDesde.Value, dtpHasta.Value, cmbAlqTipoDpto.Text);
         }
+
+        private void dtpDesde_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtpDesde.Value > dtpHasta.Value) dtpHasta.Value = dtpDesde.Value.AddDays(1);
+        }
+
+        private void dtpHasta_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtpDesde.Value > dtpHasta.Value) dtpDesde.Value = dtpHasta.Value.AddDays(-1);
+        }
+
     }
 }
