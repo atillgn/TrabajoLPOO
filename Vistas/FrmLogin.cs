@@ -27,17 +27,6 @@ namespace Vistas
 
         }
    
-        private void btn_Ingresar_MouseHover(object sender, EventArgs e)
-        {
-            btn_Ingresar.Font = new Font(" ", 8, FontStyle.Underline);
-            btn_Ingresar.BackColor = Color.White;
-        }
-
-        private void btn_Ingresar_MouseLeave(object sender, EventArgs e)
-        {
-            btn_Ingresar.Font = new Font(" ", 8);
-            btn_Ingresar.BackColor = Control.DefaultBackColor;
-        }
 
         private void btn_Ingresar_Click(object sender, EventArgs e)
         {
@@ -71,6 +60,19 @@ namespace Vistas
             }
         }
 
+        //Diseño
+
+        private void btn_Ingresar_MouseHover(object sender, EventArgs e)
+        {
+            btn_Ingresar.Font = new Font(" ", 8, FontStyle.Underline);
+            btn_Ingresar.BackColor = Color.White;
+        }
+
+        private void btn_Ingresar_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Ingresar.Font = new Font(" ", 8);
+            btn_Ingresar.BackColor = Color.Cyan;
+        }
         private void btn_Cancelar_MouseHover(object sender, EventArgs e)
         {
             btn_Cancelar.Font = new Font(" ", 8, FontStyle.Underline);
@@ -80,7 +82,7 @@ namespace Vistas
         private void btn_Cancelar_MouseLeave(object sender, EventArgs e)
         {
             btn_Cancelar.Font = new Font(" ", 8);
-            btn_Cancelar.BackColor = Control.DefaultBackColor;
+            btn_Cancelar.BackColor = Color.Cyan;
         }
     }
 }

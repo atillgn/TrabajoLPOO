@@ -153,7 +153,7 @@
             this.Controls.Add(this.dgvAlquileres);
             this.Name = "FrmListAlquiler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmListAlquiler";
+            this.Text = "Listado de Alquileres";
             this.Load += new System.EventHandler(this.FrmListAlquiler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlquileres)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alquilerBindingSource)).EndInit();

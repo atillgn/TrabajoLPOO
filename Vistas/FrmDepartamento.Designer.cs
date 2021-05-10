@@ -68,7 +68,7 @@
             // lblDptoEdifCodigo
             // 
             this.lblDptoEdifCodigo.AutoSize = true;
-            this.lblDptoEdifCodigo.Location = new System.Drawing.Point(8, 72);
+            this.lblDptoEdifCodigo.Location = new System.Drawing.Point(12, 61);
             this.lblDptoEdifCodigo.Name = "lblDptoEdifCodigo";
             this.lblDptoEdifCodigo.Size = new System.Drawing.Size(90, 13);
             this.lblDptoEdifCodigo.TabIndex = 1;
@@ -77,7 +77,7 @@
             // lblDptoNumero
             // 
             this.lblDptoNumero.AutoSize = true;
-            this.lblDptoNumero.Location = new System.Drawing.Point(8, 153);
+            this.lblDptoNumero.Location = new System.Drawing.Point(9, 117);
             this.lblDptoNumero.Name = "lblDptoNumero";
             this.lblDptoNumero.Size = new System.Drawing.Size(44, 13);
             this.lblDptoNumero.TabIndex = 2;
@@ -86,7 +86,7 @@
             // lblDptoTipo
             // 
             this.lblDptoTipo.AutoSize = true;
-            this.lblDptoTipo.Location = new System.Drawing.Point(8, 114);
+            this.lblDptoTipo.Location = new System.Drawing.Point(8, 87);
             this.lblDptoTipo.Name = "lblDptoTipo";
             this.lblDptoTipo.Size = new System.Drawing.Size(28, 13);
             this.lblDptoTipo.TabIndex = 3;
@@ -95,7 +95,7 @@
             // lblDptoPiso
             // 
             this.lblDptoPiso.AutoSize = true;
-            this.lblDptoPiso.Location = new System.Drawing.Point(9, 203);
+            this.lblDptoPiso.Location = new System.Drawing.Point(12, 147);
             this.lblDptoPiso.Name = "lblDptoPiso";
             this.lblDptoPiso.Size = new System.Drawing.Size(27, 13);
             this.lblDptoPiso.TabIndex = 4;
@@ -104,7 +104,7 @@
             // lblDptoAmbientes
             // 
             this.lblDptoAmbientes.AutoSize = true;
-            this.lblDptoAmbientes.Location = new System.Drawing.Point(8, 245);
+            this.lblDptoAmbientes.Location = new System.Drawing.Point(8, 169);
             this.lblDptoAmbientes.Name = "lblDptoAmbientes";
             this.lblDptoAmbientes.Size = new System.Drawing.Size(56, 13);
             this.lblDptoAmbientes.TabIndex = 5;
@@ -113,7 +113,7 @@
             // lblDptoDormitorios
             // 
             this.lblDptoDormitorios.AutoSize = true;
-            this.lblDptoDormitorios.Location = new System.Drawing.Point(346, 35);
+            this.lblDptoDormitorios.Location = new System.Drawing.Point(9, 195);
             this.lblDptoDormitorios.Name = "lblDptoDormitorios";
             this.lblDptoDormitorios.Size = new System.Drawing.Size(59, 13);
             this.lblDptoDormitorios.TabIndex = 6;
@@ -122,7 +122,7 @@
             // lblDptoBaños
             // 
             this.lblDptoBaños.AutoSize = true;
-            this.lblDptoBaños.Location = new System.Drawing.Point(348, 72);
+            this.lblDptoBaños.Location = new System.Drawing.Point(12, 221);
             this.lblDptoBaños.Name = "lblDptoBaños";
             this.lblDptoBaños.Size = new System.Drawing.Size(37, 13);
             this.lblDptoBaños.TabIndex = 7;
@@ -131,7 +131,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(346, 114);
+            this.label9.Location = new System.Drawing.Point(12, 247);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(61, 13);
             this.label9.TabIndex = 8;
@@ -148,7 +148,7 @@
             // lblDptoPrecio
             // 
             this.lblDptoPrecio.AutoSize = true;
-            this.lblDptoPrecio.Location = new System.Drawing.Point(348, 153);
+            this.lblDptoPrecio.Location = new System.Drawing.Point(12, 274);
             this.lblDptoPrecio.Name = "lblDptoPrecio";
             this.lblDptoPrecio.Size = new System.Drawing.Size(37, 13);
             this.lblDptoPrecio.TabIndex = 10;
@@ -164,7 +164,7 @@
             // 
             // txtDptoPiso
             // 
-            this.txtDptoPiso.Location = new System.Drawing.Point(104, 200);
+            this.txtDptoPiso.Location = new System.Drawing.Point(104, 140);
             this.txtDptoPiso.Name = "txtDptoPiso";
             this.txtDptoPiso.Size = new System.Drawing.Size(155, 20);
             this.txtDptoPiso.TabIndex = 4;
@@ -172,7 +172,7 @@
             // 
             // txtDptoNumero
             // 
-            this.txtDptoNumero.Location = new System.Drawing.Point(104, 150);
+            this.txtDptoNumero.Location = new System.Drawing.Point(104, 114);
             this.txtDptoNumero.Name = "txtDptoNumero";
             this.txtDptoNumero.Size = new System.Drawing.Size(155, 20);
             this.txtDptoNumero.TabIndex = 4;
@@ -180,7 +180,7 @@
             // 
             // txtDptoEdifCodigo
             // 
-            this.txtDptoEdifCodigo.Location = new System.Drawing.Point(104, 65);
+            this.txtDptoEdifCodigo.Location = new System.Drawing.Point(104, 58);
             this.txtDptoEdifCodigo.Name = "txtDptoEdifCodigo";
             this.txtDptoEdifCodigo.Size = new System.Drawing.Size(155, 20);
             this.txtDptoEdifCodigo.TabIndex = 2;
@@ -188,7 +188,7 @@
             // 
             // txtDptoAmbiente
             // 
-            this.txtDptoAmbiente.Location = new System.Drawing.Point(104, 238);
+            this.txtDptoAmbiente.Location = new System.Drawing.Point(104, 166);
             this.txtDptoAmbiente.Name = "txtDptoAmbiente";
             this.txtDptoAmbiente.Size = new System.Drawing.Size(155, 20);
             this.txtDptoAmbiente.TabIndex = 5;
@@ -196,7 +196,7 @@
             // 
             // txtDptoBaños
             // 
-            this.txtDptoBaños.Location = new System.Drawing.Point(452, 72);
+            this.txtDptoBaños.Location = new System.Drawing.Point(104, 218);
             this.txtDptoBaños.Name = "txtDptoBaños";
             this.txtDptoBaños.Size = new System.Drawing.Size(155, 20);
             this.txtDptoBaños.TabIndex = 7;
@@ -204,7 +204,7 @@
             // 
             // txtDptoDormitorios
             // 
-            this.txtDptoDormitorios.Location = new System.Drawing.Point(452, 32);
+            this.txtDptoDormitorios.Location = new System.Drawing.Point(104, 192);
             this.txtDptoDormitorios.Name = "txtDptoDormitorios";
             this.txtDptoDormitorios.Size = new System.Drawing.Size(155, 20);
             this.txtDptoDormitorios.TabIndex = 6;
@@ -212,7 +212,7 @@
             // 
             // txtDptoPrecio
             // 
-            this.txtDptoPrecio.Location = new System.Drawing.Point(452, 150);
+            this.txtDptoPrecio.Location = new System.Drawing.Point(104, 271);
             this.txtDptoPrecio.Name = "txtDptoPrecio";
             this.txtDptoPrecio.Size = new System.Drawing.Size(155, 20);
             this.txtDptoPrecio.TabIndex = 8;
@@ -221,7 +221,7 @@
             // cmbDptoDisposicion
             // 
             this.cmbDptoDisposicion.FormattingEnabled = true;
-            this.cmbDptoDisposicion.Location = new System.Drawing.Point(452, 114);
+            this.cmbDptoDisposicion.Location = new System.Drawing.Point(104, 244);
             this.cmbDptoDisposicion.Name = "cmbDptoDisposicion";
             this.cmbDptoDisposicion.Size = new System.Drawing.Size(155, 21);
             this.cmbDptoDisposicion.TabIndex = 8;
@@ -229,14 +229,14 @@
             // cmbDptoTipo
             // 
             this.cmbDptoTipo.FormattingEnabled = true;
-            this.cmbDptoTipo.Location = new System.Drawing.Point(104, 106);
+            this.cmbDptoTipo.Location = new System.Drawing.Point(104, 84);
             this.cmbDptoTipo.Name = "cmbDptoTipo";
             this.cmbDptoTipo.Size = new System.Drawing.Size(155, 21);
             this.cmbDptoTipo.TabIndex = 3;
             // 
             // btnDptoConfirmar
             // 
-            this.btnDptoConfirmar.Location = new System.Drawing.Point(246, 307);
+            this.btnDptoConfirmar.Location = new System.Drawing.Point(79, 297);
             this.btnDptoConfirmar.Name = "btnDptoConfirmar";
             this.btnDptoConfirmar.Size = new System.Drawing.Size(106, 23);
             this.btnDptoConfirmar.TabIndex = 9;
@@ -247,15 +247,15 @@
             // dgvDepartamentos
             // 
             this.dgvDepartamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDepartamentos.Location = new System.Drawing.Point(367, 176);
+            this.dgvDepartamentos.Location = new System.Drawing.Point(276, 45);
             this.dgvDepartamentos.Name = "dgvDepartamentos";
-            this.dgvDepartamentos.Size = new System.Drawing.Size(405, 150);
+            this.dgvDepartamentos.Size = new System.Drawing.Size(573, 246);
             this.dgvDepartamentos.TabIndex = 11;
             // 
             // optAmbiente
             // 
             this.optAmbiente.AutoSize = true;
-            this.optAmbiente.Location = new System.Drawing.Point(437, 340);
+            this.optAmbiente.Location = new System.Drawing.Point(384, 22);
             this.optAmbiente.Name = "optAmbiente";
             this.optAmbiente.Size = new System.Drawing.Size(69, 17);
             this.optAmbiente.TabIndex = 12;
@@ -267,7 +267,7 @@
             // optDisposicion
             // 
             this.optDisposicion.AutoSize = true;
-            this.optDisposicion.Location = new System.Drawing.Point(572, 340);
+            this.optDisposicion.Location = new System.Drawing.Point(667, 22);
             this.optDisposicion.Name = "optDisposicion";
             this.optDisposicion.Size = new System.Drawing.Size(79, 17);
             this.optDisposicion.TabIndex = 13;
@@ -280,7 +280,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(797, 369);
+            this.ClientSize = new System.Drawing.Size(861, 328);
             this.Controls.Add(this.optDisposicion);
             this.Controls.Add(this.optAmbiente);
             this.Controls.Add(this.dgvDepartamentos);

@@ -75,6 +75,7 @@
             // lbl_User
             // 
             this.lbl_User.AutoSize = true;
+            this.lbl_User.BackColor = System.Drawing.Color.MediumTurquoise;
             this.lbl_User.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_User.Location = new System.Drawing.Point(68, 40);
             this.lbl_User.Name = "lbl_User";
@@ -85,6 +86,7 @@
             // lbl_Password
             // 
             this.lbl_Password.AutoSize = true;
+            this.lbl_Password.BackColor = System.Drawing.Color.MediumTurquoise;
             this.lbl_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Password.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbl_Password.Location = new System.Drawing.Point(68, 121);
@@ -95,6 +97,7 @@
             // 
             // txt_User
             // 
+            this.txt_User.BackColor = System.Drawing.Color.LightCyan;
             this.txt_User.Location = new System.Drawing.Point(205, 37);
             this.txt_User.Name = "txt_User";
             this.txt_User.Size = new System.Drawing.Size(154, 20);
@@ -102,6 +105,7 @@
             // 
             // txt_Password
             // 
+            this.txt_Password.BackColor = System.Drawing.Color.LightCyan;
             this.txt_Password.Location = new System.Drawing.Point(205, 119);
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.PasswordChar = '*';
@@ -110,6 +114,7 @@
             // 
             // imgUser
             // 
+            this.imgUser.BackColor = System.Drawing.Color.MediumTurquoise;
             this.imgUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.imgUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.imgUser.Image = ((System.Drawing.Image)(resources.GetObject("imgUser.Image")));
@@ -122,6 +127,7 @@
             // 
             // imgPassword
             // 
+            this.imgPassword.BackColor = System.Drawing.Color.MediumTurquoise;
             this.imgPassword.Image = ((System.Drawing.Image)(resources.GetObject("imgPassword.Image")));
             this.imgPassword.Location = new System.Drawing.Point(12, 108);
             this.imgPassword.Name = "imgPassword";
@@ -152,7 +158,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Bienvenido al sistema";
+            this.Text = "Bienvenido al Sistema";
             this.TransparencyKey = System.Drawing.Color.OrangeRed;
             this.Load += new System.EventHandler(this.FrmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imgUser)).EndInit();

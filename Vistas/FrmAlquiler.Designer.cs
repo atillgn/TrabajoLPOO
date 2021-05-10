@@ -176,7 +176,7 @@
             this.Controls.Add(this.lblEdificio);
             this.Name = "FrmAlquiler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmAlquiler";
+            this.Text = "Alta Alquiler";
             this.Load += new System.EventHandler(this.FrmAlquiler_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
