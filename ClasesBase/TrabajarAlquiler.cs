@@ -20,8 +20,8 @@ namespace ClasesBase
             SqlConnection con = connect();
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Edificio";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "ListarEdificios";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = con;
 
             //Ejecutar la consulta
@@ -42,8 +42,8 @@ namespace ClasesBase
             SqlConnection con = connect();
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Departamento WHERE Edif_Codigo = @edif_codigo";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "ListarDepartamentos";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = con;
 
             cmd.Parameters.AddWithValue("@edif_codigo", Edif_Codigo);
@@ -71,8 +71,8 @@ namespace ClasesBase
             SqlConnection con = connect();
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Inquilino";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "ListarInquilinos";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = con;
 
             //Ejecutar la consulta
@@ -92,8 +92,8 @@ namespace ClasesBase
             SqlConnection con = connect();
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "SELECT * FROM Departamento WHERE Dpto_Codigo = @Dpto_Codigo";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "ObtenerDepartamento";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = con;
 
             cmd.Parameters.AddWithValue("@Dpto_Codigo", Dpto_Codigo);
@@ -123,8 +123,8 @@ namespace ClasesBase
         {
             SqlConnection con = connect();
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = "INSERT INTO Alquiler(Alq_Fecha, Dpto_Codigo, Inq_Codigo, Alq_FechaDesde, Alq_FechaHasta, Alq_Precio) VALUES(@fecha, @dpto_codigo, @inq_codigo, @fechadesde, @fechahasta, @precio)";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "AltaAlquiler";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = con;
             alq.Alq_Fecha = DateTime.Now;
             cmd.Parameters.AddWithValue("@fecha", alq.Alq_Fecha);

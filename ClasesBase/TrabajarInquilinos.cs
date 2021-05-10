@@ -58,8 +58,8 @@ namespace ClasesBase
 
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "INSERT INTO Inquilino(Inq_Apellido, Inq_Nombre, Inq_Telefono) VALUES(@apellido, @nombre, @telefono)";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "AltaInquilino";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = con;
 
             cmd.Parameters.AddWithValue("@apellido", inquilino.Inq_Apellido);
@@ -76,8 +76,8 @@ namespace ClasesBase
 
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "UPDATE Inquilino SET Inq_Apellido = @apellido, Inq_Nombre = @nombre, Inq_Telefono = @telefono WHERE Inq_Codigo = @codigo";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "UpdateInquilino";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = con;
 
             cmd.Parameters.AddWithValue("@apellido", inquilino.Inq_Apellido);
@@ -95,8 +95,8 @@ namespace ClasesBase
 
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "DELETE FROM Inquilino WHERE Inq_Codigo = @codigo";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "DeleteInquilino";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = con;
 
             cmd.Parameters.AddWithValue("@codigo", codigo);

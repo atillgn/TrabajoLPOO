@@ -21,8 +21,8 @@ namespace ClasesBase
             SqlConnection con = connect();
             
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText += "SELECT * FROM Roles";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText += "ListarRoles";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = con;
 
             //Ejecutar la consulta
@@ -40,8 +40,8 @@ namespace ClasesBase
 
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "INSERT INTO Usuario(Usu_NombreUsuario, Usu_Contrasenia, Usu_ApellidoNombre, Rol_Codigo) VALUES(@usuario, @contrasenia, @apellidonombre, @rol_codigo)";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "AltaUsuario";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = con;
 
             cmd.Parameters.AddWithValue("@usuario", user.Usr_NombreUsuario);
@@ -59,8 +59,8 @@ namespace ClasesBase
 
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "UPDATE Usuario SET Usu_NombreUsuario = @usuario, Usu_Contrasenia = @contrasenia, Usu_ApellidoNombre = @apellidonombre, Rol_Codigo = @rol_codigo WHERE Usu_ID = @id";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "UpdateUsuario";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = con;
 
             cmd.Parameters.AddWithValue("@id", user.Usr_Id);
@@ -79,8 +79,8 @@ namespace ClasesBase
 
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText = "DELETE FROM Usuario WHERE Usu_ID = @id";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "DeleteUsuario";
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = con;
 
             cmd.Parameters.AddWithValue("@id", id);
@@ -94,18 +94,9 @@ namespace ClasesBase
             SqlConnection con = connect();
 
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = @"SELECT
-                Usu_ID AS 'ID',
-                Usu_NombreUsuario AS 'Nombre de usuario',
-                Usu_Contrasenia AS 'Contraseña',
-                Usu_ApellidoNombre AS 'Apellido y Nombre',
-                Roles.Rol_Descripcion AS 'Rol',
-                Roles.Rol_Codigo AS 'ID Rol'
-                FROM Usuario INNER JOIN Roles ON Usuario.Rol_Codigo=Roles.Rol_Codigo
-                WHERE Usu_NombreUsuario LIKE @pattern OR Usu_ApellidoNombre LIKE @pattern
-                ";
+            cmd.CommandText = "MostrarUsuarios";
             cmd.Parameters.AddWithValue("@pattern", "%" + sPattern + "%");
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = con;
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);

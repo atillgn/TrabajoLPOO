@@ -19,10 +19,10 @@ namespace ClasesBase
             SqlConnection con = connect();
             SqlCommand cmd = new SqlCommand();
 
-            cmd.CommandText += "SELECT Rol_Codigo FROM Usuario WHERE Usu_NombreUsuario = @user AND Usu_Contrasenia = @pas";
+            cmd.CommandText += "Login";
             cmd.Parameters.AddWithValue("user", u);
             cmd.Parameters.AddWithValue("pas", p);
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = con;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 
