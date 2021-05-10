@@ -31,5 +31,42 @@ namespace ClasesBase
 
             return dt;
         }
+        
+        public static DataTable list_alquileresP(String edificio,String tipo_departamento) 
+        {
+            SqlConnection con = connect();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "MostrarAlquileresPar";
+            cmd.Parameters.AddWithValue("@edificio" ,edificio);
+            cmd.Parameters.AddWithValue("@tipo_dpto",tipo_departamento);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public static DataTable list_edificios()
+        {
+            SqlConnection con = connect();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "ListarEdificios";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con;
+
+            //Ejecutar la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            //Mandar al DataTable
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
     }
 }

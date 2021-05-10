@@ -21,13 +21,27 @@ namespace Vistas
         {
             // TODO: This line of code loads data into the 'datosDataSet1.Alquiler' table. You can move, or remove it, as needed.
             dgvAlquileres.DataSource = ListAlquiler.list_alquileres();
-
+            load_combo_edificios();
+            load_combo_tipo_departamento();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void load_combo_edificios()
         {
-
+            cmbEdifList.ValueMember = "Edif_Codigo";
+            cmbEdifList.DisplayMember = "Edif_Nombre";
+            cmbEdifList.DataSource = ListAlquiler.list_edificios();
         }
 
+        private void load_combo_tipo_departamento()
+        {
+            cmbAlqTipoDpto.ValueMember = "TipoD_Codigo";
+            cmbAlqTipoDpto.DisplayMember = "TipoD_Descripcion";
+            cmbAlqTipoDpto.DataSource = TrabajarAlquiler.list_tipoDepartamento();
+        }
+
+        private void btnAlqBuscar_Click(object sender, EventArgs e)
+        {
+            dgvAlquileres.DataSource = ListAlquiler.list_alquileresP(cmbEdifList.Text, cmbAlqTipoDpto.Text);
+        }
     }
 }

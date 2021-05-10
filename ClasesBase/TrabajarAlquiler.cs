@@ -37,6 +37,24 @@ namespace ClasesBase
             return dt;
         }
 
+        public static DataTable list_tipoDepartamento()
+        {
+            SqlConnection con = connect();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "ListarTipoDepartamento";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con;
+
+            //Ejecutar la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            //Mandar al DataTable
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
         public static DataTable list_departamentos(int Edif_Codigo)
         {
             SqlConnection con = connect();
