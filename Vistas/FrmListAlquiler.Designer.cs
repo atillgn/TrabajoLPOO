@@ -34,13 +34,13 @@
             this.datosDataSet1 = new Vistas.datosDataSet1();
             this.alquilerTableAdapter = new Vistas.datosDataSet1TableAdapters.AlquilerTableAdapter();
             this.cmbEdifList = new System.Windows.Forms.ComboBox();
-            this.lblAlqList = new System.Windows.Forms.Label();
-            this.lblAlqRango = new System.Windows.Forms.Label();
             this.dtpDesde = new System.Windows.Forms.DateTimePicker();
             this.dtpHasta = new System.Windows.Forms.DateTimePicker();
             this.cmbAlqTipoDpto = new System.Windows.Forms.ComboBox();
-            this.lblAlqTipoDpto = new System.Windows.Forms.Label();
             this.btnAlqBuscar = new System.Windows.Forms.Button();
+            this.ckbAlqEdif = new System.Windows.Forms.CheckBox();
+            this.ckbAlqRango = new System.Windows.Forms.CheckBox();
+            this.ckbAlqDpto = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlquileres)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alquilerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosDataSet1)).BeginInit();
@@ -76,24 +76,6 @@
             this.cmbEdifList.Size = new System.Drawing.Size(200, 21);
             this.cmbEdifList.TabIndex = 1;
             // 
-            // lblAlqList
-            // 
-            this.lblAlqList.AutoSize = true;
-            this.lblAlqList.Location = new System.Drawing.Point(550, 41);
-            this.lblAlqList.Name = "lblAlqList";
-            this.lblAlqList.Size = new System.Drawing.Size(41, 13);
-            this.lblAlqList.TabIndex = 2;
-            this.lblAlqList.Text = "Edificio";
-            // 
-            // lblAlqRango
-            // 
-            this.lblAlqRango.AutoSize = true;
-            this.lblAlqRango.Location = new System.Drawing.Point(550, 113);
-            this.lblAlqRango.Name = "lblAlqRango";
-            this.lblAlqRango.Size = new System.Drawing.Size(89, 13);
-            this.lblAlqRango.TabIndex = 3;
-            this.lblAlqRango.Text = "Rango de fechas";
-            // 
             // dtpDesde
             // 
             this.dtpDesde.Location = new System.Drawing.Point(690, 96);
@@ -118,15 +100,6 @@
             this.cmbAlqTipoDpto.Size = new System.Drawing.Size(200, 21);
             this.cmbAlqTipoDpto.TabIndex = 6;
             // 
-            // lblAlqTipoDpto
-            // 
-            this.lblAlqTipoDpto.AutoSize = true;
-            this.lblAlqTipoDpto.Location = new System.Drawing.Point(550, 186);
-            this.lblAlqTipoDpto.Name = "lblAlqTipoDpto";
-            this.lblAlqTipoDpto.Size = new System.Drawing.Size(113, 13);
-            this.lblAlqTipoDpto.TabIndex = 7;
-            this.lblAlqTipoDpto.Text = "Tipo de Departamento";
-            // 
             // btnAlqBuscar
             // 
             this.btnAlqBuscar.Location = new System.Drawing.Point(656, 242);
@@ -137,18 +110,51 @@
             this.btnAlqBuscar.UseVisualStyleBackColor = true;
             this.btnAlqBuscar.Click += new System.EventHandler(this.btnAlqBuscar_Click);
             // 
+            // ckbAlqEdif
+            // 
+            this.ckbAlqEdif.AutoSize = true;
+            this.ckbAlqEdif.Location = new System.Drawing.Point(552, 42);
+            this.ckbAlqEdif.Name = "ckbAlqEdif";
+            this.ckbAlqEdif.Size = new System.Drawing.Size(60, 17);
+            this.ckbAlqEdif.TabIndex = 9;
+            this.ckbAlqEdif.Text = "Edificio";
+            this.ckbAlqEdif.UseVisualStyleBackColor = true;
+            this.ckbAlqEdif.CheckedChanged += new System.EventHandler(this.ckbAlqEdif_CheckedChanged);
+            // 
+            // ckbAlqRango
+            // 
+            this.ckbAlqRango.AutoSize = true;
+            this.ckbAlqRango.Location = new System.Drawing.Point(552, 112);
+            this.ckbAlqRango.Name = "ckbAlqRango";
+            this.ckbAlqRango.Size = new System.Drawing.Size(108, 17);
+            this.ckbAlqRango.TabIndex = 10;
+            this.ckbAlqRango.Text = "Rango de fechas";
+            this.ckbAlqRango.UseVisualStyleBackColor = true;
+            this.ckbAlqRango.CheckedChanged += new System.EventHandler(this.ckbAlqRango_CheckedChanged);
+            // 
+            // ckbAlqDpto
+            // 
+            this.ckbAlqDpto.AutoSize = true;
+            this.ckbAlqDpto.Location = new System.Drawing.Point(552, 185);
+            this.ckbAlqDpto.Name = "ckbAlqDpto";
+            this.ckbAlqDpto.Size = new System.Drawing.Size(132, 17);
+            this.ckbAlqDpto.TabIndex = 11;
+            this.ckbAlqDpto.Text = "Tipo de Departamento";
+            this.ckbAlqDpto.UseVisualStyleBackColor = true;
+            this.ckbAlqDpto.CheckedChanged += new System.EventHandler(this.ckbAlqDpto_CheckedChanged);
+            // 
             // FrmListAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(902, 277);
+            this.Controls.Add(this.ckbAlqDpto);
+            this.Controls.Add(this.ckbAlqRango);
+            this.Controls.Add(this.ckbAlqEdif);
             this.Controls.Add(this.btnAlqBuscar);
-            this.Controls.Add(this.lblAlqTipoDpto);
             this.Controls.Add(this.cmbAlqTipoDpto);
             this.Controls.Add(this.dtpHasta);
             this.Controls.Add(this.dtpDesde);
-            this.Controls.Add(this.lblAlqRango);
-            this.Controls.Add(this.lblAlqList);
             this.Controls.Add(this.cmbEdifList);
             this.Controls.Add(this.dgvAlquileres);
             this.Name = "FrmListAlquiler";
@@ -170,12 +176,12 @@
         private System.Windows.Forms.BindingSource alquilerBindingSource;
         private datosDataSet1TableAdapters.AlquilerTableAdapter alquilerTableAdapter;
         private System.Windows.Forms.ComboBox cmbEdifList;
-        private System.Windows.Forms.Label lblAlqList;
-        private System.Windows.Forms.Label lblAlqRango;
         private System.Windows.Forms.DateTimePicker dtpDesde;
         private System.Windows.Forms.DateTimePicker dtpHasta;
         private System.Windows.Forms.ComboBox cmbAlqTipoDpto;
-        private System.Windows.Forms.Label lblAlqTipoDpto;
         private System.Windows.Forms.Button btnAlqBuscar;
+        private System.Windows.Forms.CheckBox ckbAlqEdif;
+        private System.Windows.Forms.CheckBox ckbAlqRango;
+        private System.Windows.Forms.CheckBox ckbAlqDpto;
     }
 }

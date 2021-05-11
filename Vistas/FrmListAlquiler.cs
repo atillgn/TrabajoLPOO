@@ -16,13 +16,17 @@ namespace Vistas
         {
             InitializeComponent();
         }
-
+        bool a = false, b = false, c = false;
         private void FrmListAlquiler_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'datosDataSet1.Alquiler' table. You can move, or remove it, as needed.
             dgvAlquileres.DataSource = ListAlquiler.list_alquileres();
             load_combo_edificios();
             load_combo_tipo_departamento();
+            cmbEdifList.Enabled = a;
+            cmbAlqTipoDpto.Enabled = c;
+            dtpDesde.Enabled = b;
+            dtpHasta.Enabled = b;
         }
 
         private void load_combo_edificios()
@@ -41,7 +45,7 @@ namespace Vistas
 
         private void btnAlqBuscar_Click(object sender, EventArgs e)
         {
-            dgvAlquileres.DataSource = ListAlquiler.list_alquileresP(cmbEdifList.Text, dtpDesde.Value, dtpHasta.Value, cmbAlqTipoDpto.Text);
+            dgvAlquileres.DataSource = ListAlquiler.list_alquileresP(cmbEdifList.Text, dtpDesde.Value, dtpHasta.Value, cmbAlqTipoDpto.Text,a,b,c);
         }
 
         private void dtpDesde_ValueChanged(object sender, EventArgs e)
@@ -52,6 +56,52 @@ namespace Vistas
         private void dtpHasta_ValueChanged(object sender, EventArgs e)
         {
             if (dtpDesde.Value > dtpHasta.Value) dtpDesde.Value = dtpHasta.Value.AddDays(-1);
+        }
+
+        private void ckbAlqEdif_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!a)
+            {
+                a = true;
+                cmbEdifList.Enabled = a;
+            }
+            else 
+            {
+                a = false;
+                cmbEdifList.Enabled = a;
+            }
+            
+        }
+
+        private void ckbAlqRango_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!b)
+            {
+                b = true;
+                dtpDesde.Enabled = b;
+                dtpHasta.Enabled = b;
+            }
+            else 
+            {
+                b = false;
+                dtpDesde.Enabled = b;
+                dtpHasta.Enabled = b;
+            }
+            
+        }
+
+        private void ckbAlqDpto_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!c)
+            {
+                c = true;
+                cmbAlqTipoDpto.Enabled = c;
+            }
+            else 
+            {
+                c = false;
+                cmbAlqTipoDpto.Enabled = c;
+            }
         }
 
     }
