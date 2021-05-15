@@ -54,12 +54,6 @@ namespace Vistas
             oFrmUsuario.Show();
         }
 
-        private void mnuMostrarAlquileres_Click(object sender, EventArgs e)
-        {
-            FrmListAlquiler oFrmAlquiler = new FrmListAlquiler();
-            oFrmAlquiler.Show();
-        }
-
         private void mnuAltaAlquiler_Click(object sender, EventArgs e)
         {
             FrmAlquiler oFrmAlquiler = new FrmAlquiler();

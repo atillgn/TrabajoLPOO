@@ -45,17 +45,23 @@ namespace Vistas
 
         private void btnAlqBuscar_Click(object sender, EventArgs e)
         {
-            dgvAlquileres.DataSource = ListAlquiler.list_alquileresP(cmbEdifList.Text, dtpDesde.Value, dtpHasta.Value, cmbAlqTipoDpto.Text,a,b,c);
+            dgvAlquileres.DataSource = ListAlquiler.list_alquileresP(cmbEdifList.Text, dtpDesde.Value.Date, dtpHasta.Value, cmbAlqTipoDpto.Text,a,b,c);
         }
 
         private void dtpDesde_ValueChanged(object sender, EventArgs e)
         {
-            if (dtpDesde.Value > dtpHasta.Value) dtpHasta.Value = dtpDesde.Value.AddDays(1);
+            if (dtpDesde.Value > dtpHasta.Value) dtpHasta.Value = dtpDesde.Value;
+            dtpHasta.Value=dtpHasta.Value.AddSeconds(59-dtpHasta.Value.Second);
+            dtpHasta.Value=dtpHasta.Value.AddHours(23-dtpHasta.Value.Hour);
+            dtpHasta.Value=dtpHasta.Value.AddMinutes(59-dtpHasta.Value.Minute);
         }
 
         private void dtpHasta_ValueChanged(object sender, EventArgs e)
         {
-            if (dtpDesde.Value > dtpHasta.Value) dtpDesde.Value = dtpHasta.Value.AddDays(-1);
+            if (dtpDesde.Value > dtpHasta.Value) dtpDesde.Value = dtpHasta.Value;
+            dtpHasta.Value = dtpHasta.Value.AddSeconds(59 - dtpHasta.Value.Second);
+            dtpHasta.Value = dtpHasta.Value.AddHours(23 - dtpHasta.Value.Hour);
+            dtpHasta.Value = dtpHasta.Value.AddMinutes(59 - dtpHasta.Value.Minute);
         }
 
         private void ckbAlqEdif_CheckedChanged(object sender, EventArgs e)

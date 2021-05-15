@@ -49,9 +49,9 @@
             // dgvAlquileres
             // 
             this.dgvAlquileres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlquileres.Location = new System.Drawing.Point(12, 15);
+            this.dgvAlquileres.Location = new System.Drawing.Point(12, 80);
             this.dgvAlquileres.Name = "dgvAlquileres";
-            this.dgvAlquileres.Size = new System.Drawing.Size(499, 250);
+            this.dgvAlquileres.Size = new System.Drawing.Size(1003, 247);
             this.dgvAlquileres.TabIndex = 0;
             // 
             // alquilerBindingSource
@@ -71,14 +71,14 @@
             // cmbEdifList
             // 
             this.cmbEdifList.FormattingEnabled = true;
-            this.cmbEdifList.Location = new System.Drawing.Point(690, 38);
+            this.cmbEdifList.Location = new System.Drawing.Point(78, 24);
             this.cmbEdifList.Name = "cmbEdifList";
             this.cmbEdifList.Size = new System.Drawing.Size(200, 21);
             this.cmbEdifList.TabIndex = 1;
             // 
             // dtpDesde
             // 
-            this.dtpDesde.Location = new System.Drawing.Point(690, 96);
+            this.dtpDesde.Location = new System.Drawing.Point(439, 12);
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(200, 20);
             this.dtpDesde.TabIndex = 4;
@@ -86,7 +86,7 @@
             // 
             // dtpHasta
             // 
-            this.dtpHasta.Location = new System.Drawing.Point(690, 122);
+            this.dtpHasta.Location = new System.Drawing.Point(439, 38);
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(200, 20);
             this.dtpHasta.TabIndex = 5;
@@ -95,14 +95,14 @@
             // cmbAlqTipoDpto
             // 
             this.cmbAlqTipoDpto.FormattingEnabled = true;
-            this.cmbAlqTipoDpto.Location = new System.Drawing.Point(690, 183);
+            this.cmbAlqTipoDpto.Location = new System.Drawing.Point(815, 24);
             this.cmbAlqTipoDpto.Name = "cmbAlqTipoDpto";
             this.cmbAlqTipoDpto.Size = new System.Drawing.Size(200, 21);
             this.cmbAlqTipoDpto.TabIndex = 6;
             // 
             // btnAlqBuscar
             // 
-            this.btnAlqBuscar.Location = new System.Drawing.Point(656, 242);
+            this.btnAlqBuscar.Location = new System.Drawing.Point(887, 51);
             this.btnAlqBuscar.Name = "btnAlqBuscar";
             this.btnAlqBuscar.Size = new System.Drawing.Size(128, 23);
             this.btnAlqBuscar.TabIndex = 8;
@@ -113,7 +113,7 @@
             // ckbAlqEdif
             // 
             this.ckbAlqEdif.AutoSize = true;
-            this.ckbAlqEdif.Location = new System.Drawing.Point(552, 42);
+            this.ckbAlqEdif.Location = new System.Drawing.Point(12, 26);
             this.ckbAlqEdif.Name = "ckbAlqEdif";
             this.ckbAlqEdif.Size = new System.Drawing.Size(60, 17);
             this.ckbAlqEdif.TabIndex = 9;
@@ -124,7 +124,7 @@
             // ckbAlqRango
             // 
             this.ckbAlqRango.AutoSize = true;
-            this.ckbAlqRango.Location = new System.Drawing.Point(552, 112);
+            this.ckbAlqRango.Location = new System.Drawing.Point(325, 26);
             this.ckbAlqRango.Name = "ckbAlqRango";
             this.ckbAlqRango.Size = new System.Drawing.Size(108, 17);
             this.ckbAlqRango.TabIndex = 10;
@@ -135,7 +135,7 @@
             // ckbAlqDpto
             // 
             this.ckbAlqDpto.AutoSize = true;
-            this.ckbAlqDpto.Location = new System.Drawing.Point(552, 185);
+            this.ckbAlqDpto.Location = new System.Drawing.Point(677, 26);
             this.ckbAlqDpto.Name = "ckbAlqDpto";
             this.ckbAlqDpto.Size = new System.Drawing.Size(132, 17);
             this.ckbAlqDpto.TabIndex = 11;
@@ -147,7 +147,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(902, 277);
+            this.ClientSize = new System.Drawing.Size(1027, 340);
             this.Controls.Add(this.ckbAlqDpto);
             this.Controls.Add(this.ckbAlqRango);
             this.Controls.Add(this.ckbAlqEdif);

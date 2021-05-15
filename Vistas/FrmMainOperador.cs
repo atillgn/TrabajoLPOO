@@ -36,12 +36,6 @@ namespace Vistas
             oFrmInquilinos.Show();
         }
 
-        private void mnuMostrarAlquileres_Click(object sender, EventArgs e)
-        {
-            FrmListAlquiler oFrmListAlquiler = new FrmListAlquiler();
-            oFrmListAlquiler.Show();
-        }
-
         private void altaDeAlquilerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmAlquiler oFrmAlquiler = new FrmAlquiler();

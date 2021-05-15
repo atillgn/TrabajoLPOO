@@ -33,7 +33,6 @@
             this.mnuInquilinos = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAbmInquilinos = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAlquileres = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuMostrarAlquileres = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAltaAlquiler = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSalir = new System.Windows.Forms.Button();
             this.mnuMain.SuspendLayout();
@@ -68,23 +67,15 @@
             // mnuAlquileres
             // 
             this.mnuAlquileres.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuMostrarAlquileres,
             this.mnuAltaAlquiler});
             this.mnuAlquileres.Name = "mnuAlquileres";
             this.mnuAlquileres.Size = new System.Drawing.Size(71, 20);
             this.mnuAlquileres.Text = "Alquileres";
             // 
-            // mnuMostrarAlquileres
-            // 
-            this.mnuMostrarAlquileres.Name = "mnuMostrarAlquileres";
-            this.mnuMostrarAlquileres.Size = new System.Drawing.Size(170, 22);
-            this.mnuMostrarAlquileres.Text = "Mostrar Alquileres";
-            this.mnuMostrarAlquileres.Click += new System.EventHandler(this.mnuMostrarAlquileres_Click);
-            // 
             // mnuAltaAlquiler
             // 
             this.mnuAltaAlquiler.Name = "mnuAltaAlquiler";
-            this.mnuAltaAlquiler.Size = new System.Drawing.Size(170, 22);
+            this.mnuAltaAlquiler.Size = new System.Drawing.Size(152, 22);
             this.mnuAltaAlquiler.Text = "Alta Alquiler";
             this.mnuAltaAlquiler.Click += new System.EventHandler(this.altaDeAlquilerToolStripMenuItem_Click);
             // 
@@ -125,7 +116,6 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ToolStripMenuItem mnuInquilinos;
         private System.Windows.Forms.ToolStripMenuItem mnuAbmInquilinos;
-        private System.Windows.Forms.ToolStripMenuItem mnuMostrarAlquileres;
         private System.Windows.Forms.ToolStripMenuItem mnuAltaAlquiler;
     }
 }

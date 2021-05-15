@@ -41,6 +41,7 @@
             this.txtPrecioFinal = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAlquilerConfirmar = new System.Windows.Forms.Button();
+            this.btnAlquilerMostrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblEdificio
@@ -148,7 +149,7 @@
             // 
             // btnAlquilerConfirmar
             // 
-            this.btnAlquilerConfirmar.Location = new System.Drawing.Point(314, 174);
+            this.btnAlquilerConfirmar.Location = new System.Drawing.Point(315, 181);
             this.btnAlquilerConfirmar.Name = "btnAlquilerConfirmar";
             this.btnAlquilerConfirmar.Size = new System.Drawing.Size(75, 23);
             this.btnAlquilerConfirmar.TabIndex = 12;
@@ -156,11 +157,22 @@
             this.btnAlquilerConfirmar.UseVisualStyleBackColor = true;
             this.btnAlquilerConfirmar.Click += new System.EventHandler(this.btnAlquilerConfirmar_Click);
             // 
+            // btnAlquilerMostrar
+            // 
+            this.btnAlquilerMostrar.Location = new System.Drawing.Point(15, 181);
+            this.btnAlquilerMostrar.Name = "btnAlquilerMostrar";
+            this.btnAlquilerMostrar.Size = new System.Drawing.Size(128, 23);
+            this.btnAlquilerMostrar.TabIndex = 13;
+            this.btnAlquilerMostrar.Text = "Registro de Alquileres";
+            this.btnAlquilerMostrar.UseVisualStyleBackColor = true;
+            this.btnAlquilerMostrar.Click += new System.EventHandler(this.btnAlquilerMostrar_Click);
+            // 
             // FrmAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(402, 216);
+            this.Controls.Add(this.btnAlquilerMostrar);
             this.Controls.Add(this.btnAlquilerConfirmar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtPrecioFinal);
@@ -198,5 +210,6 @@
         private System.Windows.Forms.TextBox txtPrecioFinal;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnAlquilerConfirmar;
+        private System.Windows.Forms.Button btnAlquilerMostrar;
     }
 }

@@ -118,5 +118,11 @@ namespace Vistas
             dtpHasta.Value = DateTime.Now.AddDays(1);
             display_precioFinal();
         }
+
+        private void btnAlquilerMostrar_Click(object sender, EventArgs e)
+        {
+            FrmListAlquiler oFrmListAlquiler = new FrmListAlquiler();
+            oFrmListAlquiler.Show();
+        }
     }
 }
