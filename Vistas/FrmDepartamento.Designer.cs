@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblDptoCodigo = new System.Windows.Forms.Label();
             this.lblDptoEdifCodigo = new System.Windows.Forms.Label();
             this.lblDptoNumero = new System.Windows.Forms.Label();
             this.lblDptoTipo = new System.Windows.Forms.Label();
@@ -39,10 +38,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lblDptoPrecio = new System.Windows.Forms.Label();
-            this.txtDptoCodigo = new System.Windows.Forms.TextBox();
             this.txtDptoPiso = new System.Windows.Forms.TextBox();
             this.txtDptoNumero = new System.Windows.Forms.TextBox();
-            this.txtDptoEdifCodigo = new System.Windows.Forms.TextBox();
             this.txtDptoAmbiente = new System.Windows.Forms.TextBox();
             this.txtDptoBaños = new System.Windows.Forms.TextBox();
             this.txtDptoDormitorios = new System.Windows.Forms.TextBox();
@@ -53,26 +50,20 @@
             this.dgvDepartamentos = new System.Windows.Forms.DataGridView();
             this.optAmbiente = new System.Windows.Forms.RadioButton();
             this.optDisposicion = new System.Windows.Forms.RadioButton();
+            this.btnDptoEliminar = new System.Windows.Forms.Button();
+            this.btnDptoeditar = new System.Windows.Forms.Button();
+            this.cmbEdifico = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartamentos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblDptoCodigo
-            // 
-            this.lblDptoCodigo.AutoSize = true;
-            this.lblDptoCodigo.Location = new System.Drawing.Point(12, 35);
-            this.lblDptoCodigo.Name = "lblDptoCodigo";
-            this.lblDptoCodigo.Size = new System.Drawing.Size(40, 13);
-            this.lblDptoCodigo.TabIndex = 0;
-            this.lblDptoCodigo.Text = "Codigo";
             // 
             // lblDptoEdifCodigo
             // 
             this.lblDptoEdifCodigo.AutoSize = true;
-            this.lblDptoEdifCodigo.Location = new System.Drawing.Point(12, 61);
+            this.lblDptoEdifCodigo.Location = new System.Drawing.Point(8, 58);
             this.lblDptoEdifCodigo.Name = "lblDptoEdifCodigo";
-            this.lblDptoEdifCodigo.Size = new System.Drawing.Size(90, 13);
+            this.lblDptoEdifCodigo.Size = new System.Drawing.Size(41, 13);
             this.lblDptoEdifCodigo.TabIndex = 1;
-            this.lblDptoEdifCodigo.Text = "Codigo de Edifcio";
+            this.lblDptoEdifCodigo.Text = "Edificio";
             // 
             // lblDptoNumero
             // 
@@ -154,14 +145,6 @@
             this.lblDptoPrecio.TabIndex = 10;
             this.lblDptoPrecio.Text = "Precio";
             // 
-            // txtDptoCodigo
-            // 
-            this.txtDptoCodigo.Location = new System.Drawing.Point(104, 32);
-            this.txtDptoCodigo.Name = "txtDptoCodigo";
-            this.txtDptoCodigo.Size = new System.Drawing.Size(155, 20);
-            this.txtDptoCodigo.TabIndex = 1;
-            this.txtDptoCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDptoCodigo_KeyPress);
-            // 
             // txtDptoPiso
             // 
             this.txtDptoPiso.Location = new System.Drawing.Point(104, 140);
@@ -177,14 +160,6 @@
             this.txtDptoNumero.Size = new System.Drawing.Size(155, 20);
             this.txtDptoNumero.TabIndex = 4;
             this.txtDptoNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDptoNumero_KeyPress);
-            // 
-            // txtDptoEdifCodigo
-            // 
-            this.txtDptoEdifCodigo.Location = new System.Drawing.Point(104, 58);
-            this.txtDptoEdifCodigo.Name = "txtDptoEdifCodigo";
-            this.txtDptoEdifCodigo.Size = new System.Drawing.Size(155, 20);
-            this.txtDptoEdifCodigo.TabIndex = 2;
-            this.txtDptoEdifCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDptoEdifCodigo_KeyPress);
             // 
             // txtDptoAmbiente
             // 
@@ -251,6 +226,7 @@
             this.dgvDepartamentos.Name = "dgvDepartamentos";
             this.dgvDepartamentos.Size = new System.Drawing.Size(573, 246);
             this.dgvDepartamentos.TabIndex = 11;
+            
             // 
             // optAmbiente
             // 
@@ -276,11 +252,42 @@
             this.optDisposicion.UseVisualStyleBackColor = true;
             this.optDisposicion.CheckedChanged += new System.EventHandler(this.optDisposicion_CheckedChanged);
             // 
+            // btnDptoEliminar
+            // 
+            this.btnDptoEliminar.Location = new System.Drawing.Point(384, 296);
+            this.btnDptoEliminar.Name = "btnDptoEliminar";
+            this.btnDptoEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnDptoEliminar.TabIndex = 14;
+            this.btnDptoEliminar.Text = "Eliminar";
+            this.btnDptoEliminar.UseVisualStyleBackColor = true;
+            this.btnDptoEliminar.Click += new System.EventHandler(this.btnDptoEliminar_Click);
+            // 
+            // btnDptoeditar
+            // 
+            this.btnDptoeditar.Location = new System.Drawing.Point(667, 296);
+            this.btnDptoeditar.Name = "btnDptoeditar";
+            this.btnDptoeditar.Size = new System.Drawing.Size(75, 23);
+            this.btnDptoeditar.TabIndex = 15;
+            this.btnDptoeditar.Text = "Editar";
+            this.btnDptoeditar.UseVisualStyleBackColor = true;
+            this.btnDptoeditar.Click += new System.EventHandler(this.btnDptoeditar_Click);
+            // 
+            // cmbEdifico
+            // 
+            this.cmbEdifico.FormattingEnabled = true;
+            this.cmbEdifico.Location = new System.Drawing.Point(104, 50);
+            this.cmbEdifico.Name = "cmbEdifico";
+            this.cmbEdifico.Size = new System.Drawing.Size(155, 21);
+            this.cmbEdifico.TabIndex = 16;
+            // 
             // FrmDepartamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(861, 328);
+            this.Controls.Add(this.cmbEdifico);
+            this.Controls.Add(this.btnDptoeditar);
+            this.Controls.Add(this.btnDptoEliminar);
             this.Controls.Add(this.optDisposicion);
             this.Controls.Add(this.optAmbiente);
             this.Controls.Add(this.dgvDepartamentos);
@@ -291,10 +298,8 @@
             this.Controls.Add(this.txtDptoDormitorios);
             this.Controls.Add(this.txtDptoBaños);
             this.Controls.Add(this.txtDptoAmbiente);
-            this.Controls.Add(this.txtDptoEdifCodigo);
             this.Controls.Add(this.txtDptoNumero);
             this.Controls.Add(this.txtDptoPiso);
-            this.Controls.Add(this.txtDptoCodigo);
             this.Controls.Add(this.lblDptoPrecio);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -305,7 +310,6 @@
             this.Controls.Add(this.lblDptoTipo);
             this.Controls.Add(this.lblDptoNumero);
             this.Controls.Add(this.lblDptoEdifCodigo);
-            this.Controls.Add(this.lblDptoCodigo);
             this.MinimizeBox = false;
             this.Name = "FrmDepartamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -319,7 +323,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblDptoCodigo;
         private System.Windows.Forms.Label lblDptoEdifCodigo;
         private System.Windows.Forms.Label lblDptoNumero;
         private System.Windows.Forms.Label lblDptoTipo;
@@ -330,10 +333,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblDptoPrecio;
-        private System.Windows.Forms.TextBox txtDptoCodigo;
         private System.Windows.Forms.TextBox txtDptoPiso;
         private System.Windows.Forms.TextBox txtDptoNumero;
-        private System.Windows.Forms.TextBox txtDptoEdifCodigo;
         private System.Windows.Forms.TextBox txtDptoAmbiente;
         private System.Windows.Forms.TextBox txtDptoBaños;
         private System.Windows.Forms.TextBox txtDptoDormitorios;
@@ -344,5 +345,8 @@
         private System.Windows.Forms.DataGridView dgvDepartamentos;
         private System.Windows.Forms.RadioButton optAmbiente;
         private System.Windows.Forms.RadioButton optDisposicion;
+        private System.Windows.Forms.Button btnDptoEliminar;
+        private System.Windows.Forms.Button btnDptoeditar;
+        private System.Windows.Forms.ComboBox cmbEdifico;
     }
 }

@@ -15,3 +15,9 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\ClasesBase\bin\
 C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\ClasesBase\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\ClasesBase\obj\Debug\ClasesBase.dll
 C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\ClasesBase\obj\Debug\ClasesBase.pdb
+H:\1Unju\lpoo\realtp\TrabajoLPOO\ClasesBase\bin\Debug\ClasesBase.dll.config
+H:\1Unju\lpoo\realtp\TrabajoLPOO\ClasesBase\bin\Debug\ClasesBase.dll
+H:\1Unju\lpoo\realtp\TrabajoLPOO\ClasesBase\bin\Debug\ClasesBase.pdb
+H:\1Unju\lpoo\realtp\TrabajoLPOO\ClasesBase\obj\Debug\ClasesBase.csprojResolveAssemblyReference.cache
+H:\1Unju\lpoo\realtp\TrabajoLPOO\ClasesBase\obj\Debug\ClasesBase.dll
+H:\1Unju\lpoo\realtp\TrabajoLPOO\ClasesBase\obj\Debug\ClasesBase.pdb

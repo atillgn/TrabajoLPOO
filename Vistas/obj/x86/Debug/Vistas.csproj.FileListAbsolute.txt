@@ -54,3 +54,23 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\
 C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\Debug\GenerateResource.write.1.tlog
+H:\1Unju\lpoo\realtp\TrabajoLPOO\Vistas\bin\Debug\Vistas.exe.config
+H:\1Unju\lpoo\realtp\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.exe
+H:\1Unju\lpoo\realtp\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.pdb
+H:\1Unju\lpoo\realtp\TrabajoLPOO\Vistas\bin\Debug\Vistas.exe
+H:\1Unju\lpoo\realtp\TrabajoLPOO\Vistas\bin\Debug\Vistas.pdb
+H:\1Unju\lpoo\realtp\TrabajoLPOO\Vistas\bin\Debug\ClasesBase.dll
+H:\1Unju\lpoo\realtp\TrabajoLPOO\Vistas\bin\Debug\ClasesBase.pdb
+H:\1Unju\lpoo\realtp\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.csprojResolveAssemblyReference.cache
+H:\1Unju\lpoo\realtp\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmAlquiler.resources
+H:\1Unju\lpoo\realtp\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmDepartamento.resources
+H:\1Unju\lpoo\realtp\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmEdificio.resources
+H:\1Unju\lpoo\realtp\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmInquilino.resources
+H:\1Unju\lpoo\realtp\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmListAlquiler.resources
+H:\1Unju\lpoo\realtp\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmLogin.resources
+H:\1Unju\lpoo\realtp\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmMainAdmin.resources
+H:\1Unju\lpoo\realtp\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmMainAuditor.resources
+H:\1Unju\lpoo\realtp\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmMainOperador.resources
+H:\1Unju\lpoo\realtp\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmUsuario.resources
+H:\1Unju\lpoo\realtp\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
+H:\1Unju\lpoo\realtp\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
