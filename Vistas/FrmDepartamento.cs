@@ -46,6 +46,7 @@ namespace Vistas
             cmbDptoDisposicion.Items.Add(2);
             cmbDptoDisposicion.Items.Add(3);
             cmbDptoDisposicion.Items.Add(4);
+            cmbDptoDisposicion.Text = "1";
 
             load_departamento();
         }
@@ -57,7 +58,6 @@ namespace Vistas
             {
                 Departamento oDpto = new Departamento();
 
-                
                 oDpto.Edif_Codigo = (int)cmbEdifico.SelectedValue;
                 oDpto.Dpto_Tipo = (int)cmbDptoTipo.SelectedValue;
                 oDpto.Dpto_Numero = Convert.ToInt32(txtDptoNumero.Text);
@@ -67,18 +67,6 @@ namespace Vistas
                 oDpto.Dpto_Baños = Convert.ToInt32(txtDptoBaños.Text);
                 oDpto.Dpto_Disposicion = Convert.ToInt32(cmbDptoDisposicion.Text);
                 oDpto.Dpto_Precio = Convert.ToDouble(txtDptoPrecio.Text);
-                
-
-                //oDpto.Edif_Codigo = txtDptoEdifCodigo.Text;
-                //oDpto.Dpto_Tipo = (int)cmbDptoTipo.SelectedValue();
-                //oDpto.Dpto_Numero = (int)txtDptoNumero.Text();
-
-                //oDpto.Dpto_Piso = (int)txtDptoPiso.Text();
-                //oDpto.Dpto_Ambientes = (int)txtDptoAmbiente.Text();
-                //oDpto.Dpto_Dormitorios = (int)txtDptoDormitorios.Text();
-                //oDpto.Dpto_Baños = (int)txtDptoBaños.Text();
-                //oDpto.Dpto_Precio = (int)txtDptoPrecio.Text();
-                //oDpto.Dpto_Disposicion = (int)cmbDptoDisposicion.SelectedValue();
                 if (edit)
                 {
                     try
@@ -103,8 +91,9 @@ namespace Vistas
                         MessageBox.Show("Los departamentos no pueden tener datos repetidos");
                     }
                 }
-                cmbDptoDisposicion.SelectedValue = 1;
+                cmbDptoDisposicion.Text = "1";
                 cmbDptoTipo.SelectedValue = 1;
+                cmbEdifico.SelectedValue = 1;
                 txtDptoNumero.Text = "";
                 txtDptoPiso.Text = "";
                 txtDptoDormitorios.Text = "";
@@ -229,7 +218,7 @@ namespace Vistas
                 txtDptoPiso.Text = dgvDepartamentos.CurrentRow.Cells["Piso"].Value.ToString();
                 txtDptoAmbiente.Text = dgvDepartamentos.CurrentRow.Cells["Ambientes"].Value.ToString();
                 txtDptoPrecio.Text = dgvDepartamentos.CurrentRow.Cells["Precio"].Value.ToString();
-                cmbDptoDisposicion.SelectedValue = dgvDepartamentos.CurrentRow.Cells["Disposicion"].Value;
+                cmbDptoDisposicion.Text = dgvDepartamentos.CurrentRow.Cells["Disposicion"].Value.ToString();
                 cmbDptoTipo.SelectedValue = dgvDepartamentos.CurrentRow.Cells["Tipo"].Value;
             }
             else 
@@ -240,7 +229,7 @@ namespace Vistas
 
         private void load_departamento()
         {
-            dgvDepartamentos.DataSource = TrabajarDepartamento.ConsultarAmbiente();
+            dgvDepartamentos.DataSource = TrabajarDepartamento.list_dpto();
         }
 
     }

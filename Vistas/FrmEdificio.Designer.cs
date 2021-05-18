@@ -28,32 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblEdifCodigo = new System.Windows.Forms.Label();
             this.lblEdifNombre = new System.Windows.Forms.Label();
             this.lblEdifDireccion = new System.Windows.Forms.Label();
             this.lblEdifAdministrador = new System.Windows.Forms.Label();
             this.lblEdifTelefono = new System.Windows.Forms.Label();
-            this.txtEdifCodigo = new System.Windows.Forms.TextBox();
             this.txtEdifDireccion = new System.Windows.Forms.TextBox();
-            this.txtEdifAdminitrador = new System.Windows.Forms.TextBox();
             this.txtEdifNombre = new System.Windows.Forms.TextBox();
             this.txtEdifTelefono = new System.Windows.Forms.TextBox();
             this.btnEdifConfirmar = new System.Windows.Forms.Button();
+            this.dgvEdificio = new System.Windows.Forms.DataGridView();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.cmbEdifAdmin = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEdificio)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblEdifCodigo
-            // 
-            this.lblEdifCodigo.AutoSize = true;
-            this.lblEdifCodigo.Location = new System.Drawing.Point(13, 39);
-            this.lblEdifCodigo.Name = "lblEdifCodigo";
-            this.lblEdifCodigo.Size = new System.Drawing.Size(40, 13);
-            this.lblEdifCodigo.TabIndex = 0;
-            this.lblEdifCodigo.Text = "Codigo";
             // 
             // lblEdifNombre
             // 
             this.lblEdifNombre.AutoSize = true;
-            this.lblEdifNombre.Location = new System.Drawing.Point(13, 76);
+            this.lblEdifNombre.Location = new System.Drawing.Point(12, 28);
             this.lblEdifNombre.Name = "lblEdifNombre";
             this.lblEdifNombre.Size = new System.Drawing.Size(44, 13);
             this.lblEdifNombre.TabIndex = 4;
@@ -62,7 +55,7 @@
             // lblEdifDireccion
             // 
             this.lblEdifDireccion.AutoSize = true;
-            this.lblEdifDireccion.Location = new System.Drawing.Point(13, 112);
+            this.lblEdifDireccion.Location = new System.Drawing.Point(12, 79);
             this.lblEdifDireccion.Name = "lblEdifDireccion";
             this.lblEdifDireccion.Size = new System.Drawing.Size(52, 13);
             this.lblEdifDireccion.TabIndex = 5;
@@ -71,7 +64,7 @@
             // lblEdifAdministrador
             // 
             this.lblEdifAdministrador.AutoSize = true;
-            this.lblEdifAdministrador.Location = new System.Drawing.Point(13, 155);
+            this.lblEdifAdministrador.Location = new System.Drawing.Point(12, 135);
             this.lblEdifAdministrador.Name = "lblEdifAdministrador";
             this.lblEdifAdministrador.Size = new System.Drawing.Size(70, 13);
             this.lblEdifAdministrador.TabIndex = 6;
@@ -80,80 +73,103 @@
             // lblEdifTelefono
             // 
             this.lblEdifTelefono.AutoSize = true;
-            this.lblEdifTelefono.Location = new System.Drawing.Point(16, 193);
+            this.lblEdifTelefono.Location = new System.Drawing.Point(12, 186);
             this.lblEdifTelefono.Name = "lblEdifTelefono";
             this.lblEdifTelefono.Size = new System.Drawing.Size(49, 13);
             this.lblEdifTelefono.TabIndex = 7;
             this.lblEdifTelefono.Text = "Telefono";
             // 
-            // txtEdifCodigo
-            // 
-            this.txtEdifCodigo.Location = new System.Drawing.Point(89, 39);
-            this.txtEdifCodigo.Name = "txtEdifCodigo";
-            this.txtEdifCodigo.Size = new System.Drawing.Size(172, 20);
-            this.txtEdifCodigo.TabIndex = 1;
-            this.txtEdifCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEdifCodigo_KeyPress);
-            // 
             // txtEdifDireccion
             // 
-            this.txtEdifDireccion.Location = new System.Drawing.Point(89, 109);
+            this.txtEdifDireccion.Location = new System.Drawing.Point(89, 76);
             this.txtEdifDireccion.Name = "txtEdifDireccion";
-            this.txtEdifDireccion.Size = new System.Drawing.Size(172, 20);
-            this.txtEdifDireccion.TabIndex = 3;
-            // 
-            // txtEdifAdminitrador
-            // 
-            this.txtEdifAdminitrador.Location = new System.Drawing.Point(89, 152);
-            this.txtEdifAdminitrador.Name = "txtEdifAdminitrador";
-            this.txtEdifAdminitrador.Size = new System.Drawing.Size(172, 20);
-            this.txtEdifAdminitrador.TabIndex = 4;
+            this.txtEdifDireccion.Size = new System.Drawing.Size(150, 20);
+            this.txtEdifDireccion.TabIndex = 2;
             // 
             // txtEdifNombre
             // 
-            this.txtEdifNombre.Location = new System.Drawing.Point(89, 73);
+            this.txtEdifNombre.Location = new System.Drawing.Point(89, 25);
             this.txtEdifNombre.Name = "txtEdifNombre";
-            this.txtEdifNombre.Size = new System.Drawing.Size(172, 20);
-            this.txtEdifNombre.TabIndex = 2;
+            this.txtEdifNombre.Size = new System.Drawing.Size(150, 20);
+            this.txtEdifNombre.TabIndex = 1;
             // 
             // txtEdifTelefono
             // 
-            this.txtEdifTelefono.Location = new System.Drawing.Point(89, 190);
+            this.txtEdifTelefono.Location = new System.Drawing.Point(89, 183);
             this.txtEdifTelefono.Name = "txtEdifTelefono";
-            this.txtEdifTelefono.Size = new System.Drawing.Size(172, 20);
-            this.txtEdifTelefono.TabIndex = 5;
+            this.txtEdifTelefono.Size = new System.Drawing.Size(150, 20);
+            this.txtEdifTelefono.TabIndex = 4;
             // 
             // btnEdifConfirmar
             // 
-            this.btnEdifConfirmar.Location = new System.Drawing.Point(78, 236);
+            this.btnEdifConfirmar.Location = new System.Drawing.Point(73, 229);
             this.btnEdifConfirmar.Name = "btnEdifConfirmar";
             this.btnEdifConfirmar.Size = new System.Drawing.Size(103, 23);
-            this.btnEdifConfirmar.TabIndex = 6;
+            this.btnEdifConfirmar.TabIndex = 5;
             this.btnEdifConfirmar.Text = "Confirmar Datos";
             this.btnEdifConfirmar.UseVisualStyleBackColor = true;
             this.btnEdifConfirmar.Click += new System.EventHandler(this.btnEdifConfirmar_Click);
+            // 
+            // dgvEdificio
+            // 
+            this.dgvEdificio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEdificio.Location = new System.Drawing.Point(258, 13);
+            this.dgvEdificio.Name = "dgvEdificio";
+            this.dgvEdificio.Size = new System.Drawing.Size(514, 203);
+            this.dgvEdificio.TabIndex = 8;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(346, 229);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 6;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(617, 229);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 7;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // cmbEdifAdmin
+            // 
+            this.cmbEdifAdmin.FormattingEnabled = true;
+            this.cmbEdifAdmin.Location = new System.Drawing.Point(88, 132);
+            this.cmbEdifAdmin.Name = "cmbEdifAdmin";
+            this.cmbEdifAdmin.Size = new System.Drawing.Size(151, 21);
+            this.cmbEdifAdmin.TabIndex = 3;
             // 
             // FrmEdificio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(284, 280);
+            this.ClientSize = new System.Drawing.Size(784, 265);
+            this.Controls.Add(this.cmbEdifAdmin);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.dgvEdificio);
             this.Controls.Add(this.btnEdifConfirmar);
             this.Controls.Add(this.txtEdifTelefono);
             this.Controls.Add(this.txtEdifNombre);
-            this.Controls.Add(this.txtEdifAdminitrador);
             this.Controls.Add(this.txtEdifDireccion);
-            this.Controls.Add(this.txtEdifCodigo);
             this.Controls.Add(this.lblEdifTelefono);
             this.Controls.Add(this.lblEdifAdministrador);
             this.Controls.Add(this.lblEdifDireccion);
             this.Controls.Add(this.lblEdifNombre);
-            this.Controls.Add(this.lblEdifCodigo);
             this.MaximizeBox = false;
             this.Name = "FrmEdificio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alta Edificio";
             this.Load += new System.EventHandler(this.FrmEdificio_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEdificio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,16 +177,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblEdifCodigo;
         private System.Windows.Forms.Label lblEdifNombre;
         private System.Windows.Forms.Label lblEdifDireccion;
         private System.Windows.Forms.Label lblEdifAdministrador;
         private System.Windows.Forms.Label lblEdifTelefono;
-        private System.Windows.Forms.TextBox txtEdifCodigo;
         private System.Windows.Forms.TextBox txtEdifDireccion;
-        private System.Windows.Forms.TextBox txtEdifAdminitrador;
         private System.Windows.Forms.TextBox txtEdifNombre;
         private System.Windows.Forms.TextBox txtEdifTelefono;
         private System.Windows.Forms.Button btnEdifConfirmar;
+        private System.Windows.Forms.DataGridView dgvEdificio;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.ComboBox cmbEdifAdmin;
     }
 }

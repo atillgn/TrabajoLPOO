@@ -102,7 +102,7 @@
             this.dtpDesde.Location = new System.Drawing.Point(100, 94);
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(290, 20);
-            this.dtpDesde.TabIndex = 6;
+            this.dtpDesde.TabIndex = 4;
             this.dtpDesde.ValueChanged += new System.EventHandler(this.dtpDesde_ValueChanged);
             // 
             // dtpHasta
@@ -110,7 +110,7 @@
             this.dtpHasta.Location = new System.Drawing.Point(100, 121);
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(290, 20);
-            this.dtpHasta.TabIndex = 7;
+            this.dtpHasta.TabIndex = 5;
             this.dtpHasta.ValueChanged += new System.EventHandler(this.dtpHasta_ValueChanged);
             // 
             // label3
@@ -136,7 +136,7 @@
             this.txtPrecioFinal.Location = new System.Drawing.Point(100, 147);
             this.txtPrecioFinal.Name = "txtPrecioFinal";
             this.txtPrecioFinal.Size = new System.Drawing.Size(290, 20);
-            this.txtPrecioFinal.TabIndex = 10;
+            this.txtPrecioFinal.TabIndex = 6;
             // 
             // label5
             // 
@@ -152,7 +152,7 @@
             this.btnAlquilerConfirmar.Location = new System.Drawing.Point(315, 181);
             this.btnAlquilerConfirmar.Name = "btnAlquilerConfirmar";
             this.btnAlquilerConfirmar.Size = new System.Drawing.Size(75, 23);
-            this.btnAlquilerConfirmar.TabIndex = 12;
+            this.btnAlquilerConfirmar.TabIndex = 7;
             this.btnAlquilerConfirmar.Text = "Registrar";
             this.btnAlquilerConfirmar.UseVisualStyleBackColor = true;
             this.btnAlquilerConfirmar.Click += new System.EventHandler(this.btnAlquilerConfirmar_Click);
@@ -162,7 +162,7 @@
             this.btnAlquilerMostrar.Location = new System.Drawing.Point(15, 181);
             this.btnAlquilerMostrar.Name = "btnAlquilerMostrar";
             this.btnAlquilerMostrar.Size = new System.Drawing.Size(128, 23);
-            this.btnAlquilerMostrar.TabIndex = 13;
+            this.btnAlquilerMostrar.TabIndex = 8;
             this.btnAlquilerMostrar.Text = "Registro de Alquileres";
             this.btnAlquilerMostrar.UseVisualStyleBackColor = true;
             this.btnAlquilerMostrar.Click += new System.EventHandler(this.btnAlquilerMostrar_Click);

@@ -52,7 +52,7 @@
             this.dgvAlquileres.Location = new System.Drawing.Point(12, 80);
             this.dgvAlquileres.Name = "dgvAlquileres";
             this.dgvAlquileres.Size = new System.Drawing.Size(1003, 247);
-            this.dgvAlquileres.TabIndex = 0;
+            this.dgvAlquileres.TabIndex = 9;
             // 
             // alquilerBindingSource
             // 
@@ -74,7 +74,7 @@
             this.cmbEdifList.Location = new System.Drawing.Point(78, 24);
             this.cmbEdifList.Name = "cmbEdifList";
             this.cmbEdifList.Size = new System.Drawing.Size(200, 21);
-            this.cmbEdifList.TabIndex = 1;
+            this.cmbEdifList.TabIndex = 2;
             // 
             // dtpDesde
             // 
@@ -98,7 +98,7 @@
             this.cmbAlqTipoDpto.Location = new System.Drawing.Point(815, 24);
             this.cmbAlqTipoDpto.Name = "cmbAlqTipoDpto";
             this.cmbAlqTipoDpto.Size = new System.Drawing.Size(200, 21);
-            this.cmbAlqTipoDpto.TabIndex = 6;
+            this.cmbAlqTipoDpto.TabIndex = 7;
             // 
             // btnAlqBuscar
             // 
@@ -116,7 +116,7 @@
             this.ckbAlqEdif.Location = new System.Drawing.Point(12, 26);
             this.ckbAlqEdif.Name = "ckbAlqEdif";
             this.ckbAlqEdif.Size = new System.Drawing.Size(60, 17);
-            this.ckbAlqEdif.TabIndex = 9;
+            this.ckbAlqEdif.TabIndex = 1;
             this.ckbAlqEdif.Text = "Edificio";
             this.ckbAlqEdif.UseVisualStyleBackColor = true;
             this.ckbAlqEdif.CheckedChanged += new System.EventHandler(this.ckbAlqEdif_CheckedChanged);
@@ -127,7 +127,7 @@
             this.ckbAlqRango.Location = new System.Drawing.Point(325, 26);
             this.ckbAlqRango.Name = "ckbAlqRango";
             this.ckbAlqRango.Size = new System.Drawing.Size(108, 17);
-            this.ckbAlqRango.TabIndex = 10;
+            this.ckbAlqRango.TabIndex = 3;
             this.ckbAlqRango.Text = "Rango de fechas";
             this.ckbAlqRango.UseVisualStyleBackColor = true;
             this.ckbAlqRango.CheckedChanged += new System.EventHandler(this.ckbAlqRango_CheckedChanged);
@@ -138,7 +138,7 @@
             this.ckbAlqDpto.Location = new System.Drawing.Point(677, 26);
             this.ckbAlqDpto.Name = "ckbAlqDpto";
             this.ckbAlqDpto.Size = new System.Drawing.Size(132, 17);
-            this.ckbAlqDpto.TabIndex = 11;
+            this.ckbAlqDpto.TabIndex = 6;
             this.ckbAlqDpto.Text = "Tipo de Departamento";
             this.ckbAlqDpto.UseVisualStyleBackColor = true;
             this.ckbAlqDpto.CheckedChanged += new System.EventHandler(this.ckbAlqDpto_CheckedChanged);

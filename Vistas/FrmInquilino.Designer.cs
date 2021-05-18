@@ -49,21 +49,21 @@
             this.txtInqNombre.Location = new System.Drawing.Point(527, 46);
             this.txtInqNombre.Name = "txtInqNombre";
             this.txtInqNombre.Size = new System.Drawing.Size(115, 20);
-            this.txtInqNombre.TabIndex = 2;
+            this.txtInqNombre.TabIndex = 1;
             // 
             // txtInqApellido
             // 
             this.txtInqApellido.Location = new System.Drawing.Point(527, 100);
             this.txtInqApellido.Name = "txtInqApellido";
             this.txtInqApellido.Size = new System.Drawing.Size(115, 20);
-            this.txtInqApellido.TabIndex = 3;
+            this.txtInqApellido.TabIndex = 2;
             // 
             // txtInqTelefono
             // 
             this.txtInqTelefono.Location = new System.Drawing.Point(527, 155);
             this.txtInqTelefono.Name = "txtInqTelefono";
             this.txtInqTelefono.Size = new System.Drawing.Size(115, 20);
-            this.txtInqTelefono.TabIndex = 4;
+            this.txtInqTelefono.TabIndex = 3;
             // 
             // lblInqTelefono
             // 
@@ -97,7 +97,7 @@
             this.btnInqConfirmar.Location = new System.Drawing.Point(513, 200);
             this.btnInqConfirmar.Name = "btnInqConfirmar";
             this.btnInqConfirmar.Size = new System.Drawing.Size(75, 23);
-            this.btnInqConfirmar.TabIndex = 5;
+            this.btnInqConfirmar.TabIndex = 4;
             this.btnInqConfirmar.Text = "Confirmar ";
             this.btnInqConfirmar.UseVisualStyleBackColor = true;
             this.btnInqConfirmar.Click += new System.EventHandler(this.btnInqConfirmar_Click);
@@ -107,7 +107,7 @@
             this.btnInqEliminar.Location = new System.Drawing.Point(140, 229);
             this.btnInqEliminar.Name = "btnInqEliminar";
             this.btnInqEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnInqEliminar.TabIndex = 8;
+            this.btnInqEliminar.TabIndex = 6;
             this.btnInqEliminar.Text = "Eliminar";
             this.btnInqEliminar.UseVisualStyleBackColor = true;
             this.btnInqEliminar.Click += new System.EventHandler(this.btnInqEliminar_Click);
@@ -117,7 +117,7 @@
             this.btnInqEditar.Location = new System.Drawing.Point(12, 229);
             this.btnInqEditar.Name = "btnInqEditar";
             this.btnInqEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnInqEditar.TabIndex = 9;
+            this.btnInqEditar.TabIndex = 5;
             this.btnInqEditar.Text = "Editar";
             this.btnInqEditar.UseVisualStyleBackColor = true;
             this.btnInqEditar.Click += new System.EventHandler(this.btnInqEditar_Click);
@@ -135,14 +135,14 @@
             this.txtBusqueda.Location = new System.Drawing.Point(12, 12);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(356, 20);
-            this.txtBusqueda.TabIndex = 11;
+            this.txtBusqueda.TabIndex = 7;
             // 
             // btnBusqueda
             // 
             this.btnBusqueda.Location = new System.Drawing.Point(379, 10);
             this.btnBusqueda.Name = "btnBusqueda";
             this.btnBusqueda.Size = new System.Drawing.Size(75, 23);
-            this.btnBusqueda.TabIndex = 12;
+            this.btnBusqueda.TabIndex = 8;
             this.btnBusqueda.Text = "Buscar";
             this.btnBusqueda.UseVisualStyleBackColor = true;
             this.btnBusqueda.Click += new System.EventHandler(this.btnBusqueda_Click);
@@ -152,7 +152,7 @@
             this.btnInqOrdenar.Location = new System.Drawing.Point(324, 229);
             this.btnInqOrdenar.Name = "btnInqOrdenar";
             this.btnInqOrdenar.Size = new System.Drawing.Size(130, 23);
-            this.btnInqOrdenar.TabIndex = 13;
+            this.btnInqOrdenar.TabIndex = 9;
             this.btnInqOrdenar.Text = "Ordenar por Apellido";
             this.btnInqOrdenar.UseVisualStyleBackColor = true;
             this.btnInqOrdenar.Click += new System.EventHandler(this.btnInqOrdenar_Click);

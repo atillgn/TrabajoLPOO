@@ -33,7 +33,6 @@ namespace ClasesBase
 
         public static DataTable ConsultarAmbiente()
         {
-
             SqlConnection con = connect();
 
             SqlCommand cmd = new SqlCommand();
@@ -48,7 +47,21 @@ namespace ClasesBase
             return dt;
         }
 
+        public static DataTable list_dpto() 
+        {
+            SqlConnection con = connect();
 
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "MostrarDepartamentos";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
 
         public static void insert_depto(Departamento d)
         {

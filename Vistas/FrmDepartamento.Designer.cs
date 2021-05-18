@@ -158,7 +158,7 @@
             this.txtDptoNumero.Location = new System.Drawing.Point(104, 114);
             this.txtDptoNumero.Name = "txtDptoNumero";
             this.txtDptoNumero.Size = new System.Drawing.Size(155, 20);
-            this.txtDptoNumero.TabIndex = 4;
+            this.txtDptoNumero.TabIndex = 3;
             this.txtDptoNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDptoNumero_KeyPress);
             // 
             // txtDptoAmbiente
@@ -190,7 +190,7 @@
             this.txtDptoPrecio.Location = new System.Drawing.Point(104, 271);
             this.txtDptoPrecio.Name = "txtDptoPrecio";
             this.txtDptoPrecio.Size = new System.Drawing.Size(155, 20);
-            this.txtDptoPrecio.TabIndex = 8;
+            this.txtDptoPrecio.TabIndex = 9;
             this.txtDptoPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDptoPrecio_KeyPress);
             // 
             // cmbDptoDisposicion
@@ -207,14 +207,14 @@
             this.cmbDptoTipo.Location = new System.Drawing.Point(104, 84);
             this.cmbDptoTipo.Name = "cmbDptoTipo";
             this.cmbDptoTipo.Size = new System.Drawing.Size(155, 21);
-            this.cmbDptoTipo.TabIndex = 3;
+            this.cmbDptoTipo.TabIndex = 2;
             // 
             // btnDptoConfirmar
             // 
             this.btnDptoConfirmar.Location = new System.Drawing.Point(79, 297);
             this.btnDptoConfirmar.Name = "btnDptoConfirmar";
             this.btnDptoConfirmar.Size = new System.Drawing.Size(106, 23);
-            this.btnDptoConfirmar.TabIndex = 9;
+            this.btnDptoConfirmar.TabIndex = 10;
             this.btnDptoConfirmar.Text = "Confirmar Datos";
             this.btnDptoConfirmar.UseVisualStyleBackColor = true;
             this.btnDptoConfirmar.Click += new System.EventHandler(this.btnDptoConfirmar_Click);
@@ -225,8 +225,7 @@
             this.dgvDepartamentos.Location = new System.Drawing.Point(276, 45);
             this.dgvDepartamentos.Name = "dgvDepartamentos";
             this.dgvDepartamentos.Size = new System.Drawing.Size(573, 246);
-            this.dgvDepartamentos.TabIndex = 11;
-            
+            this.dgvDepartamentos.TabIndex = 15;
             // 
             // optAmbiente
             // 
@@ -234,7 +233,7 @@
             this.optAmbiente.Location = new System.Drawing.Point(384, 22);
             this.optAmbiente.Name = "optAmbiente";
             this.optAmbiente.Size = new System.Drawing.Size(69, 17);
-            this.optAmbiente.TabIndex = 12;
+            this.optAmbiente.TabIndex = 13;
             this.optAmbiente.TabStop = true;
             this.optAmbiente.Text = "Ambiente";
             this.optAmbiente.UseVisualStyleBackColor = true;
@@ -246,7 +245,7 @@
             this.optDisposicion.Location = new System.Drawing.Point(667, 22);
             this.optDisposicion.Name = "optDisposicion";
             this.optDisposicion.Size = new System.Drawing.Size(79, 17);
-            this.optDisposicion.TabIndex = 13;
+            this.optDisposicion.TabIndex = 14;
             this.optDisposicion.TabStop = true;
             this.optDisposicion.Text = "Disposicion";
             this.optDisposicion.UseVisualStyleBackColor = true;
@@ -257,7 +256,7 @@
             this.btnDptoEliminar.Location = new System.Drawing.Point(384, 296);
             this.btnDptoEliminar.Name = "btnDptoEliminar";
             this.btnDptoEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnDptoEliminar.TabIndex = 14;
+            this.btnDptoEliminar.TabIndex = 12;
             this.btnDptoEliminar.Text = "Eliminar";
             this.btnDptoEliminar.UseVisualStyleBackColor = true;
             this.btnDptoEliminar.Click += new System.EventHandler(this.btnDptoEliminar_Click);
@@ -267,7 +266,7 @@
             this.btnDptoeditar.Location = new System.Drawing.Point(667, 296);
             this.btnDptoeditar.Name = "btnDptoeditar";
             this.btnDptoeditar.Size = new System.Drawing.Size(75, 23);
-            this.btnDptoeditar.TabIndex = 15;
+            this.btnDptoeditar.TabIndex = 11;
             this.btnDptoeditar.Text = "Editar";
             this.btnDptoeditar.UseVisualStyleBackColor = true;
             this.btnDptoeditar.Click += new System.EventHandler(this.btnDptoeditar_Click);
@@ -278,7 +277,7 @@
             this.cmbEdifico.Location = new System.Drawing.Point(104, 50);
             this.cmbEdifico.Name = "cmbEdifico";
             this.cmbEdifico.Size = new System.Drawing.Size(155, 21);
-            this.cmbEdifico.TabIndex = 16;
+            this.cmbEdifico.TabIndex = 1;
             // 
             // FrmDepartamento
             // 
