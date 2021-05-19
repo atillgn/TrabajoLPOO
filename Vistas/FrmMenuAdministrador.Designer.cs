@@ -86,11 +86,12 @@
             this.cmbDptoTipo = new System.Windows.Forms.ComboBox();
             this.cmbDptoEdificio = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnDepartamentos = new System.Windows.Forms.RadioButton();
-            this.btnEdificios = new System.Windows.Forms.RadioButton();
-            this.btnUsuarios = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnDpto = new System.Windows.Forms.Button();
+            this.btnEdif = new System.Windows.Forms.Button();
+            this.btnUser = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
@@ -104,6 +105,7 @@
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartamentos)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -148,9 +150,9 @@
             this.panel4.Controls.Add(this.btnUserEliminar);
             this.panel4.Controls.Add(this.btnUserEditar);
             this.panel4.Controls.Add(this.btnUserBuscar);
-            this.panel4.Location = new System.Drawing.Point(105, 47);
+            this.panel4.Location = new System.Drawing.Point(195, 49);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(819, 306);
+            this.panel4.Size = new System.Drawing.Size(807, 306);
             this.panel4.TabIndex = 14;
             // 
             // txtUserBuscar
@@ -162,21 +164,21 @@
             // 
             // txtUserNombreApellido
             // 
-            this.txtUserNombreApellido.Location = new System.Drawing.Point(678, 208);
+            this.txtUserNombreApellido.Location = new System.Drawing.Point(666, 211);
             this.txtUserNombreApellido.Name = "txtUserNombreApellido";
             this.txtUserNombreApellido.Size = new System.Drawing.Size(121, 20);
             this.txtUserNombreApellido.TabIndex = 12;
             // 
             // txtUserContra
             // 
-            this.txtUserContra.Location = new System.Drawing.Point(679, 155);
+            this.txtUserContra.Location = new System.Drawing.Point(667, 158);
             this.txtUserContra.Name = "txtUserContra";
             this.txtUserContra.Size = new System.Drawing.Size(120, 20);
             this.txtUserContra.TabIndex = 11;
             // 
             // txtUserNombreUsuario
             // 
-            this.txtUserNombreUsuario.Location = new System.Drawing.Point(679, 101);
+            this.txtUserNombreUsuario.Location = new System.Drawing.Point(667, 104);
             this.txtUserNombreUsuario.Name = "txtUserNombreUsuario";
             this.txtUserNombreUsuario.Size = new System.Drawing.Size(121, 20);
             this.txtUserNombreUsuario.TabIndex = 10;
@@ -184,7 +186,7 @@
             // lblUserNombreApellido
             // 
             this.lblUserNombreApellido.AutoSize = true;
-            this.lblUserNombreApellido.Location = new System.Drawing.Point(572, 211);
+            this.lblUserNombreApellido.Location = new System.Drawing.Point(560, 214);
             this.lblUserNombreApellido.Name = "lblUserNombreApellido";
             this.lblUserNombreApellido.Size = new System.Drawing.Size(95, 13);
             this.lblUserNombreApellido.TabIndex = 9;
@@ -193,7 +195,7 @@
             // lblUserContra
             // 
             this.lblUserContra.AutoSize = true;
-            this.lblUserContra.Location = new System.Drawing.Point(572, 158);
+            this.lblUserContra.Location = new System.Drawing.Point(560, 161);
             this.lblUserContra.Name = "lblUserContra";
             this.lblUserContra.Size = new System.Drawing.Size(64, 13);
             this.lblUserContra.TabIndex = 8;
@@ -202,7 +204,7 @@
             // lblUserNombreUsuario
             // 
             this.lblUserNombreUsuario.AutoSize = true;
-            this.lblUserNombreUsuario.Location = new System.Drawing.Point(572, 104);
+            this.lblUserNombreUsuario.Location = new System.Drawing.Point(560, 107);
             this.lblUserNombreUsuario.Name = "lblUserNombreUsuario";
             this.lblUserNombreUsuario.Size = new System.Drawing.Size(101, 13);
             this.lblUserNombreUsuario.TabIndex = 7;
@@ -211,7 +213,7 @@
             // lblUserRol
             // 
             this.lblUserRol.AutoSize = true;
-            this.lblUserRol.Location = new System.Drawing.Point(572, 53);
+            this.lblUserRol.Location = new System.Drawing.Point(560, 56);
             this.lblUserRol.Name = "lblUserRol";
             this.lblUserRol.Size = new System.Drawing.Size(26, 13);
             this.lblUserRol.TabIndex = 6;
@@ -228,14 +230,14 @@
             // cmbUserRol
             // 
             this.cmbUserRol.FormattingEnabled = true;
-            this.cmbUserRol.Location = new System.Drawing.Point(679, 53);
+            this.cmbUserRol.Location = new System.Drawing.Point(667, 56);
             this.cmbUserRol.Name = "cmbUserRol";
             this.cmbUserRol.Size = new System.Drawing.Size(121, 21);
             this.cmbUserRol.TabIndex = 4;
             // 
             // btnUserRegistrar
             // 
-            this.btnUserRegistrar.Location = new System.Drawing.Point(630, 267);
+            this.btnUserRegistrar.Location = new System.Drawing.Point(617, 267);
             this.btnUserRegistrar.Name = "btnUserRegistrar";
             this.btnUserRegistrar.Size = new System.Drawing.Size(100, 23);
             this.btnUserRegistrar.TabIndex = 3;
@@ -301,7 +303,7 @@
             this.panel5.Controls.Add(this.txtEdifDireccion);
             this.panel5.Controls.Add(this.txtEdifNombre);
             this.panel5.Controls.Add(this.dgvEdificio);
-            this.panel5.Location = new System.Drawing.Point(136, 56);
+            this.panel5.Location = new System.Drawing.Point(226, 66);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(754, 275);
             this.panel5.TabIndex = 13;
@@ -449,15 +451,15 @@
             this.panel6.Controls.Add(this.cmbDptoDisposicion);
             this.panel6.Controls.Add(this.cmbDptoTipo);
             this.panel6.Controls.Add(this.cmbDptoEdificio);
-            this.panel6.Location = new System.Drawing.Point(52, 39);
+            this.panel6.Location = new System.Drawing.Point(200, 39);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(916, 323);
+            this.panel6.Size = new System.Drawing.Size(799, 323);
             this.panel6.TabIndex = 25;
             // 
             // optDisposicion
             // 
             this.optDisposicion.AutoSize = true;
-            this.optDisposicion.Location = new System.Drawing.Point(704, 15);
+            this.optDisposicion.Location = new System.Drawing.Point(630, 15);
             this.optDisposicion.Name = "optDisposicion";
             this.optDisposicion.Size = new System.Drawing.Size(79, 17);
             this.optDisposicion.TabIndex = 23;
@@ -468,7 +470,7 @@
             // 
             // btnDptoEliminar
             // 
-            this.btnDptoEliminar.Location = new System.Drawing.Point(817, 286);
+            this.btnDptoEliminar.Location = new System.Drawing.Point(705, 286);
             this.btnDptoEliminar.Name = "btnDptoEliminar";
             this.btnDptoEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnDptoEliminar.TabIndex = 21;
@@ -490,7 +492,7 @@
             // 
             // btnDptoEditar
             // 
-            this.btnDptoEditar.Location = new System.Drawing.Point(708, 286);
+            this.btnDptoEditar.Location = new System.Drawing.Point(595, 286);
             this.btnDptoEditar.Name = "btnDptoEditar";
             this.btnDptoEditar.Size = new System.Drawing.Size(75, 23);
             this.btnDptoEditar.TabIndex = 20;
@@ -503,12 +505,12 @@
             this.dgvDepartamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDepartamentos.Location = new System.Drawing.Point(274, 47);
             this.dgvDepartamentos.Name = "dgvDepartamentos";
-            this.dgvDepartamentos.Size = new System.Drawing.Size(618, 229);
+            this.dgvDepartamentos.Size = new System.Drawing.Size(506, 229);
             this.dgvDepartamentos.TabIndex = 19;
             // 
             // btnDptoRegistrar
             // 
-            this.btnDptoRegistrar.Location = new System.Drawing.Point(88, 279);
+            this.btnDptoRegistrar.Location = new System.Drawing.Point(87, 286);
             this.btnDptoRegistrar.Name = "btnDptoRegistrar";
             this.btnDptoRegistrar.Size = new System.Drawing.Size(94, 23);
             this.btnDptoRegistrar.TabIndex = 18;
@@ -671,104 +673,106 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
+            this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Controls.Add(this.btnSalir);
-            this.panel1.Controls.Add(this.btnDepartamentos);
-            this.panel1.Controls.Add(this.btnEdificios);
-            this.panel1.Controls.Add(this.btnUsuarios);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1029, 24);
             this.panel1.TabIndex = 1;
             // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(25, 5);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(100, 13);
+            this.lblTitulo.TabIndex = 8;
+            this.lblTitulo.Text = "Menu Administrador";
+            // 
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.Location = new System.Drawing.Point(954, 1);
+            this.btnSalir.BackColor = System.Drawing.Color.Navy;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Location = new System.Drawing.Point(999, 0);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 6;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // btnDepartamentos
-            // 
-            this.btnDepartamentos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnDepartamentos.Appearance = System.Windows.Forms.Appearance.Button;
-            this.btnDepartamentos.AutoSize = true;
-            this.btnDepartamentos.FlatAppearance.BorderSize = 0;
-            this.btnDepartamentos.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
-            this.btnDepartamentos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
-            this.btnDepartamentos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
-            this.btnDepartamentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDepartamentos.ForeColor = System.Drawing.Color.White;
-            this.btnDepartamentos.Location = new System.Drawing.Point(407, 1);
-            this.btnDepartamentos.Name = "btnDepartamentos";
-            this.btnDepartamentos.Size = new System.Drawing.Size(89, 23);
-            this.btnDepartamentos.TabIndex = 5;
-            this.btnDepartamentos.TabStop = true;
-            this.btnDepartamentos.Text = "Departamentos";
-            this.btnDepartamentos.UseVisualStyleBackColor = true;
-            this.btnDepartamentos.CheckedChanged += new System.EventHandler(this.btnDepartamentos_CheckedChanged);
-            // 
-            // btnEdificios
-            // 
-            this.btnEdificios.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnEdificios.Appearance = System.Windows.Forms.Appearance.Button;
-            this.btnEdificios.AutoSize = true;
-            this.btnEdificios.FlatAppearance.BorderSize = 0;
-            this.btnEdificios.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
-            this.btnEdificios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
-            this.btnEdificios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
-            this.btnEdificios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdificios.ForeColor = System.Drawing.Color.White;
-            this.btnEdificios.Location = new System.Drawing.Point(229, 1);
-            this.btnEdificios.Name = "btnEdificios";
-            this.btnEdificios.Size = new System.Drawing.Size(56, 23);
-            this.btnEdificios.TabIndex = 4;
-            this.btnEdificios.TabStop = true;
-            this.btnEdificios.Text = "Edificios";
-            this.btnEdificios.UseVisualStyleBackColor = true;
-            this.btnEdificios.CheckedChanged += new System.EventHandler(this.btnEdificios_CheckedChanged);
-            // 
-            // btnUsuarios
-            // 
-            this.btnUsuarios.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnUsuarios.Appearance = System.Windows.Forms.Appearance.Button;
-            this.btnUsuarios.AutoSize = true;
-            this.btnUsuarios.FlatAppearance.BorderSize = 0;
-            this.btnUsuarios.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
-            this.btnUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
-            this.btnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
-            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuarios.ForeColor = System.Drawing.Color.White;
-            this.btnUsuarios.Location = new System.Drawing.Point(62, 1);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(58, 23);
-            this.btnUsuarios.TabIndex = 3;
-            this.btnUsuarios.TabStop = true;
-            this.btnUsuarios.Text = "Usuarios";
-            this.btnUsuarios.UseVisualStyleBackColor = true;
-            this.btnUsuarios.CheckedChanged += new System.EventHandler(this.btnUsuarios_CheckedChanged);
+            this.btnSalir.Size = new System.Drawing.Size(30, 23);
+            this.btnSalir.TabIndex = 7;
+            this.btnSalir.Text = "X";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
+            this.panel2.Controls.Add(this.btnDpto);
+            this.panel2.Controls.Add(this.btnEdif);
+            this.panel2.Controls.Add(this.btnUser);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 24);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(8, 405);
+            this.panel2.Size = new System.Drawing.Size(183, 405);
             this.panel2.TabIndex = 2;
+            // 
+            // btnDpto
+            // 
+            this.btnDpto.FlatAppearance.BorderSize = 0;
+            this.btnDpto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnDpto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnDpto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDpto.ForeColor = System.Drawing.Color.White;
+            this.btnDpto.Location = new System.Drawing.Point(0, 162);
+            this.btnDpto.Name = "btnDpto";
+            this.btnDpto.Size = new System.Drawing.Size(183, 52);
+            this.btnDpto.TabIndex = 16;
+            this.btnDpto.Text = "Departamento";
+            this.btnDpto.UseVisualStyleBackColor = true;
+            this.btnDpto.Click += new System.EventHandler(this.btnDpto_Click);
+            // 
+            // btnEdif
+            // 
+            this.btnEdif.FlatAppearance.BorderSize = 0;
+            this.btnEdif.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnEdif.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnEdif.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdif.ForeColor = System.Drawing.Color.White;
+            this.btnEdif.Location = new System.Drawing.Point(0, 104);
+            this.btnEdif.Name = "btnEdif";
+            this.btnEdif.Size = new System.Drawing.Size(183, 52);
+            this.btnEdif.TabIndex = 15;
+            this.btnEdif.Text = "Edificio";
+            this.btnEdif.UseVisualStyleBackColor = true;
+            this.btnEdif.Click += new System.EventHandler(this.btnEdif_Click);
+            // 
+            // btnUser
+            // 
+            this.btnUser.FlatAppearance.BorderSize = 0;
+            this.btnUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUser.ForeColor = System.Drawing.Color.White;
+            this.btnUser.Location = new System.Drawing.Point(0, 46);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(183, 52);
+            this.btnUser.TabIndex = 14;
+            this.btnUser.Text = "Usuario";
+            this.btnUser.UseVisualStyleBackColor = true;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(8, 421);
+            this.panel3.Location = new System.Drawing.Point(183, 421);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1021, 8);
+            this.panel3.Size = new System.Drawing.Size(846, 8);
             this.panel3.TabIndex = 3;
             // 
             // panel7
@@ -793,6 +797,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMenuAdministrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Administrador";
@@ -812,6 +817,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartamentos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -823,10 +829,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RadioButton btnUsuarios;
-        private System.Windows.Forms.RadioButton btnEdificios;
-        private System.Windows.Forms.RadioButton btnDepartamentos;
-        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtUserBuscar;
         private System.Windows.Forms.TextBox txtUserNombreApellido;
@@ -883,5 +885,10 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button btnDpto;
+        private System.Windows.Forms.Button btnEdif;
+        private System.Windows.Forms.Button btnUser;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }

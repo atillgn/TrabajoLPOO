@@ -49,14 +49,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlquileres)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alquilerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosDataSet1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvAlquileres
             // 
             this.dgvAlquileres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlquileres.Location = new System.Drawing.Point(36, 97);
+            this.dgvAlquileres.Location = new System.Drawing.Point(36, 108);
             this.dgvAlquileres.Name = "dgvAlquileres";
-            this.dgvAlquileres.Size = new System.Drawing.Size(1003, 247);
+            this.dgvAlquileres.Size = new System.Drawing.Size(1003, 236);
             this.dgvAlquileres.TabIndex = 9;
             // 
             // alquilerBindingSource
@@ -76,14 +77,14 @@
             // cmbEdifList
             // 
             this.cmbEdifList.FormattingEnabled = true;
-            this.cmbEdifList.Location = new System.Drawing.Point(102, 41);
+            this.cmbEdifList.Location = new System.Drawing.Point(102, 52);
             this.cmbEdifList.Name = "cmbEdifList";
             this.cmbEdifList.Size = new System.Drawing.Size(200, 21);
             this.cmbEdifList.TabIndex = 2;
             // 
             // dtpDesde
             // 
-            this.dtpDesde.Location = new System.Drawing.Point(463, 29);
+            this.dtpDesde.Location = new System.Drawing.Point(463, 40);
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(200, 20);
             this.dtpDesde.TabIndex = 4;
@@ -91,7 +92,7 @@
             // 
             // dtpHasta
             // 
-            this.dtpHasta.Location = new System.Drawing.Point(463, 55);
+            this.dtpHasta.Location = new System.Drawing.Point(463, 66);
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(200, 20);
             this.dtpHasta.TabIndex = 5;
@@ -100,14 +101,14 @@
             // cmbAlqTipoDpto
             // 
             this.cmbAlqTipoDpto.FormattingEnabled = true;
-            this.cmbAlqTipoDpto.Location = new System.Drawing.Point(839, 41);
+            this.cmbAlqTipoDpto.Location = new System.Drawing.Point(839, 52);
             this.cmbAlqTipoDpto.Name = "cmbAlqTipoDpto";
             this.cmbAlqTipoDpto.Size = new System.Drawing.Size(200, 21);
             this.cmbAlqTipoDpto.TabIndex = 7;
             // 
             // btnAlqBuscar
             // 
-            this.btnAlqBuscar.Location = new System.Drawing.Point(911, 68);
+            this.btnAlqBuscar.Location = new System.Drawing.Point(911, 79);
             this.btnAlqBuscar.Name = "btnAlqBuscar";
             this.btnAlqBuscar.Size = new System.Drawing.Size(128, 23);
             this.btnAlqBuscar.TabIndex = 8;
@@ -118,7 +119,7 @@
             // ckbAlqEdif
             // 
             this.ckbAlqEdif.AutoSize = true;
-            this.ckbAlqEdif.Location = new System.Drawing.Point(36, 43);
+            this.ckbAlqEdif.Location = new System.Drawing.Point(36, 54);
             this.ckbAlqEdif.Name = "ckbAlqEdif";
             this.ckbAlqEdif.Size = new System.Drawing.Size(60, 17);
             this.ckbAlqEdif.TabIndex = 1;
@@ -129,7 +130,7 @@
             // ckbAlqRango
             // 
             this.ckbAlqRango.AutoSize = true;
-            this.ckbAlqRango.Location = new System.Drawing.Point(349, 43);
+            this.ckbAlqRango.Location = new System.Drawing.Point(349, 54);
             this.ckbAlqRango.Name = "ckbAlqRango";
             this.ckbAlqRango.Size = new System.Drawing.Size(108, 17);
             this.ckbAlqRango.TabIndex = 3;
@@ -140,7 +141,7 @@
             // ckbAlqDpto
             // 
             this.ckbAlqDpto.AutoSize = true;
-            this.ckbAlqDpto.Location = new System.Drawing.Point(701, 43);
+            this.ckbAlqDpto.Location = new System.Drawing.Point(701, 54);
             this.ckbAlqDpto.Name = "ckbAlqDpto";
             this.ckbAlqDpto.Size = new System.Drawing.Size(132, 17);
             this.ckbAlqDpto.TabIndex = 6;
@@ -150,29 +151,30 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
+            this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Controls.Add(this.btnVolver);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1075, 14);
+            this.panel1.Size = new System.Drawing.Size(1075, 23);
             this.panel1.TabIndex = 10;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 14);
+            this.panel2.Location = new System.Drawing.Point(0, 23);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(15, 365);
+            this.panel2.Size = new System.Drawing.Size(15, 356);
             this.panel2.TabIndex = 11;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(1062, 14);
+            this.panel3.Location = new System.Drawing.Point(1062, 23);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(13, 365);
+            this.panel3.Size = new System.Drawing.Size(13, 356);
             this.panel3.TabIndex = 12;
             // 
             // panel4
@@ -186,11 +188,16 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(780, 68);
+            this.btnVolver.FlatAppearance.BorderSize = 0;
+            this.btnVolver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.btnVolver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolver.ForeColor = System.Drawing.Color.White;
+            this.btnVolver.Location = new System.Drawing.Point(998, 0);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(125, 23);
+            this.btnVolver.Size = new System.Drawing.Size(77, 23);
             this.btnVolver.TabIndex = 14;
-            this.btnVolver.Text = "Volver";
+            this.btnVolver.Text = "<--- Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
@@ -201,7 +208,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1075, 379);
             this.ControlBox = false;
-            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -215,6 +221,7 @@
             this.Controls.Add(this.dtpDesde);
             this.Controls.Add(this.cmbEdifList);
             this.Controls.Add(this.dgvAlquileres);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmListAlquiler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Alquileres";
@@ -222,6 +229,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlquileres)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alquilerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosDataSet1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

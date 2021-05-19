@@ -61,12 +61,13 @@
             this.lblAlqDepartamento = new System.Windows.Forms.Label();
             this.lblAlqEdificio = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnAlquiler = new System.Windows.Forms.RadioButton();
-            this.btnInquilino = new System.Windows.Forms.RadioButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnAlq = new System.Windows.Forms.Button();
+            this.btnInq = new System.Windows.Forms.Button();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -74,6 +75,7 @@
             this.tabPage2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -116,7 +118,7 @@
             this.panel2.Controls.Add(this.dgvInquilinos);
             this.panel2.Controls.Add(this.txtBusqueda);
             this.panel2.Controls.Add(this.btnBusqueda);
-            this.panel2.Location = new System.Drawing.Point(125, 46);
+            this.panel2.Location = new System.Drawing.Point(215, 39);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(767, 323);
             this.panel2.TabIndex = 14;
@@ -264,7 +266,7 @@
             this.panel3.Controls.Add(this.lblAlqInquilino);
             this.panel3.Controls.Add(this.lblAlqDepartamento);
             this.panel3.Controls.Add(this.lblAlqEdificio);
-            this.panel3.Location = new System.Drawing.Point(264, 53);
+            this.panel3.Location = new System.Drawing.Point(370, 58);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(492, 296);
             this.panel3.TabIndex = 15;
@@ -394,10 +396,9 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
+            this.panel1.BackColor = System.Drawing.Color.Navy;
             this.panel1.Controls.Add(this.btnSalir);
-            this.panel1.Controls.Add(this.btnAlquiler);
-            this.panel1.Controls.Add(this.btnInquilino);
+            this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -405,63 +406,15 @@
             this.panel1.Size = new System.Drawing.Size(1029, 23);
             this.panel1.TabIndex = 1;
             // 
-            // btnSalir
-            // 
-            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.ForeColor = System.Drawing.Color.Black;
-            this.btnSalir.Location = new System.Drawing.Point(954, 0);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 6;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // btnAlquiler
-            // 
-            this.btnAlquiler.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnAlquiler.Appearance = System.Windows.Forms.Appearance.Button;
-            this.btnAlquiler.AutoSize = true;
-            this.btnAlquiler.FlatAppearance.BorderSize = 0;
-            this.btnAlquiler.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
-            this.btnAlquiler.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
-            this.btnAlquiler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
-            this.btnAlquiler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlquiler.Location = new System.Drawing.Point(230, 0);
-            this.btnAlquiler.Name = "btnAlquiler";
-            this.btnAlquiler.Size = new System.Drawing.Size(62, 23);
-            this.btnAlquiler.TabIndex = 2;
-            this.btnAlquiler.TabStop = true;
-            this.btnAlquiler.Text = "Alquileres";
-            this.btnAlquiler.UseVisualStyleBackColor = true;
-            this.btnAlquiler.CheckedChanged += new System.EventHandler(this.btnAlquiler_CheckedChanged);
-            // 
-            // btnInquilino
-            // 
-            this.btnInquilino.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnInquilino.Appearance = System.Windows.Forms.Appearance.Button;
-            this.btnInquilino.AutoSize = true;
-            this.btnInquilino.FlatAppearance.BorderSize = 0;
-            this.btnInquilino.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
-            this.btnInquilino.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
-            this.btnInquilino.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
-            this.btnInquilino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInquilino.Location = new System.Drawing.Point(56, 0);
-            this.btnInquilino.Name = "btnInquilino";
-            this.btnInquilino.Size = new System.Drawing.Size(61, 23);
-            this.btnInquilino.TabIndex = 1;
-            this.btnInquilino.TabStop = true;
-            this.btnInquilino.Text = "Inquilinos";
-            this.btnInquilino.UseVisualStyleBackColor = true;
-            this.btnInquilino.CheckedChanged += new System.EventHandler(this.btnInquilino_CheckedChanged);
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
+            this.panel4.Controls.Add(this.btnAlq);
+            this.panel4.Controls.Add(this.btnInq);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 23);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(8, 406);
+            this.panel4.Size = new System.Drawing.Size(183, 406);
             this.panel4.TabIndex = 2;
             // 
             // panel5
@@ -477,10 +430,66 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(8, 421);
+            this.panel6.Location = new System.Drawing.Point(183, 421);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1013, 8);
+            this.panel6.Size = new System.Drawing.Size(838, 8);
             this.panel6.TabIndex = 4;
+            // 
+            // btnAlq
+            // 
+            this.btnAlq.FlatAppearance.BorderSize = 0;
+            this.btnAlq.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnAlq.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnAlq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlq.ForeColor = System.Drawing.Color.White;
+            this.btnAlq.Location = new System.Drawing.Point(0, 107);
+            this.btnAlq.Name = "btnAlq";
+            this.btnAlq.Size = new System.Drawing.Size(183, 52);
+            this.btnAlq.TabIndex = 12;
+            this.btnAlq.Text = "Alquiler";
+            this.btnAlq.UseVisualStyleBackColor = true;
+            this.btnAlq.Click += new System.EventHandler(this.btnAlq_Click);
+            // 
+            // btnInq
+            // 
+            this.btnInq.FlatAppearance.BorderSize = 0;
+            this.btnInq.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnInq.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnInq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInq.ForeColor = System.Drawing.Color.White;
+            this.btnInq.Location = new System.Drawing.Point(0, 49);
+            this.btnInq.Name = "btnInq";
+            this.btnInq.Size = new System.Drawing.Size(183, 52);
+            this.btnInq.TabIndex = 11;
+            this.btnInq.Text = "Inquilino";
+            this.btnInq.UseVisualStyleBackColor = true;
+            this.btnInq.Click += new System.EventHandler(this.btnInq_Click);
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Location = new System.Drawing.Point(22, 4);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(81, 13);
+            this.lblTitulo.TabIndex = 7;
+            this.lblTitulo.Text = "Menu Operador";
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.BackColor = System.Drawing.Color.Navy;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Location = new System.Drawing.Point(999, 0);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(30, 23);
+            this.btnSalir.TabIndex = 8;
+            this.btnSalir.Text = "X";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // FrmMenuOperador
             // 
@@ -495,6 +504,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMenuOperador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Operador";
@@ -509,6 +519,7 @@
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -519,9 +530,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RadioButton btnInquilino;
-        private System.Windows.Forms.RadioButton btnAlquiler;
-        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnInqOrdenar;
         private System.Windows.Forms.TextBox txtInqTelefono;
@@ -554,5 +562,9 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button btnAlq;
+        private System.Windows.Forms.Button btnInq;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

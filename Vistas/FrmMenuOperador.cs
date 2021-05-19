@@ -34,11 +34,11 @@ namespace Vistas
         }
 
         //Botones del menu
-        private void btnInquilino_CheckedChanged(object sender, EventArgs e)
+        private void btnInq_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 0;
         }
-        private void btnAlquiler_CheckedChanged(object sender, EventArgs e)
+        private void btnAlq_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 1;
         }

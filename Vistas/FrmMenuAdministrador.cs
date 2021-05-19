@@ -37,19 +37,19 @@ namespace Vistas
         }
 
         //Botones del menu
-        private void btnUsuarios_CheckedChanged(object sender, EventArgs e)
+        private void btnUser_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 0;
         }
-        private void btnEdificios_CheckedChanged(object sender, EventArgs e)
+        private void btnEdif_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 1;
         }
-        private void btnDepartamentos_CheckedChanged(object sender, EventArgs e)
+        private void btnDpto_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 2;
         }
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void btnSalir_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Salir?", "Salir", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
             {

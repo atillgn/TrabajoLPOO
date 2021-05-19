@@ -46,23 +46,23 @@ namespace Vistas
         }
 
         //Botones del menu
-        private void btnInquilino_CheckedChanged(object sender, EventArgs e)
+        private void btnInq_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedIndex= 0;
+            tabControl1.SelectedIndex = 0;
         }
-        private void btnAlquiler_CheckedChanged(object sender, EventArgs e)
+        private void btnAlq_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 1;
         }
-        private void btnUsuarios_CheckedChanged(object sender, EventArgs e)
+        private void btnUser_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 2;
         }
-        private void btnEdificios_CheckedChanged(object sender, EventArgs e)
+        private void btnEdif_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 3;
         }
-        private void btnDepartamentos_CheckedChanged(object sender, EventArgs e)
+        private void btnDpto_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 4;
         }
