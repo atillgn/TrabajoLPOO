@@ -100,7 +100,7 @@
             this.lbl_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Password.ForeColor = System.Drawing.Color.White;
             this.lbl_Password.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbl_Password.Location = new System.Drawing.Point(90, 132);
+            this.lbl_Password.Location = new System.Drawing.Point(90, 139);
             this.lbl_Password.Name = "lbl_Password";
             this.lbl_Password.Size = new System.Drawing.Size(96, 20);
             this.lbl_Password.TabIndex = 3;
@@ -119,7 +119,7 @@
             // 
             this.txt_Password.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.txt_Password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Password.Location = new System.Drawing.Point(206, 132);
+            this.txt_Password.Location = new System.Drawing.Point(206, 139);
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.PasswordChar = '*';
             this.txt_Password.Size = new System.Drawing.Size(140, 20);
@@ -131,9 +131,9 @@
             this.imgUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.imgUser.ErrorImage = null;
             this.imgUser.Image = ((System.Drawing.Image)(resources.GetObject("imgUser.Image")));
-            this.imgUser.Location = new System.Drawing.Point(34, 51);
+            this.imgUser.Location = new System.Drawing.Point(25, 47);
             this.imgUser.Name = "imgUser";
-            this.imgUser.Size = new System.Drawing.Size(50, 48);
+            this.imgUser.Size = new System.Drawing.Size(59, 56);
             this.imgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgUser.TabIndex = 6;
             this.imgUser.TabStop = false;
@@ -143,9 +143,9 @@
             this.imgPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
             this.imgPassword.Image = ((System.Drawing.Image)(resources.GetObject("imgPassword.Image")));
             this.imgPassword.InitialImage = ((System.Drawing.Image)(resources.GetObject("imgPassword.InitialImage")));
-            this.imgPassword.Location = new System.Drawing.Point(34, 118);
+            this.imgPassword.Location = new System.Drawing.Point(25, 118);
             this.imgPassword.Name = "imgPassword";
-            this.imgPassword.Size = new System.Drawing.Size(50, 47);
+            this.imgPassword.Size = new System.Drawing.Size(59, 60);
             this.imgPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgPassword.TabIndex = 7;
             this.imgPassword.TabStop = false;

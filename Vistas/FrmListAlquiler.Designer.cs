@@ -42,10 +42,10 @@
             this.ckbAlqRango = new System.Windows.Forms.CheckBox();
             this.ckbAlqDpto = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlquileres)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alquilerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosDataSet1)).BeginInit();
@@ -54,6 +54,8 @@
             // 
             // dgvAlquileres
             // 
+            this.dgvAlquileres.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
+            this.dgvAlquileres.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
             this.dgvAlquileres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAlquileres.Location = new System.Drawing.Point(36, 108);
             this.dgvAlquileres.Name = "dgvAlquileres";
@@ -159,6 +161,21 @@
             this.panel1.Size = new System.Drawing.Size(1075, 23);
             this.panel1.TabIndex = 10;
             // 
+            // btnVolver
+            // 
+            this.btnVolver.FlatAppearance.BorderSize = 0;
+            this.btnVolver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.btnVolver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolver.ForeColor = System.Drawing.Color.White;
+            this.btnVolver.Location = new System.Drawing.Point(998, 0);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(77, 23);
+            this.btnVolver.TabIndex = 14;
+            this.btnVolver.Text = "<--- Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
@@ -185,21 +202,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1047, 15);
             this.panel4.TabIndex = 13;
-            // 
-            // btnVolver
-            // 
-            this.btnVolver.FlatAppearance.BorderSize = 0;
-            this.btnVolver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.btnVolver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolver.ForeColor = System.Drawing.Color.White;
-            this.btnVolver.Location = new System.Drawing.Point(998, 0);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(77, 23);
-            this.btnVolver.TabIndex = 14;
-            this.btnVolver.Text = "<--- Volver";
-            this.btnVolver.UseVisualStyleBackColor = true;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // FrmListAlquiler
             // 
