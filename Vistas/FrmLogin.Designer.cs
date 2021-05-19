@@ -44,8 +44,11 @@
             // btn_Ingresar
             // 
             this.btn_Ingresar.AutoSize = true;
-            this.btn_Ingresar.BackColor = System.Drawing.Color.Cyan;
+            this.btn_Ingresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
+            this.btn_Ingresar.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btn_Ingresar.FlatAppearance.BorderSize = 2;
             this.btn_Ingresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Ingresar.ForeColor = System.Drawing.Color.White;
             this.btn_Ingresar.Location = new System.Drawing.Point(250, 205);
             this.btn_Ingresar.Name = "btn_Ingresar";
             this.btn_Ingresar.Size = new System.Drawing.Size(101, 37);
@@ -53,15 +56,16 @@
             this.btn_Ingresar.Text = "Ingresar";
             this.btn_Ingresar.UseVisualStyleBackColor = false;
             this.btn_Ingresar.Click += new System.EventHandler(this.btn_Ingresar_Click);
-            this.btn_Ingresar.MouseLeave += new System.EventHandler(this.btn_Ingresar_MouseLeave);
-            this.btn_Ingresar.MouseHover += new System.EventHandler(this.btn_Ingresar_MouseHover);
             // 
             // btn_Cancelar
             // 
             this.btn_Cancelar.AutoSize = true;
-            this.btn_Cancelar.BackColor = System.Drawing.Color.Cyan;
+            this.btn_Cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
             this.btn_Cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btn_Cancelar.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btn_Cancelar.FlatAppearance.BorderSize = 2;
             this.btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Cancelar.ForeColor = System.Drawing.Color.White;
             this.btn_Cancelar.Location = new System.Drawing.Point(51, 205);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(92, 37);
@@ -69,14 +73,13 @@
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = false;
             this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
-            this.btn_Cancelar.MouseLeave += new System.EventHandler(this.btn_Cancelar_MouseLeave);
-            this.btn_Cancelar.MouseHover += new System.EventHandler(this.btn_Cancelar_MouseHover);
             // 
             // lbl_User
             // 
             this.lbl_User.AutoSize = true;
-            this.lbl_User.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.lbl_User.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
             this.lbl_User.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_User.ForeColor = System.Drawing.Color.White;
             this.lbl_User.Location = new System.Drawing.Point(68, 40);
             this.lbl_User.Name = "lbl_User";
             this.lbl_User.Size = new System.Drawing.Size(68, 20);
@@ -86,8 +89,9 @@
             // lbl_Password
             // 
             this.lbl_Password.AutoSize = true;
-            this.lbl_Password.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.lbl_Password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
             this.lbl_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Password.ForeColor = System.Drawing.Color.White;
             this.lbl_Password.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbl_Password.Location = new System.Drawing.Point(68, 121);
             this.lbl_Password.Name = "lbl_Password";
@@ -97,7 +101,8 @@
             // 
             // txt_User
             // 
-            this.txt_User.BackColor = System.Drawing.Color.LightCyan;
+            this.txt_User.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.txt_User.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_User.Location = new System.Drawing.Point(205, 37);
             this.txt_User.Name = "txt_User";
             this.txt_User.Size = new System.Drawing.Size(154, 20);
@@ -105,7 +110,8 @@
             // 
             // txt_Password
             // 
-            this.txt_Password.BackColor = System.Drawing.Color.LightCyan;
+            this.txt_Password.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.txt_Password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Password.Location = new System.Drawing.Point(205, 119);
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.PasswordChar = '*';
@@ -114,9 +120,9 @@
             // 
             // imgUser
             // 
-            this.imgUser.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.imgUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
             this.imgUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.imgUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.imgUser.ErrorImage = null;
             this.imgUser.Image = ((System.Drawing.Image)(resources.GetObject("imgUser.Image")));
             this.imgUser.Location = new System.Drawing.Point(12, 28);
             this.imgUser.Name = "imgUser";
@@ -127,8 +133,9 @@
             // 
             // imgPassword
             // 
-            this.imgPassword.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.imgPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
             this.imgPassword.Image = ((System.Drawing.Image)(resources.GetObject("imgPassword.Image")));
+            this.imgPassword.InitialImage = ((System.Drawing.Image)(resources.GetObject("imgPassword.InitialImage")));
             this.imgPassword.Location = new System.Drawing.Point(12, 108);
             this.imgPassword.Name = "imgPassword";
             this.imgPassword.Size = new System.Drawing.Size(50, 47);
@@ -141,8 +148,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
             this.CancelButton = this.btn_Cancelar;
             this.ClientSize = new System.Drawing.Size(385, 282);
             this.ControlBox = false;

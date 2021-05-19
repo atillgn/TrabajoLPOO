@@ -26,7 +26,7 @@ namespace Vistas
         {
 
         }
-   
+
 
         private void btn_Ingresar_Click(object sender, EventArgs e)
         {
@@ -35,11 +35,12 @@ namespace Vistas
 
             if (dt.Rows.Count == 1)
             {
-                MessageBox.Show("Bienvenido/a: " + txt_User.Text );
+                MessageBox.Show("Bienvenido/a: " + txt_User.Text);
                 txt_User.Clear();
                 txt_Password.Clear();
                 this.Hide();
-                if (dt.Rows[0][0].ToString() == "1") {
+                if (dt.Rows[0][0].ToString() == "1")
+                {
                     FrmMenuAdministrador oFrmAdmin = new FrmMenuAdministrador();
                     oFrmAdmin.Show();
                 }
@@ -48,7 +49,7 @@ namespace Vistas
                     FrmMenuOperador oFrmOperador = new FrmMenuOperador();
                     oFrmOperador.Show();
                 }
-                else 
+                else
                 {
                     FrmMenuAuditor oFrmAuditor = new FrmMenuAuditor();
                     oFrmAuditor.Show();
@@ -58,31 +59,6 @@ namespace Vistas
             {
                 MessageBox.Show("Datos de acceso incorrectos");
             }
-        }
-
-        //Diseño
-
-        private void btn_Ingresar_MouseHover(object sender, EventArgs e)
-        {
-            btn_Ingresar.Font = new Font(" ", 8, FontStyle.Underline);
-            btn_Ingresar.BackColor = Color.White;
-        }
-
-        private void btn_Ingresar_MouseLeave(object sender, EventArgs e)
-        {
-            btn_Ingresar.Font = new Font(" ", 8);
-            btn_Ingresar.BackColor = Color.Cyan;
-        }
-        private void btn_Cancelar_MouseHover(object sender, EventArgs e)
-        {
-            btn_Cancelar.Font = new Font(" ", 8, FontStyle.Underline);
-            btn_Cancelar.BackColor = Color.White;
-        }
-
-        private void btn_Cancelar_MouseLeave(object sender, EventArgs e)
-        {
-            btn_Cancelar.Font = new Font(" ", 8);
-            btn_Cancelar.BackColor = Color.Cyan;
         }
     }
 }

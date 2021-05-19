@@ -30,11 +30,6 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnInquilino = new System.Windows.Forms.RadioButton();
-            this.btnAlquiler = new System.Windows.Forms.RadioButton();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnInqOrdenar = new System.Windows.Forms.Button();
             this.txtInqTelefono = new System.Windows.Forms.TextBox();
@@ -49,6 +44,7 @@
             this.dgvInquilinos = new System.Windows.Forms.DataGridView();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.btnBusqueda = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtAlqPreciofinal = new System.Windows.Forms.TextBox();
             this.btnAlqRegistro = new System.Windows.Forms.Button();
@@ -64,13 +60,17 @@
             this.lblAlqInquilino = new System.Windows.Forms.Label();
             this.lblAlqDepartamento = new System.Windows.Forms.Label();
             this.lblAlqEdificio = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnAlquiler = new System.Windows.Forms.RadioButton();
+            this.btnInquilino = new System.Windows.Forms.RadioButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInquilinos)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -86,7 +86,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(186)))), ((int)(((byte)(250)))));
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -95,80 +95,10 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.LightGray;
-            this.tabPage2.Controls.Add(this.panel3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1021, 403);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(172)))), ((int)(((byte)(175)))));
-            this.panel1.Controls.Add(this.btnSalir);
-            this.panel1.Controls.Add(this.btnAlquiler);
-            this.panel1.Controls.Add(this.btnInquilino);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1029, 23);
-            this.panel1.TabIndex = 1;
-            // 
-            // btnInquilino
-            // 
-            this.btnInquilino.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnInquilino.Appearance = System.Windows.Forms.Appearance.Button;
-            this.btnInquilino.AutoSize = true;
-            this.btnInquilino.FlatAppearance.BorderSize = 0;
-            this.btnInquilino.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnInquilino.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnInquilino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInquilino.Location = new System.Drawing.Point(56, 0);
-            this.btnInquilino.Name = "btnInquilino";
-            this.btnInquilino.Size = new System.Drawing.Size(61, 23);
-            this.btnInquilino.TabIndex = 1;
-            this.btnInquilino.TabStop = true;
-            this.btnInquilino.Text = "Inquilinos";
-            this.btnInquilino.UseVisualStyleBackColor = true;
-            this.btnInquilino.CheckedChanged += new System.EventHandler(this.btnInquilino_CheckedChanged);
-            // 
-            // btnAlquiler
-            // 
-            this.btnAlquiler.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnAlquiler.Appearance = System.Windows.Forms.Appearance.Button;
-            this.btnAlquiler.AutoSize = true;
-            this.btnAlquiler.FlatAppearance.BorderSize = 0;
-            this.btnAlquiler.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAlquiler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAlquiler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlquiler.Location = new System.Drawing.Point(230, 0);
-            this.btnAlquiler.Name = "btnAlquiler";
-            this.btnAlquiler.Size = new System.Drawing.Size(62, 23);
-            this.btnAlquiler.TabIndex = 2;
-            this.btnAlquiler.TabStop = true;
-            this.btnAlquiler.Text = "Alquileres";
-            this.btnAlquiler.UseVisualStyleBackColor = true;
-            this.btnAlquiler.CheckedChanged += new System.EventHandler(this.btnAlquiler_CheckedChanged);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.Location = new System.Drawing.Point(954, 0);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 6;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.btnInqOrdenar);
             this.panel2.Controls.Add(this.txtInqTelefono);
@@ -301,9 +231,20 @@
             this.btnBusqueda.UseVisualStyleBackColor = true;
             this.btnBusqueda.Click += new System.EventHandler(this.btnBusqueda_Click);
             // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(186)))), ((int)(((byte)(250)))));
+            this.tabPage2.Controls.Add(this.panel3);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1021, 403);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.txtAlqPreciofinal);
             this.panel3.Controls.Add(this.btnAlqRegistro);
@@ -447,6 +388,69 @@
             this.lblAlqEdificio.TabIndex = 0;
             this.lblAlqEdificio.Text = "Edificio:";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
+            this.panel1.Controls.Add(this.btnSalir);
+            this.panel1.Controls.Add(this.btnAlquiler);
+            this.panel1.Controls.Add(this.btnInquilino);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1029, 23);
+            this.panel1.TabIndex = 1;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.ForeColor = System.Drawing.Color.Black;
+            this.btnSalir.Location = new System.Drawing.Point(954, 0);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 6;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnAlquiler
+            // 
+            this.btnAlquiler.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAlquiler.Appearance = System.Windows.Forms.Appearance.Button;
+            this.btnAlquiler.AutoSize = true;
+            this.btnAlquiler.FlatAppearance.BorderSize = 0;
+            this.btnAlquiler.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnAlquiler.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnAlquiler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnAlquiler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlquiler.Location = new System.Drawing.Point(230, 0);
+            this.btnAlquiler.Name = "btnAlquiler";
+            this.btnAlquiler.Size = new System.Drawing.Size(62, 23);
+            this.btnAlquiler.TabIndex = 2;
+            this.btnAlquiler.TabStop = true;
+            this.btnAlquiler.Text = "Alquileres";
+            this.btnAlquiler.UseVisualStyleBackColor = true;
+            this.btnAlquiler.CheckedChanged += new System.EventHandler(this.btnAlquiler_CheckedChanged);
+            // 
+            // btnInquilino
+            // 
+            this.btnInquilino.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnInquilino.Appearance = System.Windows.Forms.Appearance.Button;
+            this.btnInquilino.AutoSize = true;
+            this.btnInquilino.FlatAppearance.BorderSize = 0;
+            this.btnInquilino.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnInquilino.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnInquilino.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnInquilino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInquilino.Location = new System.Drawing.Point(56, 0);
+            this.btnInquilino.Name = "btnInquilino";
+            this.btnInquilino.Size = new System.Drawing.Size(61, 23);
+            this.btnInquilino.TabIndex = 1;
+            this.btnInquilino.TabStop = true;
+            this.btnInquilino.Text = "Inquilinos";
+            this.btnInquilino.UseVisualStyleBackColor = true;
+            this.btnInquilino.CheckedChanged += new System.EventHandler(this.btnInquilino_CheckedChanged);
+            // 
             // FrmMenuOperador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -463,14 +467,14 @@
             this.Load += new System.EventHandler(this.FrmMenuOperador_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInquilinos)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

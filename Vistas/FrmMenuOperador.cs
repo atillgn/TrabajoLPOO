@@ -61,42 +61,45 @@ namespace Vistas
         {
             if (MessageBox.Show("Confirmar Datos", "¿Confirmar Datos?", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
             {
-                Inquilino oInq = new Inquilino();
-                oInq.Inq_Nombre = txtInqNombre.Text;
-                oInq.Inq_Apellido = txtInqApellido.Text;
-                oInq.Inq_Telefono = txtInqTelefono.Text;
-                if (editInq)
+                if (validarInq())
                 {
-                    try
+                    Inquilino oInq = new Inquilino();
+                    oInq.Inq_Nombre = txtInqNombre.Text;
+                    oInq.Inq_Apellido = txtInqApellido.Text;
+                    oInq.Inq_Telefono = txtInqTelefono.Text;
+                    if (editInq)
                     {
-                        oInq.Inq_Codigo = (int)dgvInquilinos.CurrentRow.Cells["Codigo"].Value;
-                        TrabajarInquilinos.edit_inquilino(oInq);
+                        try
+                        {
+                            oInq.Inq_Codigo = (int)dgvInquilinos.CurrentRow.Cells["Codigo"].Value;
+                            TrabajarInquilinos.edit_inquilino(oInq);
+                        }
+                        catch (Exception a)
+                        {
+                            MessageBox.Show("Los usuarios no pueden tener datos repetidos");
+                        }
+                        editInq = false;
                     }
-                    catch (Exception a)
+                    else
                     {
-                        MessageBox.Show("Los usuarios no pueden tener datos repetidos");
+                        try
+                        {
+                            TrabajarInquilinos.insert_inquilino(oInq);
+                        }
+                        catch (Exception a)
+                        {
+                            MessageBox.Show("Los usuarios no pueden tener datos repetidos");
+                        }
                     }
-                    editInq = false;
+                    txtInqApellido.Text = "";
+                    txtInqNombre.Text = "";
+                    txtInqTelefono.Text = "";
+                    load_inquilinos();
                 }
                 else
                 {
-                    try
-                    {
-                        TrabajarInquilinos.insert_inquilino(oInq);
-                    }
-                    catch (Exception a)
-                    {
-                        MessageBox.Show("Los usuarios no pueden tener datos repetidos");
-                    }
+                    MessageBox.Show("Llenar todos los campos");
                 }
-                txtInqApellido.Text = "";
-                txtInqNombre.Text = "";
-                txtInqTelefono.Text = "";
-                load_inquilinos();
-            }
-            else
-            {
-                MessageBox.Show("Favor de llenar todos los campos.");
             }
             load_everything();
         }
@@ -146,6 +149,11 @@ namespace Vistas
         {
             dgvInquilinos.DataSource = TrabajarInquilinos.list_inquilinosord();
         }
+        private bool validarInq()
+        {
+            return txtInqNombre.Text != String.Empty && txtInqApellido.Text != String.Empty && txtInqTelefono.Text != String.Empty;
+        }
+
         //Alquileres
         private void load_combo_edificios()
         {

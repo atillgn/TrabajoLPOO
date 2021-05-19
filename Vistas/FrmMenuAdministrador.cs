@@ -74,40 +74,47 @@ namespace Vistas
         {
             if (MessageBox.Show("Confirmar Datos", "¿Confirmar Datos?", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
             {
-                Usuario oUser = new Usuario();
-                oUser.Rol_id = (int)cmbUserRol.SelectedValue;
-                oUser.Usr_NombreUsuario = txtUserNombreUsuario.Text;
-                oUser.Usr_Contrasenia = txtUserContra.Text;
-                oUser.Usr_ApellidoNombre = txtUserNombreApellido.Text;
-                if (editUser)
+                if (validarUser())
                 {
-                    try
+                    Usuario oUser = new Usuario();
+                    oUser.Rol_id = (int)cmbUserRol.SelectedValue;
+                    oUser.Usr_NombreUsuario = txtUserNombreUsuario.Text;
+                    oUser.Usr_Contrasenia = txtUserContra.Text;
+                    oUser.Usr_ApellidoNombre = txtUserNombreApellido.Text;
+                    if (editUser)
                     {
-                        oUser.Usr_Id = (int)dgvUsuarios.CurrentRow.Cells["ID"].Value;
-                        TrabajarUsuario.edit_usuario(oUser);
+                        try
+                        {
+                            oUser.Usr_Id = (int)dgvUsuarios.CurrentRow.Cells["ID"].Value;
+                            TrabajarUsuario.edit_usuario(oUser);
+                        }
+                        catch (Exception a)
+                        {
+                            MessageBox.Show("Los usuarios no pueden tener datos repetidos");
+                        }
+                        editUser = false;
                     }
-                    catch (Exception a)
+                    else
                     {
-                        MessageBox.Show("Los usuarios no pueden tener datos repetidos");
+                        try
+                        {
+                            TrabajarUsuario.insert_usuario(oUser);
+                        }
+                        catch (Exception a)
+                        {
+                            MessageBox.Show("Los usuarios no pueden tener datos repetidos");
+                        }
                     }
-                    editUser = false;
+                    cmbUserRol.SelectedValue = 1;
+                    txtUserNombreUsuario.Text = "";
+                    txtUserContra.Text = "";
+                    txtUserNombreApellido.Text = "";
+                    load_usuarios();
                 }
                 else
                 {
-                    try
-                    {
-                        TrabajarUsuario.insert_usuario(oUser);
-                    }
-                    catch (Exception a)
-                    {
-                        MessageBox.Show("Los usuarios no pueden tener datos repetidos");
-                    }
+                    MessageBox.Show("Llenar todos los campos");
                 }
-                cmbUserRol.SelectedValue = 1;
-                txtUserNombreUsuario.Text = "";
-                txtUserContra.Text = "";
-                txtUserNombreApellido.Text = "";
-                load_usuarios();
             }
             load_everything();
         }
@@ -154,6 +161,10 @@ namespace Vistas
             }
             load_everything();
         }
+        private bool validarUser()
+        {
+            return txtUserBuscar.Text != String.Empty && txtUserContra.Text != String.Empty && txtUserNombreApellido.Text != String.Empty && txtUserNombreUsuario.Text != String.Empty;
+        }
 
         //Edificios
         private bool editEdif = false;
@@ -171,40 +182,47 @@ namespace Vistas
         {
             if (MessageBox.Show("Confirmar Datos", "¿Confirmar Datos?", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
             {
-                Edificio oEdif = new Edificio();
-                oEdif.Edif_Nombre = txtEdifNombre.Text;
-                oEdif.Edif_Direccion = txtEdifDireccion.Text;
-                oEdif.Edif_Admnistrador = cmbEdifAdministrador.SelectedValue.ToString();
-                oEdif.Edif_Telefono = txtEdifTelefono.Text;
-                if (editEdif)
+                if (validarEdif())
                 {
-                    try
+                    Edificio oEdif = new Edificio();
+                    oEdif.Edif_Nombre = txtEdifNombre.Text;
+                    oEdif.Edif_Direccion = txtEdifDireccion.Text;
+                    oEdif.Edif_Admnistrador = cmbEdifAdministrador.SelectedValue.ToString();
+                    oEdif.Edif_Telefono = txtEdifTelefono.Text;
+                    if (editEdif)
                     {
-                        oEdif.Edif_Codigo = (int)dgvEdificio.CurrentRow.Cells["Edif_Codigo"].Value;
-                        TrabajarEdificios.edit_edificio(oEdif);
+                        try
+                        {
+                            oEdif.Edif_Codigo = (int)dgvEdificio.CurrentRow.Cells["Edif_Codigo"].Value;
+                            TrabajarEdificios.edit_edificio(oEdif);
+                        }
+                        catch (Exception a)
+                        {
+                            MessageBox.Show("Los usuarios no pueden tener datos repetidos");
+                        }
+                        editEdif = false;
                     }
-                    catch (Exception a)
+                    else
                     {
-                        MessageBox.Show("Los usuarios no pueden tener datos repetidos");
+                        try
+                        {
+                            TrabajarEdificios.insert_edificio(oEdif);
+                        }
+                        catch (Exception a)
+                        {
+                            MessageBox.Show("Los usuarios no pueden tener datos repetidos");
+                        }
                     }
-                    editEdif = false;
+                    txtEdifNombre.Text = "";
+                    txtEdifDireccion.Text = "";
+                    txtEdifTelefono.Text = "";
+                    cmbEdifAdministrador.SelectedValue = 1;
+                    load_edificio();
                 }
                 else
                 {
-                    try
-                    {
-                        TrabajarEdificios.insert_edificio(oEdif);
-                    }
-                    catch (Exception a)
-                    {
-                        MessageBox.Show("Los usuarios no pueden tener datos repetidos");
-                    }
+                    MessageBox.Show("Llenar todos los campos");
                 }
-                txtEdifNombre.Text = "";
-                txtEdifDireccion.Text = "";
-                txtEdifTelefono.Text = "";
-                cmbEdifAdministrador.SelectedValue = 1;
-                load_edificio();
             }
             else
             {
@@ -250,6 +268,10 @@ namespace Vistas
                 MessageBox.Show("Seleccione una fila por favor");
             }
         }
+        private bool validarEdif()
+        {
+            return txtEdifDireccion.Text != String.Empty && txtEdifNombre.Text != String.Empty && txtEdifTelefono.Text != String.Empty;
+        }
 
         //Departamentos
         private bool editDpto = false;
@@ -280,51 +302,57 @@ namespace Vistas
         {
             if (MessageBox.Show("Confirmar Datos", "¿Confirmar Datos?", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
             {
-                Departamento oDpto = new Departamento();
-
-                oDpto.Edif_Codigo = (int)cmbDptoEdificio.SelectedValue;
-                oDpto.Dpto_Tipo = (int)cmbDptoTipo.SelectedValue;
-                oDpto.Dpto_Numero = Convert.ToInt32(txtDptoNumero.Text);
-                oDpto.Dpto_Piso = Convert.ToInt32(txtDptoPiso.Text);
-                oDpto.Dpto_Ambientes = Convert.ToInt32(txtDptoAmbientes.Text);
-                oDpto.Dpto_Dormitorios = Convert.ToInt32(txtDptoDormitorios.Text);
-                oDpto.Dpto_Baños = Convert.ToInt32(txtDptoBaños.Text);
-                oDpto.Dpto_Disposicion = Convert.ToInt32(cmbDptoDisposicion.Text);
-                oDpto.Dpto_Precio = Convert.ToDouble(txtDptoPrecio.Text);
-                if (editDpto)
+                if (validarDpto())
                 {
-                    try
+                    Departamento oDpto = new Departamento();
+                    oDpto.Edif_Codigo = (int)cmbDptoEdificio.SelectedValue;
+                    oDpto.Dpto_Tipo = (int)cmbDptoTipo.SelectedValue;
+                    oDpto.Dpto_Numero = Convert.ToInt32(txtDptoNumero.Text);
+                    oDpto.Dpto_Piso = Convert.ToInt32(txtDptoPiso.Text);
+                    oDpto.Dpto_Ambientes = Convert.ToInt32(txtDptoAmbientes.Text);
+                    oDpto.Dpto_Dormitorios = Convert.ToInt32(txtDptoDormitorios.Text);
+                    oDpto.Dpto_Baños = Convert.ToInt32(txtDptoBaños.Text);
+                    oDpto.Dpto_Disposicion = Convert.ToInt32(cmbDptoDisposicion.Text);
+                    oDpto.Dpto_Precio = Convert.ToDouble(txtDptoPrecio.Text);
+                    if (editDpto)
                     {
-                        oDpto.Dpto_Codigo = (int)dgvDepartamentos.CurrentRow.Cells["Codigo"].Value;
-                        TrabajarDepartamento.edit_depto(oDpto);
+                        try
+                        {
+                            oDpto.Dpto_Codigo = (int)dgvDepartamentos.CurrentRow.Cells["Codigo"].Value;
+                            TrabajarDepartamento.edit_depto(oDpto);
+                        }
+                        catch (Exception a)
+                        {
+                            MessageBox.Show("Los departamentos no pueden tener datos repetidos");
+                        }
+                        editDpto = false;
                     }
-                    catch (Exception a)
+                    else
                     {
-                        MessageBox.Show("Los departamentos no pueden tener datos repetidos");
+                        try
+                        {
+                            TrabajarDepartamento.insert_depto(oDpto);
+                        }
+                        catch (Exception a)
+                        {
+                            MessageBox.Show("Los departamentos no pueden tener datos repetidos");
+                        }
                     }
-                    editDpto = false;
+                    cmbDptoDisposicion.Text = "1";
+                    cmbDptoTipo.SelectedValue = 1;
+                    cmbDptoEdificio.SelectedValue = 1;
+                    txtDptoNumero.Text = "";
+                    txtDptoPiso.Text = "";
+                    txtDptoDormitorios.Text = "";
+                    txtDptoBaños.Text = "";
+                    txtDptoPrecio.Text = "";
+                    txtDptoAmbientes.Text = "";
+                    load_departamento();
                 }
                 else
                 {
-                    try
-                    {
-                        TrabajarDepartamento.insert_depto(oDpto);
-                    }
-                    catch (Exception a)
-                    {
-                        MessageBox.Show("Los departamentos no pueden tener datos repetidos");
-                    }
+                    MessageBox.Show("Llenar todos los campos");
                 }
-                cmbDptoDisposicion.Text = "1";
-                cmbDptoTipo.SelectedValue = 1;
-                cmbDptoEdificio.SelectedValue = 1;
-                txtDptoNumero.Text = "";
-                txtDptoPiso.Text = "";
-                txtDptoDormitorios.Text = "";
-                txtDptoBaños.Text = "";
-                txtDptoPrecio.Text = "";
-                txtDptoAmbientes.Text = "";
-                load_departamento();
             }
             load_everything();
         }
@@ -420,6 +448,10 @@ namespace Vistas
             {
                 e.Handled = true;
             }
+        }
+        private bool validarDpto()
+        {
+            return txtDptoAmbientes.Text != String.Empty && txtDptoBaños.Text != String.Empty && txtDptoDormitorios.Text != String.Empty && txtDptoNumero.Text != String.Empty && txtDptoPiso.Text != String.Empty && txtDptoPrecio.Text != String.Empty;
         }
     }
 }

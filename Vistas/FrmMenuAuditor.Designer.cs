@@ -30,6 +30,20 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnInqOrdenar = new System.Windows.Forms.Button();
+            this.txtInqTelefono = new System.Windows.Forms.TextBox();
+            this.txtInqApellido = new System.Windows.Forms.TextBox();
+            this.txtInqNombre = new System.Windows.Forms.TextBox();
+            this.lblInqTelefono = new System.Windows.Forms.Label();
+            this.lblInqApellido = new System.Windows.Forms.Label();
+            this.lblInqNombre = new System.Windows.Forms.Label();
+            this.btnInqConfirmar = new System.Windows.Forms.Button();
+            this.btnInqEliminar = new System.Windows.Forms.Button();
+            this.btnInqEditar = new System.Windows.Forms.Button();
+            this.dgvInquilinos = new System.Windows.Forms.DataGridView();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
+            this.btnBusqueda = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtAlqPreciofinal = new System.Windows.Forms.TextBox();
@@ -109,22 +123,10 @@
             this.btnUsuarios = new System.Windows.Forms.RadioButton();
             this.btnAlquiler = new System.Windows.Forms.RadioButton();
             this.btnInquilino = new System.Windows.Forms.RadioButton();
-            this.btnBusqueda = new System.Windows.Forms.Button();
-            this.txtBusqueda = new System.Windows.Forms.TextBox();
-            this.dgvInquilinos = new System.Windows.Forms.DataGridView();
-            this.btnInqEditar = new System.Windows.Forms.Button();
-            this.btnInqEliminar = new System.Windows.Forms.Button();
-            this.btnInqConfirmar = new System.Windows.Forms.Button();
-            this.lblInqNombre = new System.Windows.Forms.Label();
-            this.lblInqApellido = new System.Windows.Forms.Label();
-            this.lblInqTelefono = new System.Windows.Forms.Label();
-            this.txtInqNombre = new System.Windows.Forms.TextBox();
-            this.txtInqApellido = new System.Windows.Forms.TextBox();
-            this.txtInqTelefono = new System.Windows.Forms.TextBox();
-            this.btnInqOrdenar = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInquilinos)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -137,8 +139,6 @@
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartamentos)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInquilinos)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -157,7 +157,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(186)))), ((int)(((byte)(250)))));
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -166,9 +166,145 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnInqOrdenar);
+            this.panel2.Controls.Add(this.txtInqTelefono);
+            this.panel2.Controls.Add(this.txtInqApellido);
+            this.panel2.Controls.Add(this.txtInqNombre);
+            this.panel2.Controls.Add(this.lblInqTelefono);
+            this.panel2.Controls.Add(this.lblInqApellido);
+            this.panel2.Controls.Add(this.lblInqNombre);
+            this.panel2.Controls.Add(this.btnInqConfirmar);
+            this.panel2.Controls.Add(this.btnInqEliminar);
+            this.panel2.Controls.Add(this.btnInqEditar);
+            this.panel2.Controls.Add(this.dgvInquilinos);
+            this.panel2.Controls.Add(this.txtBusqueda);
+            this.panel2.Controls.Add(this.btnBusqueda);
+            this.panel2.Location = new System.Drawing.Point(125, 46);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(767, 323);
+            this.panel2.TabIndex = 13;
+            // 
+            // btnInqOrdenar
+            // 
+            this.btnInqOrdenar.Location = new System.Drawing.Point(353, 281);
+            this.btnInqOrdenar.Name = "btnInqOrdenar";
+            this.btnInqOrdenar.Size = new System.Drawing.Size(118, 23);
+            this.btnInqOrdenar.TabIndex = 9;
+            this.btnInqOrdenar.Text = "Ordenar por Apellido";
+            this.btnInqOrdenar.UseVisualStyleBackColor = true;
+            this.btnInqOrdenar.Click += new System.EventHandler(this.btnInqOrdenar_Click);
+            // 
+            // txtInqTelefono
+            // 
+            this.txtInqTelefono.Location = new System.Drawing.Point(598, 221);
+            this.txtInqTelefono.Name = "txtInqTelefono";
+            this.txtInqTelefono.Size = new System.Drawing.Size(129, 20);
+            this.txtInqTelefono.TabIndex = 3;
+            // 
+            // txtInqApellido
+            // 
+            this.txtInqApellido.Location = new System.Drawing.Point(598, 142);
+            this.txtInqApellido.Name = "txtInqApellido";
+            this.txtInqApellido.Size = new System.Drawing.Size(129, 20);
+            this.txtInqApellido.TabIndex = 2;
+            // 
+            // txtInqNombre
+            // 
+            this.txtInqNombre.Location = new System.Drawing.Point(598, 59);
+            this.txtInqNombre.Name = "txtInqNombre";
+            this.txtInqNombre.Size = new System.Drawing.Size(129, 20);
+            this.txtInqNombre.TabIndex = 1;
+            // 
+            // lblInqTelefono
+            // 
+            this.lblInqTelefono.AutoSize = true;
+            this.lblInqTelefono.Location = new System.Drawing.Point(510, 224);
+            this.lblInqTelefono.Name = "lblInqTelefono";
+            this.lblInqTelefono.Size = new System.Drawing.Size(52, 13);
+            this.lblInqTelefono.TabIndex = 8;
+            this.lblInqTelefono.Text = "Telefono:";
+            // 
+            // lblInqApellido
+            // 
+            this.lblInqApellido.AutoSize = true;
+            this.lblInqApellido.Location = new System.Drawing.Point(510, 145);
+            this.lblInqApellido.Name = "lblInqApellido";
+            this.lblInqApellido.Size = new System.Drawing.Size(47, 13);
+            this.lblInqApellido.TabIndex = 7;
+            this.lblInqApellido.Text = "Apellido:";
+            // 
+            // lblInqNombre
+            // 
+            this.lblInqNombre.AutoSize = true;
+            this.lblInqNombre.Location = new System.Drawing.Point(510, 62);
+            this.lblInqNombre.Name = "lblInqNombre";
+            this.lblInqNombre.Size = new System.Drawing.Size(47, 13);
+            this.lblInqNombre.TabIndex = 6;
+            this.lblInqNombre.Text = "Nombre:";
+            // 
+            // btnInqConfirmar
+            // 
+            this.btnInqConfirmar.Location = new System.Drawing.Point(598, 281);
+            this.btnInqConfirmar.Name = "btnInqConfirmar";
+            this.btnInqConfirmar.Size = new System.Drawing.Size(75, 23);
+            this.btnInqConfirmar.TabIndex = 4;
+            this.btnInqConfirmar.Text = "Confirmar";
+            this.btnInqConfirmar.UseVisualStyleBackColor = true;
+            this.btnInqConfirmar.Click += new System.EventHandler(this.btnInqConfirmar_Click);
+            // 
+            // btnInqEliminar
+            // 
+            this.btnInqEliminar.Location = new System.Drawing.Point(130, 281);
+            this.btnInqEliminar.Name = "btnInqEliminar";
+            this.btnInqEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnInqEliminar.TabIndex = 6;
+            this.btnInqEliminar.Text = "Eliminar";
+            this.btnInqEliminar.UseVisualStyleBackColor = true;
+            this.btnInqEliminar.Click += new System.EventHandler(this.btnInqEliminar_Click);
+            // 
+            // btnInqEditar
+            // 
+            this.btnInqEditar.Location = new System.Drawing.Point(26, 281);
+            this.btnInqEditar.Name = "btnInqEditar";
+            this.btnInqEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnInqEditar.TabIndex = 5;
+            this.btnInqEditar.Text = "Editar";
+            this.btnInqEditar.UseVisualStyleBackColor = true;
+            this.btnInqEditar.Click += new System.EventHandler(this.btnInqEditar_Click);
+            // 
+            // dgvInquilinos
+            // 
+            this.dgvInquilinos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInquilinos.Location = new System.Drawing.Point(26, 45);
+            this.dgvInquilinos.Name = "dgvInquilinos";
+            this.dgvInquilinos.Size = new System.Drawing.Size(445, 230);
+            this.dgvInquilinos.TabIndex = 10;
+            // 
+            // txtBusqueda
+            // 
+            this.txtBusqueda.Location = new System.Drawing.Point(26, 18);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(364, 20);
+            this.txtBusqueda.TabIndex = 7;
+            // 
+            // btnBusqueda
+            // 
+            this.btnBusqueda.Location = new System.Drawing.Point(396, 18);
+            this.btnBusqueda.Name = "btnBusqueda";
+            this.btnBusqueda.Size = new System.Drawing.Size(75, 23);
+            this.btnBusqueda.TabIndex = 8;
+            this.btnBusqueda.Text = "Buscar";
+            this.btnBusqueda.UseVisualStyleBackColor = true;
+            this.btnBusqueda.Click += new System.EventHandler(this.btnBusqueda_Click);
+            // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(186)))), ((int)(((byte)(250)))));
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -179,7 +315,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.txtAlqPreciofinal);
             this.panel3.Controls.Add(this.btnAlqRegistro);
@@ -325,7 +461,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(186)))), ((int)(((byte)(250)))));
             this.tabPage3.Controls.Add(this.panel4);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -336,7 +472,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.txtUserBuscar);
             this.panel4.Controls.Add(this.txtUserNombreApellido);
@@ -479,7 +615,7 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(186)))), ((int)(((byte)(250)))));
             this.tabPage4.Controls.Add(this.panel5);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
@@ -490,7 +626,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.lblEdifTelefono);
             this.panel5.Controls.Add(this.lblEdifAdministrador);
@@ -614,7 +750,7 @@
             // 
             // tabPage5
             // 
-            this.tabPage5.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(186)))), ((int)(((byte)(250)))));
             this.tabPage5.Controls.Add(this.panel6);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
@@ -625,7 +761,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.optDisposicion);
             this.panel6.Controls.Add(this.btnDptoEliminar);
@@ -873,7 +1009,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(172)))), ((int)(((byte)(175)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Controls.Add(this.btnDepartamentos);
             this.panel1.Controls.Add(this.btnEdificios);
@@ -881,6 +1017,7 @@
             this.panel1.Controls.Add(this.btnAlquiler);
             this.panel1.Controls.Add(this.btnInquilino);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1029, 23);
@@ -889,6 +1026,7 @@
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.ForeColor = System.Drawing.Color.Black;
             this.btnSalir.Location = new System.Drawing.Point(954, 0);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
@@ -903,8 +1041,9 @@
             this.btnDepartamentos.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnDepartamentos.AutoSize = true;
             this.btnDepartamentos.FlatAppearance.BorderSize = 0;
-            this.btnDepartamentos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnDepartamentos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnDepartamentos.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnDepartamentos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnDepartamentos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
             this.btnDepartamentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDepartamentos.Location = new System.Drawing.Point(751, 0);
             this.btnDepartamentos.Name = "btnDepartamentos";
@@ -921,8 +1060,9 @@
             this.btnEdificios.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnEdificios.AutoSize = true;
             this.btnEdificios.FlatAppearance.BorderSize = 0;
-            this.btnEdificios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnEdificios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnEdificios.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnEdificios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnEdificios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
             this.btnEdificios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdificios.Location = new System.Drawing.Point(587, 0);
             this.btnEdificios.Name = "btnEdificios";
@@ -939,8 +1079,9 @@
             this.btnUsuarios.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnUsuarios.AutoSize = true;
             this.btnUsuarios.FlatAppearance.BorderSize = 0;
-            this.btnUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnUsuarios.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuarios.Location = new System.Drawing.Point(412, 0);
             this.btnUsuarios.Name = "btnUsuarios";
@@ -957,8 +1098,9 @@
             this.btnAlquiler.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnAlquiler.AutoSize = true;
             this.btnAlquiler.FlatAppearance.BorderSize = 0;
-            this.btnAlquiler.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAlquiler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAlquiler.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnAlquiler.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnAlquiler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
             this.btnAlquiler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlquiler.Location = new System.Drawing.Point(231, 0);
             this.btnAlquiler.Name = "btnAlquiler";
@@ -975,8 +1117,9 @@
             this.btnInquilino.Appearance = System.Windows.Forms.Appearance.Button;
             this.btnInquilino.AutoSize = true;
             this.btnInquilino.FlatAppearance.BorderSize = 0;
-            this.btnInquilino.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnInquilino.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnInquilino.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnInquilino.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnInquilino.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
             this.btnInquilino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInquilino.Location = new System.Drawing.Point(56, 0);
             this.btnInquilino.Name = "btnInquilino";
@@ -986,142 +1129,6 @@
             this.btnInquilino.Text = "Inquilinos";
             this.btnInquilino.UseVisualStyleBackColor = true;
             this.btnInquilino.CheckedChanged += new System.EventHandler(this.btnInquilino_CheckedChanged);
-            // 
-            // btnBusqueda
-            // 
-            this.btnBusqueda.Location = new System.Drawing.Point(396, 18);
-            this.btnBusqueda.Name = "btnBusqueda";
-            this.btnBusqueda.Size = new System.Drawing.Size(75, 23);
-            this.btnBusqueda.TabIndex = 8;
-            this.btnBusqueda.Text = "Buscar";
-            this.btnBusqueda.UseVisualStyleBackColor = true;
-            this.btnBusqueda.Click += new System.EventHandler(this.btnBusqueda_Click);
-            // 
-            // txtBusqueda
-            // 
-            this.txtBusqueda.Location = new System.Drawing.Point(26, 18);
-            this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(364, 20);
-            this.txtBusqueda.TabIndex = 7;
-            // 
-            // dgvInquilinos
-            // 
-            this.dgvInquilinos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInquilinos.Location = new System.Drawing.Point(26, 45);
-            this.dgvInquilinos.Name = "dgvInquilinos";
-            this.dgvInquilinos.Size = new System.Drawing.Size(445, 230);
-            this.dgvInquilinos.TabIndex = 10;
-            // 
-            // btnInqEditar
-            // 
-            this.btnInqEditar.Location = new System.Drawing.Point(26, 281);
-            this.btnInqEditar.Name = "btnInqEditar";
-            this.btnInqEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnInqEditar.TabIndex = 5;
-            this.btnInqEditar.Text = "Editar";
-            this.btnInqEditar.UseVisualStyleBackColor = true;
-            this.btnInqEditar.Click += new System.EventHandler(this.btnInqEditar_Click);
-            // 
-            // btnInqEliminar
-            // 
-            this.btnInqEliminar.Location = new System.Drawing.Point(130, 281);
-            this.btnInqEliminar.Name = "btnInqEliminar";
-            this.btnInqEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnInqEliminar.TabIndex = 6;
-            this.btnInqEliminar.Text = "Eliminar";
-            this.btnInqEliminar.UseVisualStyleBackColor = true;
-            this.btnInqEliminar.Click += new System.EventHandler(this.btnInqEliminar_Click);
-            // 
-            // btnInqConfirmar
-            // 
-            this.btnInqConfirmar.Location = new System.Drawing.Point(598, 281);
-            this.btnInqConfirmar.Name = "btnInqConfirmar";
-            this.btnInqConfirmar.Size = new System.Drawing.Size(75, 23);
-            this.btnInqConfirmar.TabIndex = 4;
-            this.btnInqConfirmar.Text = "Confirmar";
-            this.btnInqConfirmar.UseVisualStyleBackColor = true;
-            this.btnInqConfirmar.Click += new System.EventHandler(this.btnInqConfirmar_Click);
-            // 
-            // lblInqNombre
-            // 
-            this.lblInqNombre.AutoSize = true;
-            this.lblInqNombre.Location = new System.Drawing.Point(510, 62);
-            this.lblInqNombre.Name = "lblInqNombre";
-            this.lblInqNombre.Size = new System.Drawing.Size(47, 13);
-            this.lblInqNombre.TabIndex = 6;
-            this.lblInqNombre.Text = "Nombre:";
-            // 
-            // lblInqApellido
-            // 
-            this.lblInqApellido.AutoSize = true;
-            this.lblInqApellido.Location = new System.Drawing.Point(510, 145);
-            this.lblInqApellido.Name = "lblInqApellido";
-            this.lblInqApellido.Size = new System.Drawing.Size(47, 13);
-            this.lblInqApellido.TabIndex = 7;
-            this.lblInqApellido.Text = "Apellido:";
-            // 
-            // lblInqTelefono
-            // 
-            this.lblInqTelefono.AutoSize = true;
-            this.lblInqTelefono.Location = new System.Drawing.Point(510, 224);
-            this.lblInqTelefono.Name = "lblInqTelefono";
-            this.lblInqTelefono.Size = new System.Drawing.Size(52, 13);
-            this.lblInqTelefono.TabIndex = 8;
-            this.lblInqTelefono.Text = "Telefono:";
-            // 
-            // txtInqNombre
-            // 
-            this.txtInqNombre.Location = new System.Drawing.Point(598, 59);
-            this.txtInqNombre.Name = "txtInqNombre";
-            this.txtInqNombre.Size = new System.Drawing.Size(129, 20);
-            this.txtInqNombre.TabIndex = 1;
-            // 
-            // txtInqApellido
-            // 
-            this.txtInqApellido.Location = new System.Drawing.Point(598, 142);
-            this.txtInqApellido.Name = "txtInqApellido";
-            this.txtInqApellido.Size = new System.Drawing.Size(129, 20);
-            this.txtInqApellido.TabIndex = 2;
-            // 
-            // txtInqTelefono
-            // 
-            this.txtInqTelefono.Location = new System.Drawing.Point(598, 221);
-            this.txtInqTelefono.Name = "txtInqTelefono";
-            this.txtInqTelefono.Size = new System.Drawing.Size(129, 20);
-            this.txtInqTelefono.TabIndex = 3;
-            // 
-            // btnInqOrdenar
-            // 
-            this.btnInqOrdenar.Location = new System.Drawing.Point(353, 281);
-            this.btnInqOrdenar.Name = "btnInqOrdenar";
-            this.btnInqOrdenar.Size = new System.Drawing.Size(118, 23);
-            this.btnInqOrdenar.TabIndex = 9;
-            this.btnInqOrdenar.Text = "Ordenar por Apellido";
-            this.btnInqOrdenar.UseVisualStyleBackColor = true;
-            this.btnInqOrdenar.Click += new System.EventHandler(this.btnInqOrdenar_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btnInqOrdenar);
-            this.panel2.Controls.Add(this.txtInqTelefono);
-            this.panel2.Controls.Add(this.txtInqApellido);
-            this.panel2.Controls.Add(this.txtInqNombre);
-            this.panel2.Controls.Add(this.lblInqTelefono);
-            this.panel2.Controls.Add(this.lblInqApellido);
-            this.panel2.Controls.Add(this.lblInqNombre);
-            this.panel2.Controls.Add(this.btnInqConfirmar);
-            this.panel2.Controls.Add(this.btnInqEliminar);
-            this.panel2.Controls.Add(this.btnInqEditar);
-            this.panel2.Controls.Add(this.dgvInquilinos);
-            this.panel2.Controls.Add(this.txtBusqueda);
-            this.panel2.Controls.Add(this.btnBusqueda);
-            this.panel2.Location = new System.Drawing.Point(125, 46);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(767, 323);
-            this.panel2.TabIndex = 13;
             // 
             // FrmMenuAuditor
             // 
@@ -1139,6 +1146,9 @@
             this.Load += new System.EventHandler(this.FrmMenuAudito_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInquilinos)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -1156,9 +1166,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartamentos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInquilinos)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
