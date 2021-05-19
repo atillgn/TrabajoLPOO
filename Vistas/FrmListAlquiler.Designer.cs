@@ -41,6 +41,11 @@
             this.ckbAlqEdif = new System.Windows.Forms.CheckBox();
             this.ckbAlqRango = new System.Windows.Forms.CheckBox();
             this.ckbAlqDpto = new System.Windows.Forms.CheckBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlquileres)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alquilerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosDataSet1)).BeginInit();
@@ -49,7 +54,7 @@
             // dgvAlquileres
             // 
             this.dgvAlquileres.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlquileres.Location = new System.Drawing.Point(12, 80);
+            this.dgvAlquileres.Location = new System.Drawing.Point(36, 97);
             this.dgvAlquileres.Name = "dgvAlquileres";
             this.dgvAlquileres.Size = new System.Drawing.Size(1003, 247);
             this.dgvAlquileres.TabIndex = 9;
@@ -71,14 +76,14 @@
             // cmbEdifList
             // 
             this.cmbEdifList.FormattingEnabled = true;
-            this.cmbEdifList.Location = new System.Drawing.Point(78, 24);
+            this.cmbEdifList.Location = new System.Drawing.Point(102, 41);
             this.cmbEdifList.Name = "cmbEdifList";
             this.cmbEdifList.Size = new System.Drawing.Size(200, 21);
             this.cmbEdifList.TabIndex = 2;
             // 
             // dtpDesde
             // 
-            this.dtpDesde.Location = new System.Drawing.Point(439, 12);
+            this.dtpDesde.Location = new System.Drawing.Point(463, 29);
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(200, 20);
             this.dtpDesde.TabIndex = 4;
@@ -86,7 +91,7 @@
             // 
             // dtpHasta
             // 
-            this.dtpHasta.Location = new System.Drawing.Point(439, 38);
+            this.dtpHasta.Location = new System.Drawing.Point(463, 55);
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(200, 20);
             this.dtpHasta.TabIndex = 5;
@@ -95,14 +100,14 @@
             // cmbAlqTipoDpto
             // 
             this.cmbAlqTipoDpto.FormattingEnabled = true;
-            this.cmbAlqTipoDpto.Location = new System.Drawing.Point(815, 24);
+            this.cmbAlqTipoDpto.Location = new System.Drawing.Point(839, 41);
             this.cmbAlqTipoDpto.Name = "cmbAlqTipoDpto";
             this.cmbAlqTipoDpto.Size = new System.Drawing.Size(200, 21);
             this.cmbAlqTipoDpto.TabIndex = 7;
             // 
             // btnAlqBuscar
             // 
-            this.btnAlqBuscar.Location = new System.Drawing.Point(887, 51);
+            this.btnAlqBuscar.Location = new System.Drawing.Point(911, 68);
             this.btnAlqBuscar.Name = "btnAlqBuscar";
             this.btnAlqBuscar.Size = new System.Drawing.Size(128, 23);
             this.btnAlqBuscar.TabIndex = 8;
@@ -113,7 +118,7 @@
             // ckbAlqEdif
             // 
             this.ckbAlqEdif.AutoSize = true;
-            this.ckbAlqEdif.Location = new System.Drawing.Point(12, 26);
+            this.ckbAlqEdif.Location = new System.Drawing.Point(36, 43);
             this.ckbAlqEdif.Name = "ckbAlqEdif";
             this.ckbAlqEdif.Size = new System.Drawing.Size(60, 17);
             this.ckbAlqEdif.TabIndex = 1;
@@ -124,7 +129,7 @@
             // ckbAlqRango
             // 
             this.ckbAlqRango.AutoSize = true;
-            this.ckbAlqRango.Location = new System.Drawing.Point(325, 26);
+            this.ckbAlqRango.Location = new System.Drawing.Point(349, 43);
             this.ckbAlqRango.Name = "ckbAlqRango";
             this.ckbAlqRango.Size = new System.Drawing.Size(108, 17);
             this.ckbAlqRango.TabIndex = 3;
@@ -135,7 +140,7 @@
             // ckbAlqDpto
             // 
             this.ckbAlqDpto.AutoSize = true;
-            this.ckbAlqDpto.Location = new System.Drawing.Point(677, 26);
+            this.ckbAlqDpto.Location = new System.Drawing.Point(701, 43);
             this.ckbAlqDpto.Name = "ckbAlqDpto";
             this.ckbAlqDpto.Size = new System.Drawing.Size(132, 17);
             this.ckbAlqDpto.TabIndex = 6;
@@ -143,11 +148,64 @@
             this.ckbAlqDpto.UseVisualStyleBackColor = true;
             this.ckbAlqDpto.CheckedChanged += new System.EventHandler(this.ckbAlqDpto_CheckedChanged);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(172)))), ((int)(((byte)(175)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1075, 14);
+            this.panel1.TabIndex = 10;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(172)))), ((int)(((byte)(175)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 14);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(15, 365);
+            this.panel2.TabIndex = 11;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(172)))), ((int)(((byte)(175)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(1062, 14);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(13, 365);
+            this.panel3.TabIndex = 12;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(172)))), ((int)(((byte)(175)))));
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(15, 364);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1047, 15);
+            this.panel4.TabIndex = 13;
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(780, 68);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(125, 23);
+            this.btnVolver.TabIndex = 14;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // FrmListAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1027, 340);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(1075, 379);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnVolver);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.ckbAlqDpto);
             this.Controls.Add(this.ckbAlqRango);
             this.Controls.Add(this.ckbAlqEdif);
@@ -183,5 +241,10 @@
         private System.Windows.Forms.CheckBox ckbAlqEdif;
         private System.Windows.Forms.CheckBox ckbAlqRango;
         private System.Windows.Forms.CheckBox ckbAlqDpto;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

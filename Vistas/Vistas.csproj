@@ -56,24 +56,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>datosDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FrmAlquiler.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmAlquiler.Designer.cs">
-      <DependentUpon>FrmAlquiler.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmDepartamento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmDepartamento.Designer.cs">
-      <DependentUpon>FrmDepartamento.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmEdificio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmEdificio.Designer.cs">
-      <DependentUpon>FrmEdificio.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmListAlquiler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,67 +68,40 @@
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMainAuditor.cs">
+    <Compile Include="FrmMenuAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMainAuditor.Designer.cs">
-      <DependentUpon>FrmMainAuditor.cs</DependentUpon>
+    <Compile Include="FrmMenuAdministrador.Designer.cs">
+      <DependentUpon>FrmMenuAdministrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmInquilino.cs">
+    <Compile Include="FrmMenuAuditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmInquilino.Designer.cs">
-      <DependentUpon>FrmInquilino.cs</DependentUpon>
+    <Compile Include="FrmMenuAuditor.Designer.cs">
+      <DependentUpon>FrmMenuAuditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMainAdmin.cs">
+    <Compile Include="FrmMenuOperador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMainAdmin.Designer.cs">
-      <DependentUpon>FrmMainAdmin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmMainOperador.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmMainOperador.Designer.cs">
-      <DependentUpon>FrmMainOperador.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmUsuario.Designer.cs">
-      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    <Compile Include="FrmMenuOperador.Designer.cs">
+      <DependentUpon>FrmMenuOperador.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmAlquiler.resx">
-      <DependentUpon>FrmAlquiler.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmDepartamento.resx">
-      <DependentUpon>FrmDepartamento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmEdificio.resx">
-      <DependentUpon>FrmEdificio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmInquilino.resx">
-      <DependentUpon>FrmInquilino.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmListAlquiler.resx">
       <DependentUpon>FrmListAlquiler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMainAdmin.resx">
-      <DependentUpon>FrmMainAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMenuAdministrador.resx">
+      <DependentUpon>FrmMenuAdministrador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMainAuditor.resx">
-      <DependentUpon>FrmMainAuditor.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMenuAuditor.resx">
+      <DependentUpon>FrmMenuAuditor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMainOperador.resx">
-      <DependentUpon>FrmMainOperador.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmUsuario.resx">
-      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMenuOperador.resx">
+      <DependentUpon>FrmMenuOperador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

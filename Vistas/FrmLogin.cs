@@ -40,17 +40,17 @@ namespace Vistas
                 txt_Password.Clear();
                 this.Hide();
                 if (dt.Rows[0][0].ToString() == "1") {
-                    FrmMainAdmin oFrmAdmin = new FrmMainAdmin();
+                    FrmMenuAdministrador oFrmAdmin = new FrmMenuAdministrador();
                     oFrmAdmin.Show();
                 }
                 else if (dt.Rows[0][0].ToString() == "2")
                 {
-                    FrmMainOperador oFrmOperador = new FrmMainOperador();
+                    FrmMenuOperador oFrmOperador = new FrmMenuOperador();
                     oFrmOperador.Show();
                 }
                 else 
                 {
-                    FrmMainAuditor oFrmAuditor = new FrmMainAuditor();
+                    FrmMenuAuditor oFrmAuditor = new FrmMenuAuditor();
                     oFrmAuditor.Show();
                 }
             }

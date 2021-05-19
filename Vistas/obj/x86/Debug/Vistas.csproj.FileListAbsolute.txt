@@ -41,16 +41,8 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\bin\Debu
 C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\bin\Debug\ClasesBase.dll
 C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\bin\Debug\ClasesBase.pdb
 C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmAlquiler.resources
-C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmDepartamento.resources
-C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmEdificio.resources
-C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmInquilino.resources
 C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmListAlquiler.resources
 C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmLogin.resources
-C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmMainAdmin.resources
-C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmMainAuditor.resources
-C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmMainOperador.resources
-C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmUsuario.resources
 C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\Debug\GenerateResource.write.1.tlog
@@ -74,3 +66,6 @@ H:\1Unju\lpoo\realtp\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmMainOperador.res
 H:\1Unju\lpoo\realtp\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmUsuario.resources
 H:\1Unju\lpoo\realtp\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.Properties.Resources.resources
 H:\1Unju\lpoo\realtp\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.csproj.GenerateResource.Cache
+C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmMenuAuditor.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmMenuAdministrador.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmMenuOperador.resources

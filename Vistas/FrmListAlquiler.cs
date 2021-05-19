@@ -110,5 +110,13 @@ namespace Vistas
             }
         }
 
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Quiere volver a Alquiler?", "Volver", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
+
     }
 }
