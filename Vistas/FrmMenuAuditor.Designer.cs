@@ -123,6 +123,9 @@
             this.btnUsuarios = new System.Windows.Forms.RadioButton();
             this.btnAlquiler = new System.Windows.Forms.RadioButton();
             this.btnInquilino = new System.Windows.Forms.RadioButton();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -294,9 +297,11 @@
             // 
             // btnBusqueda
             // 
-            this.btnBusqueda.Location = new System.Drawing.Point(396, 18);
+            this.btnBusqueda.FlatAppearance.BorderSize = 2;
+            this.btnBusqueda.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnBusqueda.Location = new System.Drawing.Point(396, 16);
             this.btnBusqueda.Name = "btnBusqueda";
-            this.btnBusqueda.Size = new System.Drawing.Size(75, 23);
+            this.btnBusqueda.Size = new System.Drawing.Size(75, 22);
             this.btnBusqueda.TabIndex = 8;
             this.btnBusqueda.Text = "Buscar";
             this.btnBusqueda.UseVisualStyleBackColor = true;
@@ -1130,6 +1135,33 @@
             this.btnInquilino.UseVisualStyleBackColor = true;
             this.btnInquilino.CheckedChanged += new System.EventHandler(this.btnInquilino_CheckedChanged);
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel7.Location = new System.Drawing.Point(0, 23);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(8, 406);
+            this.panel7.TabIndex = 3;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel8.Location = new System.Drawing.Point(8, 421);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1021, 8);
+            this.panel8.TabIndex = 4;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel9.Location = new System.Drawing.Point(1021, 23);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(8, 398);
+            this.panel9.TabIndex = 5;
+            // 
             // FrmMenuAuditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1138,6 +1170,9 @@
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1029, 429);
             this.ControlBox = false;
+            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.Name = "FrmMenuAuditor";
@@ -1267,5 +1302,8 @@
         private System.Windows.Forms.DataGridView dgvInquilinos;
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Button btnBusqueda;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel9;
     }
 }

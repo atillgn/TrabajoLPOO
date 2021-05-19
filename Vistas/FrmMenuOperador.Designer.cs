@@ -64,6 +64,9 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnAlquiler = new System.Windows.Forms.RadioButton();
             this.btnInquilino = new System.Windows.Forms.RadioButton();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -244,6 +247,7 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.txtAlqPreciofinal);
@@ -451,6 +455,33 @@
             this.btnInquilino.UseVisualStyleBackColor = true;
             this.btnInquilino.CheckedChanged += new System.EventHandler(this.btnInquilino_CheckedChanged);
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 23);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(8, 406);
+            this.panel4.TabIndex = 2;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(1021, 23);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(8, 406);
+            this.panel5.TabIndex = 3;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(8, 421);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1013, 8);
+            this.panel6.TabIndex = 4;
+            // 
             // FrmMenuOperador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -459,6 +490,9 @@
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1029, 429);
             this.ControlBox = false;
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.Name = "FrmMenuOperador";
@@ -517,5 +551,8 @@
         private System.Windows.Forms.Label lblAlqInquilino;
         private System.Windows.Forms.Label lblAlqDepartamento;
         private System.Windows.Forms.Label lblAlqEdificio;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
     }
 }
