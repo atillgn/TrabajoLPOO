@@ -169,5 +169,23 @@ namespace ClasesBase
             return dt;
         }
 
+        public static DataTable list_disposicion()
+        {
+            SqlConnection con = connect();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "ListarDisposicion";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con;
+
+            //Ejecutar la consulta
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            //Mandar al DataTable
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
     }
 }

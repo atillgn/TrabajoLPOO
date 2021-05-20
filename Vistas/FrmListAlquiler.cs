@@ -118,5 +118,24 @@ namespace Vistas
             }
         }
 
+        //permite mover el formulario
+        int m, mx, my;
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            m = 1;
+            mx = e.X;
+            my = e.Y;
+        }
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
+            }
+        }
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            m = 0;
+        }
     }
 }

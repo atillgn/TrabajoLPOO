@@ -33,7 +33,6 @@ namespace Vistas
             load_combo_edif();
             load_combo_disposicon();
             load_departamento();
-            cmbDptoDisposicion.Text = "1";
         }
 
         //Botones del menu
@@ -289,10 +288,9 @@ namespace Vistas
         }
         private void load_combo_disposicon()
         {
-            cmbDptoDisposicion.Items.Add(1);
-            cmbDptoDisposicion.Items.Add(2);
-            cmbDptoDisposicion.Items.Add(3);
-            cmbDptoDisposicion.Items.Add(4);
+            cmbDptoDisposicion.ValueMember = "Disp_Codigo";
+            cmbDptoDisposicion.DisplayMember = "Disp_Descripcion";
+            cmbDptoDisposicion.DataSource = TrabajarDepartamento.list_disposicion();
         }
         private void load_departamento()
         {
@@ -312,7 +310,7 @@ namespace Vistas
                     oDpto.Dpto_Ambientes = Convert.ToInt32(txtDptoAmbientes.Text);
                     oDpto.Dpto_Dormitorios = Convert.ToInt32(txtDptoDormitorios.Text);
                     oDpto.Dpto_Baños = Convert.ToInt32(txtDptoBaños.Text);
-                    oDpto.Dpto_Disposicion = Convert.ToInt32(cmbDptoDisposicion.Text);
+                    oDpto.Dpto_Disposicion = (int)cmbDptoDisposicion.SelectedValue;
                     oDpto.Dpto_Precio = Convert.ToDouble(txtDptoPrecio.Text);
                     if (editDpto)
                     {
@@ -338,7 +336,7 @@ namespace Vistas
                             MessageBox.Show("Los departamentos no pueden tener datos repetidos");
                         }
                     }
-                    cmbDptoDisposicion.Text = "1";
+                    cmbDptoDisposicion.SelectedValue = 1;
                     cmbDptoTipo.SelectedValue = 1;
                     cmbDptoEdificio.SelectedValue = 1;
                     txtDptoNumero.Text = "";
@@ -391,7 +389,7 @@ namespace Vistas
                 txtDptoPiso.Text = dgvDepartamentos.CurrentRow.Cells["Piso"].Value.ToString();
                 txtDptoAmbientes.Text = dgvDepartamentos.CurrentRow.Cells["Ambientes"].Value.ToString();
                 txtDptoPrecio.Text = dgvDepartamentos.CurrentRow.Cells["Precio"].Value.ToString();
-                cmbDptoDisposicion.Text = dgvDepartamentos.CurrentRow.Cells["Disposicion"].Value.ToString();
+                cmbDptoDisposicion.SelectedValue = dgvDepartamentos.CurrentRow.Cells["Disposicion"].Value;
                 cmbDptoTipo.SelectedValue = dgvDepartamentos.CurrentRow.Cells["Tipo"].Value;
             }
             else
@@ -452,6 +450,26 @@ namespace Vistas
         private bool validarDpto()
         {
             return txtDptoAmbientes.Text != String.Empty && txtDptoBaños.Text != String.Empty && txtDptoDormitorios.Text != String.Empty && txtDptoNumero.Text != String.Empty && txtDptoPiso.Text != String.Empty && txtDptoPrecio.Text != String.Empty;
+        }
+
+        //permite mover el formulario
+        int m, mx, my;
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            m = 1;
+            mx = e.X;
+            my = e.Y;
+        }
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
+            }
+        }
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            m = 0;
         }
     }
 }
