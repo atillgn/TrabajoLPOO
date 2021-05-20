@@ -387,7 +387,7 @@ namespace Vistas
         }
         private bool validarUser() 
         {
-            return txtUserBuscar.Text != String.Empty && txtUserContra.Text != String.Empty && txtUserNombreApellido.Text != String.Empty && txtUserNombreUsuario.Text != String.Empty;
+            return txtUserContra.Text != String.Empty && txtUserNombreApellido.Text != String.Empty && txtUserNombreUsuario.Text != String.Empty;
         }
 
         //Edificios
