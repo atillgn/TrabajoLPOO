@@ -46,6 +46,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlquileres)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alquilerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosDataSet1)).BeginInit();
@@ -154,6 +155,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Controls.Add(this.btnVolver);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -206,6 +208,16 @@
             this.panel4.Size = new System.Drawing.Size(1047, 15);
             this.panel4.TabIndex = 13;
             // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(12, 5);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(141, 13);
+            this.lblTitulo.TabIndex = 15;
+            this.lblTitulo.Text = "Lista de Todos los Alquileres";
+            // 
             // FrmListAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -235,6 +247,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.alquilerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosDataSet1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,5 +272,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }

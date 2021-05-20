@@ -121,7 +121,7 @@
   <data name="btnMaximizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABEAAAANCAYAAABPeYUaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAB/SURBVDhPrZNLDoAgDES5/0F14cKoID8RZ0hJ3Lckk7YB
+        YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAAB/SURBVDhPrZNLDoAgDES5/0F14cKoID8RZ0hJ3Lckk7YB
         Xvh0XO99hQKURPlXV+RTD/IGcd5Di6wLDklxikEgIVXB4P7DAjKusytPkgjZlJBISLaANAuI9ndM+qTw
         TZLyOpUQr4SMk0ToFF+8iBQ9Qq9MvzDSW7f4hZH1xT77ALqG3XGZQG+dAAAAAElFTkSuQmCC
 </value>
@@ -129,7 +129,7 @@
   <data name="btnAlq.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADr0AAA69AUf7kK0AAAdZSURBVGhD7Zp7bBRVFMYp5WnlIQ81IkFRRERNiSSCsaWV
+        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAAdZSURBVGhD7Zp7bBRVFMYp5WnlIQ81IkFRRERNiSSCsaWV
         QBofgbY7O7utkK2GxGgUMMb6QF1RETWhGiOoUVRUomLEd9A/xEd8EBMxxhg1qPiAqKgVHyio6O8rd/B2
         mJndnXaBTWjyZfbeuY/znXPvueeeaY8eB/6CNeC6yTIwCAwGFSWtJwj0BCeB7eBv8Ao4tGRJua47HAL/
         +rC6ZAmlUm5NAKHnkslk35Ik5bpOUwChd6mbVJKEEonGQ3yEdlL+C6xJJp3TeY4oKWIsuXMRegd4GqwG
@@ -167,7 +167,7 @@
   <data name="btnInq.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADr0AAA69AUf7kK0AAAOkSURBVGhDzVq9r01BEL+IjwJPtIrXSoRGqGgkChoNyStI
+        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAAOkSURBVGhDzVq9r01BEL+IjwJPtIrXSoRGqGgkChoNyStI
         qERBolIo6HUaf4NSJ9GIQkQjUZB4avF8FaLwzZmbnZPJ3Nmd35yz59yzyUm83fn6zW9md8+5ZrPljQ+N
         63+ZZ3lRdfCcA2HN7+xgfzSV34KNdcfrVcXcaEGijmT2UR2S+yWARfQGlWVm3nb0cmxqoJidjnjmao+m
         AqoGGE6ELNuLfbLTVXdLyurBrgYyejWTFAptSMe9bf9I2Y4gijg9F7Qfsb0Qsz7wNoGoIk5ZdtcAtluT

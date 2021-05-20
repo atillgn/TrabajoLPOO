@@ -39,6 +39,7 @@
             this.imgPassword = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.lblTitulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imgUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPassword)).BeginInit();
             this.panel1.SuspendLayout();
@@ -153,6 +154,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
+            this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -177,6 +179,16 @@
             this.btnSalir.Text = "X";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(4, 4);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(33, 13);
+            this.lblTitulo.TabIndex = 1;
+            this.lblTitulo.Text = "Login";
             // 
             // FrmLogin
             // 
@@ -206,6 +218,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPassword)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,6 +236,7 @@
         private System.Windows.Forms.PictureBox imgPassword;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Label lblTitulo;
 
     }
 }
