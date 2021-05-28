@@ -42,11 +42,11 @@
             this.ckbAlqRango = new System.Windows.Forms.CheckBox();
             this.ckbAlqDpto = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.lblTitulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlquileres)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alquilerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosDataSet1)).BeginInit();
@@ -166,6 +166,16 @@
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(12, 5);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(141, 13);
+            this.lblTitulo.TabIndex = 15;
+            this.lblTitulo.Text = "Lista de Todos los Alquileres";
+            // 
             // btnVolver
             // 
             this.btnVolver.FlatAppearance.BorderSize = 0;
@@ -189,6 +199,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(15, 356);
             this.panel2.TabIndex = 11;
+            //this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
@@ -207,16 +218,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1047, 15);
             this.panel4.TabIndex = 13;
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(12, 5);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(141, 13);
-            this.lblTitulo.TabIndex = 15;
-            this.lblTitulo.Text = "Lista de Todos los Alquileres";
             // 
             // FrmListAlquiler
             // 
