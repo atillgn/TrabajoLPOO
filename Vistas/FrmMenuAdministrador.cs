@@ -466,6 +466,11 @@ namespace Vistas
         {
             return txtDptoAmbientes.Text != String.Empty && txtDptoBaños.Text != String.Empty && txtDptoDormitorios.Text != String.Empty && txtDptoNumero.Text != String.Empty && txtDptoPiso.Text != String.Empty && txtDptoPrecio.Text != String.Empty;
         }
+        private void btnTipoDepartamento_Click(object sender, EventArgs e)
+        {
+            FrmGestionTipoDpto oFormGestionTipoDpto = new FrmGestionTipoDpto();
+            oFormGestionTipoDpto.Show();
+        }
 
         //permite mover el formulario
         int m, mx, my;
@@ -486,5 +491,7 @@ namespace Vistas
         {
             m = 0;
         }
+
+        
     }
 }

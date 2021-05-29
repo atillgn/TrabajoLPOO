@@ -56,6 +56,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>datosDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FrmGestionTipoDpto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGestionTipoDpto.Designer.cs">
+      <DependentUpon>FrmGestionTipoDpto.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmListAlquiler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmGestionTipoDpto.resx">
+      <DependentUpon>FrmGestionTipoDpto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmListAlquiler.resx">
       <DependentUpon>FrmListAlquiler.cs</DependentUpon>
     </EmbeddedResource>

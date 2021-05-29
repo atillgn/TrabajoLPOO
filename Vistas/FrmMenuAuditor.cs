@@ -20,7 +20,7 @@ namespace Vistas
         {
             load_everything();
         }
-        private void load_everything() 
+        public void load_everything() 
         {
             //inquilino
             load_inquilinos();
@@ -675,6 +675,11 @@ namespace Vistas
         private bool validarDpto() 
         {
             return txtDptoAmbientes.Text != String.Empty && txtDptoBaños.Text != String.Empty && txtDptoDormitorios.Text != String.Empty && txtDptoNumero.Text != String.Empty && txtDptoPiso.Text != String.Empty && txtDptoPrecio.Text != String.Empty;
+        }
+        private void btnTipoDepartamento_Click(object sender, EventArgs e)
+        {
+            FrmGestionTipoDpto oFormGestionTipoDpto = new FrmGestionTipoDpto();
+            oFormGestionTipoDpto.Show();
         }
 
         //permite mover el formulario

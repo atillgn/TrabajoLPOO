@@ -97,6 +97,7 @@
             this.btnUser = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btnTipoDepartamento = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -434,6 +435,7 @@
             this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.btnTipoDepartamento);
             this.panel6.Controls.Add(this.optDisposicion);
             this.panel6.Controls.Add(this.btnDptoEliminar);
             this.panel6.Controls.Add(this.optAmbiente);
@@ -847,6 +849,16 @@
             this.panel7.Size = new System.Drawing.Size(9, 397);
             this.panel7.TabIndex = 4;
             // 
+            // btnTipoDepartamento
+            // 
+            this.btnTipoDepartamento.Location = new System.Drawing.Point(302, 286);
+            this.btnTipoDepartamento.Name = "btnTipoDepartamento";
+            this.btnTipoDepartamento.Size = new System.Drawing.Size(145, 23);
+            this.btnTipoDepartamento.TabIndex = 25;
+            this.btnTipoDepartamento.Text = "Gestion Tipo Departamento";
+            this.btnTipoDepartamento.UseVisualStyleBackColor = true;
+            this.btnTipoDepartamento.Click += new System.EventHandler(this.btnTipoDepartamento_Click);
+            // 
             // FrmMenuAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -955,5 +967,6 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnMaximizar;
+        private System.Windows.Forms.Button btnTipoDepartamento;
     }
 }
