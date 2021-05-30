@@ -47,6 +47,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnAlqEliminar = new System.Windows.Forms.Button();
+            this.txtAlqCantidad = new System.Windows.Forms.TextBox();
+            this.lblAlqCantidad = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlquileres)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alquilerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datosDataSet1)).BeginInit();
@@ -197,9 +200,8 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 23);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(15, 356);
+            this.panel2.Size = new System.Drawing.Size(15, 371);
             this.panel2.TabIndex = 11;
-            //this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
@@ -207,25 +209,54 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(1062, 23);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(13, 356);
+            this.panel3.Size = new System.Drawing.Size(13, 371);
             this.panel3.TabIndex = 12;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(15, 364);
+            this.panel4.Location = new System.Drawing.Point(15, 379);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1047, 15);
             this.panel4.TabIndex = 13;
+            // 
+            // btnAlqEliminar
+            // 
+            this.btnAlqEliminar.Location = new System.Drawing.Point(36, 350);
+            this.btnAlqEliminar.Name = "btnAlqEliminar";
+            this.btnAlqEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnAlqEliminar.TabIndex = 14;
+            this.btnAlqEliminar.Text = "Eliminar";
+            this.btnAlqEliminar.UseVisualStyleBackColor = true;
+            this.btnAlqEliminar.Click += new System.EventHandler(this.btnAlqEliminar_Click);
+            // 
+            // txtAlqCantidad
+            // 
+            this.txtAlqCantidad.Location = new System.Drawing.Point(890, 352);
+            this.txtAlqCantidad.Name = "txtAlqCantidad";
+            this.txtAlqCantidad.Size = new System.Drawing.Size(149, 20);
+            this.txtAlqCantidad.TabIndex = 17;
+            // 
+            // lblAlqCantidad
+            // 
+            this.lblAlqCantidad.AutoSize = true;
+            this.lblAlqCantidad.Location = new System.Drawing.Point(769, 355);
+            this.lblAlqCantidad.Name = "lblAlqCantidad";
+            this.lblAlqCantidad.Size = new System.Drawing.Size(115, 13);
+            this.lblAlqCantidad.TabIndex = 18;
+            this.lblAlqCantidad.Text = "Cantidad de Alquileres:";
             // 
             // FrmListAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1075, 379);
+            this.ClientSize = new System.Drawing.Size(1075, 394);
             this.ControlBox = false;
+            this.Controls.Add(this.lblAlqCantidad);
+            this.Controls.Add(this.txtAlqCantidad);
+            this.Controls.Add(this.btnAlqEliminar);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -274,5 +305,8 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button btnAlqEliminar;
+        private System.Windows.Forms.TextBox txtAlqCantidad;
+        private System.Windows.Forms.Label lblAlqCantidad;
     }
 }

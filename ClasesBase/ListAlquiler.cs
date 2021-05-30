@@ -107,5 +107,22 @@ namespace ClasesBase
             da.Fill(dt);
             return dt;
         }
+
+        public static void delete_alquiler(int codigo) 
+        {
+            SqlConnection con = connect();
+
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "DeleteAlquiler";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con;
+
+            cmd.Parameters.AddWithValue("@codigo", codigo);
+
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
     }
 }

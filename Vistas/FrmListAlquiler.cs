@@ -29,6 +29,8 @@ namespace Vistas
             cmbAlqTipoDpto.Enabled = c;
             dtpDesde.Enabled = b;
             dtpHasta.Enabled = b;
+            txtAlqCantidad.Enabled = false;
+            display_cantidad();
         }
 
         private void load_combo_edificios()
@@ -48,6 +50,12 @@ namespace Vistas
         private void btnAlqBuscar_Click(object sender, EventArgs e)
         {
             dgvAlquileres.DataSource = ListAlquiler.list_alquileresP(cmbEdifList.Text, dtpDesde.Value.Date, dtpHasta.Value, cmbAlqTipoDpto.Text,a,b,c);
+            display_cantidad();
+        }
+
+        private void display_cantidad() 
+        {
+            txtAlqCantidad.Text = (dgvAlquileres.RowCount-1).ToString();
         }
 
         private void dtpDesde_ValueChanged(object sender, EventArgs e)
@@ -133,6 +141,18 @@ namespace Vistas
                 this.Close();
             }
         }
+        private void btnAlqEliminar_Click(object sender, EventArgs e)
+        {
+            if(dgvAlquileres.SelectedRows.Count == 1)
+            {
+                if (MessageBox.Show("¿Desea eliminar?", "Eliminar", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                {
+                    ListAlquiler.delete_alquiler((int)dgvAlquileres.CurrentRow.Cells["Codigo"].Value);
+                    dgvAlquileres.DataSource = ListAlquiler.list_alquileres();
+                    MessageBox.Show("Alquiler eliminado con exito");
+                }
+            }
+        }
 
         //permite mover el formulario
         int m, mx, my;
@@ -153,5 +173,7 @@ namespace Vistas
         {
             m = 0;
         }
+
+        
     }
 }
