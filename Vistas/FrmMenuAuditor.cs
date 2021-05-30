@@ -278,7 +278,8 @@ namespace Vistas
         }
         private void btnAlqRegistro_Click(object sender, EventArgs e)
         {
-            FrmListAlquiler oFrmListAlquiler = new FrmListAlquiler();
+            FrmListAlquiler oFrmListAlquiler = new FrmListAlquiler(1);
+            this.Hide();
             oFrmListAlquiler.Show();
         }
 
@@ -678,7 +679,8 @@ namespace Vistas
         }
         private void btnTipoDepartamento_Click(object sender, EventArgs e)
         {
-            FrmGestionTipoDpto oFormGestionTipoDpto = new FrmGestionTipoDpto();
+            FrmGestionTipoDpto oFormGestionTipoDpto = new FrmGestionTipoDpto(1);
+            this.Hide();
             oFormGestionTipoDpto.Show();
         }
 

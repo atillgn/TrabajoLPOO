@@ -12,8 +12,10 @@ namespace Vistas
 {
     public partial class FrmGestionTipoDpto : Form
     {
-        public FrmGestionTipoDpto()
+        private int aux;
+        public FrmGestionTipoDpto(int a)
         {
+            aux = a;
             InitializeComponent();
         }
         private void FrmGestionTipoDpto_Load(object sender, EventArgs e)
@@ -26,7 +28,22 @@ namespace Vistas
         }
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("¿Quiere volver?", "Volver", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+            {
+                if (aux == 1)
+                {
+                    FrmMenuAuditor oFrmMenuAuditor = new FrmMenuAuditor();
+                    oFrmMenuAuditor.load_everything();
+                    oFrmMenuAuditor.Show();
+                }
+                else
+                {
+                    FrmMenuAdministrador oFrmMenuAdministrador = new FrmMenuAdministrador();
+                    oFrmMenuAdministrador.load_everything();
+                    oFrmMenuAdministrador.Show();
+                }
+                this.Close();
+            }
         }
 
         private bool edit = false;

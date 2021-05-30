@@ -20,7 +20,7 @@ namespace Vistas
         {
             load_everything();
         }
-        private void load_everything()
+        public void load_everything()
         {
             //usuario
             load_combo_roles();
@@ -468,7 +468,8 @@ namespace Vistas
         }
         private void btnTipoDepartamento_Click(object sender, EventArgs e)
         {
-            FrmGestionTipoDpto oFormGestionTipoDpto = new FrmGestionTipoDpto();
+            FrmGestionTipoDpto oFormGestionTipoDpto = new FrmGestionTipoDpto(2);
+            this.Hide();
             oFormGestionTipoDpto.Show();
         }
 

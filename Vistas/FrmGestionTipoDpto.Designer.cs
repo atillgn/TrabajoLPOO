@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -40,7 +41,6 @@
             this.dgvTipoDpto = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoDpto)).BeginInit();
@@ -56,6 +56,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(380, 22);
             this.panel3.TabIndex = 2;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(12, 5);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(154, 13);
+            this.lblTitulo.TabIndex = 1;
+            this.lblTitulo.Text = "Alta de Tipo de Departamentos";
             // 
             // btnSalir
             // 
@@ -146,6 +156,7 @@
             // 
             // dgvTipoDpto
             // 
+            this.dgvTipoDpto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
             this.dgvTipoDpto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTipoDpto.Location = new System.Drawing.Point(23, 72);
             this.dgvTipoDpto.Name = "dgvTipoDpto";
@@ -169,16 +180,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(14, 332);
             this.panel2.TabIndex = 6;
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(12, 5);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(154, 13);
-            this.lblTitulo.TabIndex = 1;
-            this.lblTitulo.Text = "Alta de Tipo de Departamentos";
             // 
             // FrmGestionTipoDpto
             // 

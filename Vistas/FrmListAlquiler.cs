@@ -12,8 +12,10 @@ namespace Vistas
 {
     public partial class FrmListAlquiler : Form
     {
-        public FrmListAlquiler()
+        private int aux;
+        public FrmListAlquiler(int a)
         {
+            aux = a;
             InitializeComponent();
         }
         bool a = false, b = false, c = false;
@@ -112,8 +114,20 @@ namespace Vistas
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Quiere volver a Alquiler?", "Volver", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+            if (MessageBox.Show("¿Quiere volver?", "Volver", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
             {
+                if (aux == 1)
+                {
+                    FrmMenuAuditor oFrmMenuAuditor = new FrmMenuAuditor();
+                    oFrmMenuAuditor.load_everything();
+                    oFrmMenuAuditor.Show();
+                }
+                else
+                {
+                    FrmMenuOperador oFrmMenuOperador = new FrmMenuOperador();
+                    oFrmMenuOperador.load_everything();
+                    oFrmMenuOperador.Show();
+                }
                 this.Close();
             }
         }

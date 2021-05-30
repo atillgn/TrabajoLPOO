@@ -20,7 +20,7 @@ namespace Vistas
         {
             load_everything();
         }
-        private void load_everything()
+        public void load_everything()
         {
             //inquilino
             load_inquilinos();
@@ -254,7 +254,8 @@ namespace Vistas
         }
         private void btnAlqRegistro_Click(object sender, EventArgs e)
         {
-            FrmListAlquiler oFrmListAlquiler = new FrmListAlquiler();
+            FrmListAlquiler oFrmListAlquiler = new FrmListAlquiler(2);
+            this.Hide();
             oFrmListAlquiler.Show();
         }
 
