@@ -47,6 +47,7 @@
             this.btnBusqueda = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnBuscarDpto = new System.Windows.Forms.Button();
             this.txtAlqPreciofinal = new System.Windows.Forms.TextBox();
             this.btnAlqRegistro = new System.Windows.Forms.Button();
             this.btnAlqRegistrar = new System.Windows.Forms.Button();
@@ -257,6 +258,7 @@
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btnBuscarDpto);
             this.panel3.Controls.Add(this.txtAlqPreciofinal);
             this.panel3.Controls.Add(this.btnAlqRegistro);
             this.panel3.Controls.Add(this.btnAlqRegistrar);
@@ -275,6 +277,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(492, 296);
             this.panel3.TabIndex = 15;
+            // 
+            // btnBuscarDpto
+            // 
+            this.btnBuscarDpto.Location = new System.Drawing.Point(211, 256);
+            this.btnBuscarDpto.Name = "btnBuscarDpto";
+            this.btnBuscarDpto.Size = new System.Drawing.Size(118, 23);
+            this.btnBuscarDpto.TabIndex = 14;
+            this.btnBuscarDpto.Text = "Buscar Departamento";
+            this.btnBuscarDpto.UseVisualStyleBackColor = true;
+            this.btnBuscarDpto.Click += new System.EventHandler(this.btnBuscarDpto_Click);
             // 
             // txtAlqPreciofinal
             // 
@@ -581,7 +593,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel panel1;
@@ -603,11 +614,7 @@
         private System.Windows.Forms.TextBox txtAlqPreciofinal;
         private System.Windows.Forms.Button btnAlqRegistro;
         private System.Windows.Forms.Button btnAlqRegistrar;
-        private System.Windows.Forms.DateTimePicker dtpAlqHasta;
-        private System.Windows.Forms.DateTimePicker dtpAlqDesde;
         private System.Windows.Forms.ComboBox cmbAlqInquilino;
-        private System.Windows.Forms.ComboBox cmbAlqDepartamento;
-        private System.Windows.Forms.ComboBox cmbAlqEdificio;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -623,5 +630,11 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnMaximizar;
+        public System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Button btnBuscarDpto;
+        public System.Windows.Forms.DateTimePicker dtpAlqHasta;
+        public System.Windows.Forms.DateTimePicker dtpAlqDesde;
+        public System.Windows.Forms.ComboBox cmbAlqDepartamento;
+        public System.Windows.Forms.ComboBox cmbAlqEdificio;
     }
 }

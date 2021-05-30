@@ -469,8 +469,8 @@ namespace Vistas
         private void btnTipoDepartamento_Click(object sender, EventArgs e)
         {
             FrmGestionTipoDpto oFormGestionTipoDpto = new FrmGestionTipoDpto(2);
-            this.Hide();
             oFormGestionTipoDpto.Show();
+            this.Close();
         }
 
         //permite mover el formulario

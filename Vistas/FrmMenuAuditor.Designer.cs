@@ -47,6 +47,7 @@
             this.btnBusqueda = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnBuscarDpto = new System.Windows.Forms.Button();
             this.txtAlqPreciofinal = new System.Windows.Forms.TextBox();
             this.btnAlqRegistro = new System.Windows.Forms.Button();
             this.btnAlqRegistrar = new System.Windows.Forms.Button();
@@ -93,6 +94,7 @@
             this.dgvEdificio = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnTipoDepartamento = new System.Windows.Forms.Button();
             this.optDisposicion = new System.Windows.Forms.RadioButton();
             this.btnDptoEliminar = new System.Windows.Forms.Button();
             this.optAmbiente = new System.Windows.Forms.RadioButton();
@@ -130,7 +132,6 @@
             this.btnInq = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.btnTipoDepartamento = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -332,6 +333,7 @@
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.btnBuscarDpto);
             this.panel3.Controls.Add(this.txtAlqPreciofinal);
             this.panel3.Controls.Add(this.btnAlqRegistro);
             this.panel3.Controls.Add(this.btnAlqRegistrar);
@@ -350,6 +352,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(492, 296);
             this.panel3.TabIndex = 14;
+            // 
+            // btnBuscarDpto
+            // 
+            this.btnBuscarDpto.Location = new System.Drawing.Point(211, 256);
+            this.btnBuscarDpto.Name = "btnBuscarDpto";
+            this.btnBuscarDpto.Size = new System.Drawing.Size(120, 23);
+            this.btnBuscarDpto.TabIndex = 14;
+            this.btnBuscarDpto.Text = "Buscar Departamento";
+            this.btnBuscarDpto.UseVisualStyleBackColor = true;
+            this.btnBuscarDpto.Click += new System.EventHandler(this.btnBuscarDpto_Click);
             // 
             // txtAlqPreciofinal
             // 
@@ -815,6 +827,16 @@
             this.panel6.Size = new System.Drawing.Size(799, 323);
             this.panel6.TabIndex = 24;
             // 
+            // btnTipoDepartamento
+            // 
+            this.btnTipoDepartamento.Location = new System.Drawing.Point(305, 286);
+            this.btnTipoDepartamento.Name = "btnTipoDepartamento";
+            this.btnTipoDepartamento.Size = new System.Drawing.Size(145, 23);
+            this.btnTipoDepartamento.TabIndex = 24;
+            this.btnTipoDepartamento.Text = "Gestion Tipo Departamento";
+            this.btnTipoDepartamento.UseVisualStyleBackColor = true;
+            this.btnTipoDepartamento.Click += new System.EventHandler(this.btnTipoDepartamento_Click);
+            // 
             // optDisposicion
             // 
             this.optDisposicion.AutoSize = true;
@@ -1239,16 +1261,6 @@
             this.panel9.Size = new System.Drawing.Size(8, 398);
             this.panel9.TabIndex = 5;
             // 
-            // btnTipoDepartamento
-            // 
-            this.btnTipoDepartamento.Location = new System.Drawing.Point(305, 286);
-            this.btnTipoDepartamento.Name = "btnTipoDepartamento";
-            this.btnTipoDepartamento.Size = new System.Drawing.Size(145, 23);
-            this.btnTipoDepartamento.TabIndex = 24;
-            this.btnTipoDepartamento.Text = "Gestion Tipo Departamento";
-            this.btnTipoDepartamento.UseVisualStyleBackColor = true;
-            this.btnTipoDepartamento.Click += new System.EventHandler(this.btnTipoDepartamento_Click);
-            // 
             // FrmMenuAuditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1296,12 +1308,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Label lblAlqEdificio;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnUserBuscar;
@@ -1312,11 +1322,7 @@
         private System.Windows.Forms.Label lblAlqInquilino;
         private System.Windows.Forms.Label lblAlqDepartamento;
         private System.Windows.Forms.TextBox txtAlqPreciofinal;
-        private System.Windows.Forms.DateTimePicker dtpAlqHasta;
-        private System.Windows.Forms.DateTimePicker dtpAlqDesde;
         private System.Windows.Forms.ComboBox cmbAlqInquilino;
-        private System.Windows.Forms.ComboBox cmbAlqDepartamento;
-        private System.Windows.Forms.ComboBox cmbAlqEdificio;
         private System.Windows.Forms.Button btnAlqRegistrar;
         private System.Windows.Forms.Button btnAlqRegistro;
         private System.Windows.Forms.Button btnUserRegistrar;
@@ -1398,5 +1404,12 @@
         private System.Windows.Forms.Button btnMaximizar;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnTipoDepartamento;
+        private System.Windows.Forms.TabPage tabPage5;
+        public System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Button btnBuscarDpto;
+        public System.Windows.Forms.ComboBox cmbAlqDepartamento;
+        public System.Windows.Forms.ComboBox cmbAlqEdificio;
+        public System.Windows.Forms.DateTimePicker dtpAlqHasta;
+        public System.Windows.Forms.DateTimePicker dtpAlqDesde;
     }
 }

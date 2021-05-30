@@ -291,8 +291,14 @@ namespace Vistas
         private void btnAlqRegistro_Click(object sender, EventArgs e)
         {
             FrmListAlquiler oFrmListAlquiler = new FrmListAlquiler(1);
-            this.Hide();
             oFrmListAlquiler.Show();
+            this.Close();
+        }
+        private void btnBuscarDpto_Click(object sender, EventArgs e)
+        {
+            FrmBuscarDepartamento oFrmListAlquiler = new FrmBuscarDepartamento(1);
+            oFrmListAlquiler.Show();
+            this.Close();
         }
 
         //Usuarios
@@ -692,8 +698,8 @@ namespace Vistas
         private void btnTipoDepartamento_Click(object sender, EventArgs e)
         {
             FrmGestionTipoDpto oFormGestionTipoDpto = new FrmGestionTipoDpto(1);
-            this.Hide();
             oFormGestionTipoDpto.Show();
+            this.Close();
         }
 
         //permite mover el formulario
@@ -715,5 +721,7 @@ namespace Vistas
         {
             m = 0;
         }
+
+        
     }
 }

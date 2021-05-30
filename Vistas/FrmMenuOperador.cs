@@ -255,8 +255,14 @@ namespace Vistas
         private void btnAlqRegistro_Click(object sender, EventArgs e)
         {
             FrmListAlquiler oFrmListAlquiler = new FrmListAlquiler(2);
-            this.Hide();
             oFrmListAlquiler.Show();
+            this.Close();
+        }
+        private void btnBuscarDpto_Click(object sender, EventArgs e)
+        {
+            FrmBuscarDepartamento oFrmListAlquiler = new FrmBuscarDepartamento(2);
+            oFrmListAlquiler.Show();
+            this.Close();
         }
 
         //permite mover el formulario
@@ -278,5 +284,7 @@ namespace Vistas
         {
             m = 0;
         }
+
+        
     }
 }

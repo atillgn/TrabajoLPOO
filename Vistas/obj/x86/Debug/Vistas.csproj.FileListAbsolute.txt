@@ -70,3 +70,4 @@ C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\
 C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmMenuAdministrador.resources
 C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmMenuOperador.resources
 C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmGestionTipoDpto.resources
+C:\Users\admin\Documents\Visual Studio 2010\Projects\TrabajoLPOO\Vistas\obj\x86\Debug\Vistas.FrmBuscarDepartamento.resources

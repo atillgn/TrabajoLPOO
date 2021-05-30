@@ -34,12 +34,14 @@ namespace Vistas
                 {
                     FrmMenuAuditor oFrmMenuAuditor = new FrmMenuAuditor();
                     oFrmMenuAuditor.load_everything();
+                    oFrmMenuAuditor.tabControl1.SelectedIndex = 4;
                     oFrmMenuAuditor.Show();
                 }
                 else
                 {
                     FrmMenuAdministrador oFrmMenuAdministrador = new FrmMenuAdministrador();
                     oFrmMenuAdministrador.load_everything();
+                    oFrmMenuAdministrador.tabControl1.SelectedIndex = 2;
                     oFrmMenuAdministrador.Show();
                 }
                 this.Close();

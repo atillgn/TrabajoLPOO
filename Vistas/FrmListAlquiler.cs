@@ -120,12 +120,14 @@ namespace Vistas
                 {
                     FrmMenuAuditor oFrmMenuAuditor = new FrmMenuAuditor();
                     oFrmMenuAuditor.load_everything();
+                    oFrmMenuAuditor.tabControl1.SelectedIndex = 1;
                     oFrmMenuAuditor.Show();
                 }
                 else
                 {
                     FrmMenuOperador oFrmMenuOperador = new FrmMenuOperador();
                     oFrmMenuOperador.load_everything();
+                    oFrmMenuOperador.tabControl1.SelectedIndex = 1;
                     oFrmMenuOperador.Show();
                 }
                 this.Close();

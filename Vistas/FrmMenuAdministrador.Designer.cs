@@ -62,6 +62,7 @@
             this.dgvEdificio = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnTipoDepartamento = new System.Windows.Forms.Button();
             this.optDisposicion = new System.Windows.Forms.RadioButton();
             this.btnDptoEliminar = new System.Windows.Forms.Button();
             this.optAmbiente = new System.Windows.Forms.RadioButton();
@@ -97,7 +98,6 @@
             this.btnUser = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.btnTipoDepartamento = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -464,6 +464,16 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(799, 323);
             this.panel6.TabIndex = 25;
+            // 
+            // btnTipoDepartamento
+            // 
+            this.btnTipoDepartamento.Location = new System.Drawing.Point(302, 286);
+            this.btnTipoDepartamento.Name = "btnTipoDepartamento";
+            this.btnTipoDepartamento.Size = new System.Drawing.Size(145, 23);
+            this.btnTipoDepartamento.TabIndex = 25;
+            this.btnTipoDepartamento.Text = "Gestion Tipo Departamento";
+            this.btnTipoDepartamento.UseVisualStyleBackColor = true;
+            this.btnTipoDepartamento.Click += new System.EventHandler(this.btnTipoDepartamento_Click);
             // 
             // optDisposicion
             // 
@@ -849,16 +859,6 @@
             this.panel7.Size = new System.Drawing.Size(9, 397);
             this.panel7.TabIndex = 4;
             // 
-            // btnTipoDepartamento
-            // 
-            this.btnTipoDepartamento.Location = new System.Drawing.Point(302, 286);
-            this.btnTipoDepartamento.Name = "btnTipoDepartamento";
-            this.btnTipoDepartamento.Size = new System.Drawing.Size(145, 23);
-            this.btnTipoDepartamento.TabIndex = 25;
-            this.btnTipoDepartamento.Text = "Gestion Tipo Departamento";
-            this.btnTipoDepartamento.UseVisualStyleBackColor = true;
-            this.btnTipoDepartamento.Click += new System.EventHandler(this.btnTipoDepartamento_Click);
-            // 
             // FrmMenuAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -899,7 +899,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
@@ -968,5 +967,6 @@
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnMaximizar;
         private System.Windows.Forms.Button btnTipoDepartamento;
+        public System.Windows.Forms.TabControl tabControl1;
     }
 }

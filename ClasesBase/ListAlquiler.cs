@@ -65,6 +65,31 @@ namespace ClasesBase
             return dt;
         }
 
+        public static DataTable list_dptoParaAlquilar(DateTime fecha_inicio, DateTime fecha_final, String tipo_dpto, int ambiente, int precio, String disposicion, int banios) 
+        {
+            SqlConnection con = connect();
+
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "MostrarDepartamentosAlquilar";
+            cmd.Parameters.AddWithValue("@fecha_i", fecha_inicio);
+            cmd.Parameters.AddWithValue("@fecha_f", fecha_final);
+            cmd.Parameters.AddWithValue("@tipo_dpto", tipo_dpto);
+            cmd.Parameters.AddWithValue("@ambiente", ambiente);
+            cmd.Parameters.AddWithValue("@precio",precio);
+            cmd.Parameters.AddWithValue("@disposicion", disposicion);
+            cmd.Parameters.AddWithValue("@banios", banios);
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
         public static DataTable list_edificios()
         {
             SqlConnection con = connect();
