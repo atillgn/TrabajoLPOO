@@ -155,5 +155,20 @@ namespace ClasesBase
             cmd.ExecuteNonQuery();
             con.Close();
         }
+        public static DataTable valid_fechas(DateTime fechai, DateTime fechaf, int id) 
+        {
+            SqlConnection con = connect();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "VerificarFechas";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con;
+            cmd.Parameters.AddWithValue("@fechai", fechai);
+            cmd.Parameters.AddWithValue("@fechaf", fechaf);
+            cmd.Parameters.AddWithValue("@id", id);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
     }
 }
