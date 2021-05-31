@@ -829,7 +829,7 @@
             // 
             // btnTipoDepartamento
             // 
-            this.btnTipoDepartamento.Location = new System.Drawing.Point(305, 286);
+            this.btnTipoDepartamento.Location = new System.Drawing.Point(302, 286);
             this.btnTipoDepartamento.Name = "btnTipoDepartamento";
             this.btnTipoDepartamento.Size = new System.Drawing.Size(145, 23);
             this.btnTipoDepartamento.TabIndex = 24;
