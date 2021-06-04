@@ -28,6 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuAdministrador));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -87,12 +95,21 @@
             this.cmbDptoDisposicion = new System.Windows.Forms.ComboBox();
             this.cmbDptoTipo = new System.Windows.Forms.ComboBox();
             this.cmbDptoEdificio = new System.Windows.Forms.ComboBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnMaximizar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbl = new System.Windows.Forms.Label();
             this.btnDpto = new System.Windows.Forms.Button();
             this.btnEdif = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
@@ -108,8 +125,13 @@
             this.tabPage3.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartamentos)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -117,6 +139,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -138,7 +161,7 @@
             // panel4
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(90)))));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.txtUserBuscar);
             this.panel4.Controls.Add(this.txtUserNombreApellido);
@@ -154,9 +177,9 @@
             this.panel4.Controls.Add(this.btnUserEliminar);
             this.panel4.Controls.Add(this.btnUserEditar);
             this.panel4.Controls.Add(this.btnUserBuscar);
-            this.panel4.Location = new System.Drawing.Point(195, 49);
+            this.panel4.Location = new System.Drawing.Point(185, 49);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(807, 306);
+            this.panel4.Size = new System.Drawing.Size(825, 306);
             this.panel4.TabIndex = 14;
             // 
             // txtUserBuscar
@@ -168,21 +191,21 @@
             // 
             // txtUserNombreApellido
             // 
-            this.txtUserNombreApellido.Location = new System.Drawing.Point(666, 211);
+            this.txtUserNombreApellido.Location = new System.Drawing.Point(696, 213);
             this.txtUserNombreApellido.Name = "txtUserNombreApellido";
             this.txtUserNombreApellido.Size = new System.Drawing.Size(121, 20);
             this.txtUserNombreApellido.TabIndex = 12;
             // 
             // txtUserContra
             // 
-            this.txtUserContra.Location = new System.Drawing.Point(667, 158);
+            this.txtUserContra.Location = new System.Drawing.Point(697, 160);
             this.txtUserContra.Name = "txtUserContra";
             this.txtUserContra.Size = new System.Drawing.Size(120, 20);
             this.txtUserContra.TabIndex = 11;
             // 
             // txtUserNombreUsuario
             // 
-            this.txtUserNombreUsuario.Location = new System.Drawing.Point(667, 104);
+            this.txtUserNombreUsuario.Location = new System.Drawing.Point(698, 106);
             this.txtUserNombreUsuario.Name = "txtUserNombreUsuario";
             this.txtUserNombreUsuario.Size = new System.Drawing.Size(121, 20);
             this.txtUserNombreUsuario.TabIndex = 10;
@@ -190,62 +213,101 @@
             // lblUserNombreApellido
             // 
             this.lblUserNombreApellido.AutoSize = true;
+            this.lblUserNombreApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserNombreApellido.ForeColor = System.Drawing.Color.White;
             this.lblUserNombreApellido.Location = new System.Drawing.Point(560, 214);
             this.lblUserNombreApellido.Name = "lblUserNombreApellido";
-            this.lblUserNombreApellido.Size = new System.Drawing.Size(95, 13);
+            this.lblUserNombreApellido.Size = new System.Drawing.Size(127, 17);
             this.lblUserNombreApellido.TabIndex = 9;
             this.lblUserNombreApellido.Text = "Apellido y Nombre:";
             // 
             // lblUserContra
             // 
             this.lblUserContra.AutoSize = true;
+            this.lblUserContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserContra.ForeColor = System.Drawing.Color.White;
             this.lblUserContra.Location = new System.Drawing.Point(560, 161);
             this.lblUserContra.Name = "lblUserContra";
-            this.lblUserContra.Size = new System.Drawing.Size(64, 13);
+            this.lblUserContra.Size = new System.Drawing.Size(85, 17);
             this.lblUserContra.TabIndex = 8;
             this.lblUserContra.Text = "Contraseña:";
             // 
             // lblUserNombreUsuario
             // 
             this.lblUserNombreUsuario.AutoSize = true;
+            this.lblUserNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserNombreUsuario.ForeColor = System.Drawing.Color.White;
             this.lblUserNombreUsuario.Location = new System.Drawing.Point(560, 107);
             this.lblUserNombreUsuario.Name = "lblUserNombreUsuario";
-            this.lblUserNombreUsuario.Size = new System.Drawing.Size(101, 13);
+            this.lblUserNombreUsuario.Size = new System.Drawing.Size(135, 17);
             this.lblUserNombreUsuario.TabIndex = 7;
             this.lblUserNombreUsuario.Text = "Nombre de Usuario:";
             // 
             // lblUserRol
             // 
             this.lblUserRol.AutoSize = true;
+            this.lblUserRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserRol.ForeColor = System.Drawing.Color.White;
             this.lblUserRol.Location = new System.Drawing.Point(560, 56);
             this.lblUserRol.Name = "lblUserRol";
-            this.lblUserRol.Size = new System.Drawing.Size(26, 13);
+            this.lblUserRol.Size = new System.Drawing.Size(33, 17);
             this.lblUserRol.TabIndex = 6;
             this.lblUserRol.Text = "Rol:";
             // 
             // dgvUsuarios
             // 
-            this.dgvUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
-            this.dgvUsuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
-            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(90)))));
+            this.dgvUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvUsuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvUsuarios.ColumnHeadersHeight = 30;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(90)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUsuarios.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvUsuarios.EnableHeadersVisualStyles = false;
+            this.dgvUsuarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
             this.dgvUsuarios.Location = new System.Drawing.Point(21, 43);
             this.dgvUsuarios.Name = "dgvUsuarios";
+            this.dgvUsuarios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvUsuarios.RowHeadersVisible = false;
+            this.dgvUsuarios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dgvUsuarios.RowTemplate.Height = 30;
+            this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsuarios.Size = new System.Drawing.Size(532, 218);
             this.dgvUsuarios.TabIndex = 5;
             // 
             // cmbUserRol
             // 
             this.cmbUserRol.FormattingEnabled = true;
-            this.cmbUserRol.Location = new System.Drawing.Point(667, 56);
+            this.cmbUserRol.Location = new System.Drawing.Point(697, 52);
             this.cmbUserRol.Name = "cmbUserRol";
             this.cmbUserRol.Size = new System.Drawing.Size(121, 21);
             this.cmbUserRol.TabIndex = 4;
             // 
             // btnUserRegistrar
             // 
-            this.btnUserRegistrar.Location = new System.Drawing.Point(617, 267);
+            this.btnUserRegistrar.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.btnUserRegistrar.FlatAppearance.BorderSize = 2;
+            this.btnUserRegistrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.btnUserRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnUserRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUserRegistrar.ForeColor = System.Drawing.Color.White;
+            this.btnUserRegistrar.Location = new System.Drawing.Point(645, 267);
             this.btnUserRegistrar.Name = "btnUserRegistrar";
-            this.btnUserRegistrar.Size = new System.Drawing.Size(100, 23);
+            this.btnUserRegistrar.Size = new System.Drawing.Size(100, 27);
             this.btnUserRegistrar.TabIndex = 3;
             this.btnUserRegistrar.Text = "Guardar Usuario";
             this.btnUserRegistrar.UseVisualStyleBackColor = true;
@@ -253,9 +315,15 @@
             // 
             // btnUserEliminar
             // 
+            this.btnUserEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnUserEliminar.FlatAppearance.BorderSize = 2;
+            this.btnUserEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.btnUserEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnUserEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUserEliminar.ForeColor = System.Drawing.Color.White;
             this.btnUserEliminar.Location = new System.Drawing.Point(131, 267);
             this.btnUserEliminar.Name = "btnUserEliminar";
-            this.btnUserEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnUserEliminar.Size = new System.Drawing.Size(75, 27);
             this.btnUserEliminar.TabIndex = 2;
             this.btnUserEliminar.Text = "Eliminar";
             this.btnUserEliminar.UseVisualStyleBackColor = true;
@@ -263,9 +331,15 @@
             // 
             // btnUserEditar
             // 
+            this.btnUserEditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(189)))), ((int)(((byte)(0)))));
+            this.btnUserEditar.FlatAppearance.BorderSize = 2;
+            this.btnUserEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(189)))), ((int)(((byte)(0)))));
+            this.btnUserEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(189)))), ((int)(((byte)(0)))));
+            this.btnUserEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUserEditar.ForeColor = System.Drawing.Color.White;
             this.btnUserEditar.Location = new System.Drawing.Point(21, 267);
             this.btnUserEditar.Name = "btnUserEditar";
-            this.btnUserEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnUserEditar.Size = new System.Drawing.Size(75, 27);
             this.btnUserEditar.TabIndex = 1;
             this.btnUserEditar.Text = "Editar";
             this.btnUserEditar.UseVisualStyleBackColor = true;
@@ -273,9 +347,15 @@
             // 
             // btnUserBuscar
             // 
-            this.btnUserBuscar.Location = new System.Drawing.Point(478, 15);
+            this.btnUserBuscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(156)))), ((int)(((byte)(249)))));
+            this.btnUserBuscar.FlatAppearance.BorderSize = 2;
+            this.btnUserBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(156)))), ((int)(((byte)(249)))));
+            this.btnUserBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(156)))), ((int)(((byte)(249)))));
+            this.btnUserBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUserBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnUserBuscar.Location = new System.Drawing.Point(478, 13);
             this.btnUserBuscar.Name = "btnUserBuscar";
-            this.btnUserBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnUserBuscar.Size = new System.Drawing.Size(75, 27);
             this.btnUserBuscar.TabIndex = 0;
             this.btnUserBuscar.Text = "Buscar";
             this.btnUserBuscar.UseVisualStyleBackColor = true;
@@ -295,7 +375,7 @@
             // panel5
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(90)))));
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.lblEdifTelefono);
             this.panel5.Controls.Add(this.lblEdifAdministrador);
@@ -309,52 +389,66 @@
             this.panel5.Controls.Add(this.txtEdifDireccion);
             this.panel5.Controls.Add(this.txtEdifNombre);
             this.panel5.Controls.Add(this.dgvEdificio);
-            this.panel5.Location = new System.Drawing.Point(226, 66);
+            this.panel5.Location = new System.Drawing.Point(209, 66);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(754, 275);
+            this.panel5.Size = new System.Drawing.Size(775, 275);
             this.panel5.TabIndex = 13;
             // 
             // lblEdifTelefono
             // 
             this.lblEdifTelefono.AutoSize = true;
-            this.lblEdifTelefono.Location = new System.Drawing.Point(20, 194);
+            this.lblEdifTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEdifTelefono.ForeColor = System.Drawing.Color.White;
+            this.lblEdifTelefono.Location = new System.Drawing.Point(14, 191);
             this.lblEdifTelefono.Name = "lblEdifTelefono";
-            this.lblEdifTelefono.Size = new System.Drawing.Size(52, 13);
+            this.lblEdifTelefono.Size = new System.Drawing.Size(68, 17);
             this.lblEdifTelefono.TabIndex = 11;
             this.lblEdifTelefono.Text = "Telefono:";
             // 
             // lblEdifAdministrador
             // 
             this.lblEdifAdministrador.AutoSize = true;
-            this.lblEdifAdministrador.Location = new System.Drawing.Point(20, 141);
+            this.lblEdifAdministrador.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEdifAdministrador.ForeColor = System.Drawing.Color.White;
+            this.lblEdifAdministrador.Location = new System.Drawing.Point(14, 138);
             this.lblEdifAdministrador.Name = "lblEdifAdministrador";
-            this.lblEdifAdministrador.Size = new System.Drawing.Size(76, 13);
+            this.lblEdifAdministrador.Size = new System.Drawing.Size(103, 17);
             this.lblEdifAdministrador.TabIndex = 10;
             this.lblEdifAdministrador.Text = "Administrador: ";
             // 
             // lblEdifDireccion
             // 
             this.lblEdifDireccion.AutoSize = true;
-            this.lblEdifDireccion.Location = new System.Drawing.Point(20, 82);
+            this.lblEdifDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEdifDireccion.ForeColor = System.Drawing.Color.White;
+            this.lblEdifDireccion.Location = new System.Drawing.Point(14, 79);
             this.lblEdifDireccion.Name = "lblEdifDireccion";
-            this.lblEdifDireccion.Size = new System.Drawing.Size(55, 13);
+            this.lblEdifDireccion.Size = new System.Drawing.Size(71, 17);
             this.lblEdifDireccion.TabIndex = 9;
             this.lblEdifDireccion.Text = "Direccion:";
             // 
             // lblEdifNombre
             // 
             this.lblEdifNombre.AutoSize = true;
-            this.lblEdifNombre.Location = new System.Drawing.Point(20, 30);
+            this.lblEdifNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEdifNombre.ForeColor = System.Drawing.Color.White;
+            this.lblEdifNombre.Location = new System.Drawing.Point(14, 27);
             this.lblEdifNombre.Name = "lblEdifNombre";
-            this.lblEdifNombre.Size = new System.Drawing.Size(47, 13);
+            this.lblEdifNombre.Size = new System.Drawing.Size(62, 17);
             this.lblEdifNombre.TabIndex = 8;
             this.lblEdifNombre.Text = "Nombre:";
             // 
             // btnEdifAgregar
             // 
+            this.btnEdifAgregar.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.btnEdifAgregar.FlatAppearance.BorderSize = 2;
+            this.btnEdifAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.btnEdifAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnEdifAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdifAgregar.ForeColor = System.Drawing.Color.White;
             this.btnEdifAgregar.Location = new System.Drawing.Point(76, 237);
             this.btnEdifAgregar.Name = "btnEdifAgregar";
-            this.btnEdifAgregar.Size = new System.Drawing.Size(91, 23);
+            this.btnEdifAgregar.Size = new System.Drawing.Size(91, 27);
             this.btnEdifAgregar.TabIndex = 7;
             this.btnEdifAgregar.Text = "Confirmar Datos";
             this.btnEdifAgregar.UseVisualStyleBackColor = true;
@@ -362,9 +456,15 @@
             // 
             // btnEdifEditar
             // 
+            this.btnEdifEditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(189)))), ((int)(((byte)(0)))));
+            this.btnEdifEditar.FlatAppearance.BorderSize = 2;
+            this.btnEdifEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(189)))), ((int)(((byte)(0)))));
+            this.btnEdifEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(189)))), ((int)(((byte)(0)))));
+            this.btnEdifEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdifEditar.ForeColor = System.Drawing.Color.White;
             this.btnEdifEditar.Location = new System.Drawing.Point(533, 237);
             this.btnEdifEditar.Name = "btnEdifEditar";
-            this.btnEdifEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEdifEditar.Size = new System.Drawing.Size(75, 27);
             this.btnEdifEditar.TabIndex = 6;
             this.btnEdifEditar.Text = "Editar";
             this.btnEdifEditar.UseVisualStyleBackColor = true;
@@ -372,9 +472,15 @@
             // 
             // btnEdifEliminar
             // 
-            this.btnEdifEliminar.Location = new System.Drawing.Point(664, 237);
+            this.btnEdifEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnEdifEliminar.FlatAppearance.BorderSize = 2;
+            this.btnEdifEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.btnEdifEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnEdifEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdifEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEdifEliminar.Location = new System.Drawing.Point(686, 237);
             this.btnEdifEliminar.Name = "btnEdifEliminar";
-            this.btnEdifEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEdifEliminar.Size = new System.Drawing.Size(75, 27);
             this.btnEdifEliminar.TabIndex = 5;
             this.btnEdifEliminar.Text = "Eliminar";
             this.btnEdifEliminar.UseVisualStyleBackColor = true;
@@ -383,39 +489,73 @@
             // cmbEdifAdministrador
             // 
             this.cmbEdifAdministrador.FormattingEnabled = true;
-            this.cmbEdifAdministrador.Location = new System.Drawing.Point(99, 138);
+            this.cmbEdifAdministrador.Location = new System.Drawing.Point(121, 137);
             this.cmbEdifAdministrador.Name = "cmbEdifAdministrador";
             this.cmbEdifAdministrador.Size = new System.Drawing.Size(121, 21);
             this.cmbEdifAdministrador.TabIndex = 4;
             // 
             // txtEdifTelefono
             // 
-            this.txtEdifTelefono.Location = new System.Drawing.Point(99, 191);
+            this.txtEdifTelefono.Location = new System.Drawing.Point(121, 190);
             this.txtEdifTelefono.Name = "txtEdifTelefono";
             this.txtEdifTelefono.Size = new System.Drawing.Size(121, 20);
             this.txtEdifTelefono.TabIndex = 3;
             // 
             // txtEdifDireccion
             // 
-            this.txtEdifDireccion.Location = new System.Drawing.Point(99, 79);
+            this.txtEdifDireccion.Location = new System.Drawing.Point(121, 78);
             this.txtEdifDireccion.Name = "txtEdifDireccion";
             this.txtEdifDireccion.Size = new System.Drawing.Size(121, 20);
             this.txtEdifDireccion.TabIndex = 2;
             // 
             // txtEdifNombre
             // 
-            this.txtEdifNombre.Location = new System.Drawing.Point(99, 27);
+            this.txtEdifNombre.Location = new System.Drawing.Point(121, 26);
             this.txtEdifNombre.Name = "txtEdifNombre";
             this.txtEdifNombre.Size = new System.Drawing.Size(121, 20);
             this.txtEdifNombre.TabIndex = 1;
             // 
             // dgvEdificio
             // 
-            this.dgvEdificio.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
-            this.dgvEdificio.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
-            this.dgvEdificio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEdificio.Location = new System.Drawing.Point(235, 17);
+            this.dgvEdificio.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(90)))));
+            this.dgvEdificio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvEdificio.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvEdificio.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEdificio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvEdificio.ColumnHeadersHeight = 30;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(90)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEdificio.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvEdificio.EnableHeadersVisualStyles = false;
+            this.dgvEdificio.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
+            this.dgvEdificio.Location = new System.Drawing.Point(257, 12);
             this.dgvEdificio.Name = "dgvEdificio";
+            this.dgvEdificio.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(90)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEdificio.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvEdificio.RowHeadersVisible = false;
+            this.dgvEdificio.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(155)))));
+            this.dgvEdificio.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvEdificio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEdificio.Size = new System.Drawing.Size(504, 202);
             this.dgvEdificio.TabIndex = 0;
             // 
@@ -433,7 +573,7 @@
             // panel6
             // 
             this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(90)))));
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.btnTipoDepartamento);
             this.panel6.Controls.Add(this.optDisposicion);
@@ -467,9 +607,15 @@
             // 
             // btnTipoDepartamento
             // 
+            this.btnTipoDepartamento.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(156)))), ((int)(((byte)(249)))));
+            this.btnTipoDepartamento.FlatAppearance.BorderSize = 2;
+            this.btnTipoDepartamento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(156)))), ((int)(((byte)(249)))));
+            this.btnTipoDepartamento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(156)))), ((int)(((byte)(249)))));
+            this.btnTipoDepartamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTipoDepartamento.ForeColor = System.Drawing.Color.White;
             this.btnTipoDepartamento.Location = new System.Drawing.Point(302, 286);
             this.btnTipoDepartamento.Name = "btnTipoDepartamento";
-            this.btnTipoDepartamento.Size = new System.Drawing.Size(145, 23);
+            this.btnTipoDepartamento.Size = new System.Drawing.Size(145, 27);
             this.btnTipoDepartamento.TabIndex = 25;
             this.btnTipoDepartamento.Text = "Gestion Tipo Departamento";
             this.btnTipoDepartamento.UseVisualStyleBackColor = true;
@@ -478,6 +624,7 @@
             // optDisposicion
             // 
             this.optDisposicion.AutoSize = true;
+            this.optDisposicion.ForeColor = System.Drawing.Color.White;
             this.optDisposicion.Location = new System.Drawing.Point(630, 15);
             this.optDisposicion.Name = "optDisposicion";
             this.optDisposicion.Size = new System.Drawing.Size(79, 17);
@@ -489,9 +636,15 @@
             // 
             // btnDptoEliminar
             // 
+            this.btnDptoEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnDptoEliminar.FlatAppearance.BorderSize = 2;
+            this.btnDptoEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.btnDptoEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnDptoEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDptoEliminar.ForeColor = System.Drawing.Color.White;
             this.btnDptoEliminar.Location = new System.Drawing.Point(705, 286);
             this.btnDptoEliminar.Name = "btnDptoEliminar";
-            this.btnDptoEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnDptoEliminar.Size = new System.Drawing.Size(75, 27);
             this.btnDptoEliminar.TabIndex = 21;
             this.btnDptoEliminar.Text = "Eliminar";
             this.btnDptoEliminar.UseVisualStyleBackColor = true;
@@ -500,6 +653,7 @@
             // optAmbiente
             // 
             this.optAmbiente.AutoSize = true;
+            this.optAmbiente.ForeColor = System.Drawing.Color.White;
             this.optAmbiente.Location = new System.Drawing.Point(378, 15);
             this.optAmbiente.Name = "optAmbiente";
             this.optAmbiente.Size = new System.Drawing.Size(69, 17);
@@ -511,9 +665,15 @@
             // 
             // btnDptoEditar
             // 
+            this.btnDptoEditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(189)))), ((int)(((byte)(0)))));
+            this.btnDptoEditar.FlatAppearance.BorderSize = 2;
+            this.btnDptoEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(189)))), ((int)(((byte)(0)))));
+            this.btnDptoEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(189)))), ((int)(((byte)(0)))));
+            this.btnDptoEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDptoEditar.ForeColor = System.Drawing.Color.White;
             this.btnDptoEditar.Location = new System.Drawing.Point(595, 286);
             this.btnDptoEditar.Name = "btnDptoEditar";
-            this.btnDptoEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnDptoEditar.Size = new System.Drawing.Size(75, 27);
             this.btnDptoEditar.TabIndex = 20;
             this.btnDptoEditar.Text = "Editar";
             this.btnDptoEditar.UseVisualStyleBackColor = true;
@@ -521,19 +681,49 @@
             // 
             // dgvDepartamentos
             // 
-            this.dgvDepartamentos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
-            this.dgvDepartamentos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
-            this.dgvDepartamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDepartamentos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(90)))));
+            this.dgvDepartamentos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvDepartamentos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvDepartamentos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDepartamentos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvDepartamentos.ColumnHeadersHeight = 30;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(90)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDepartamentos.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvDepartamentos.EnableHeadersVisualStyles = false;
+            this.dgvDepartamentos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
             this.dgvDepartamentos.Location = new System.Drawing.Point(274, 47);
             this.dgvDepartamentos.Name = "dgvDepartamentos";
+            this.dgvDepartamentos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvDepartamentos.RowHeadersVisible = false;
+            this.dgvDepartamentos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dgvDepartamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDepartamentos.Size = new System.Drawing.Size(506, 229);
             this.dgvDepartamentos.TabIndex = 19;
             // 
             // btnDptoRegistrar
             // 
+            this.btnDptoRegistrar.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.btnDptoRegistrar.FlatAppearance.BorderSize = 2;
+            this.btnDptoRegistrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.btnDptoRegistrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnDptoRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDptoRegistrar.ForeColor = System.Drawing.Color.White;
             this.btnDptoRegistrar.Location = new System.Drawing.Point(87, 286);
             this.btnDptoRegistrar.Name = "btnDptoRegistrar";
-            this.btnDptoRegistrar.Size = new System.Drawing.Size(94, 23);
+            this.btnDptoRegistrar.Size = new System.Drawing.Size(94, 27);
             this.btnDptoRegistrar.TabIndex = 18;
             this.btnDptoRegistrar.Text = "Confirmar Datos";
             this.btnDptoRegistrar.UseVisualStyleBackColor = true;
@@ -542,81 +732,99 @@
             // lblDptoPrecio
             // 
             this.lblDptoPrecio.AutoSize = true;
-            this.lblDptoPrecio.Location = new System.Drawing.Point(25, 256);
+            this.lblDptoPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDptoPrecio.ForeColor = System.Drawing.Color.White;
+            this.lblDptoPrecio.Location = new System.Drawing.Point(20, 256);
             this.lblDptoPrecio.Name = "lblDptoPrecio";
-            this.lblDptoPrecio.Size = new System.Drawing.Size(40, 13);
+            this.lblDptoPrecio.Size = new System.Drawing.Size(52, 17);
             this.lblDptoPrecio.TabIndex = 17;
             this.lblDptoPrecio.Text = "Precio:";
             // 
             // lblDptoDisposicion
             // 
             this.lblDptoDisposicion.AutoSize = true;
-            this.lblDptoDisposicion.Location = new System.Drawing.Point(25, 229);
+            this.lblDptoDisposicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDptoDisposicion.ForeColor = System.Drawing.Color.White;
+            this.lblDptoDisposicion.Location = new System.Drawing.Point(20, 229);
             this.lblDptoDisposicion.Name = "lblDptoDisposicion";
-            this.lblDptoDisposicion.Size = new System.Drawing.Size(64, 13);
+            this.lblDptoDisposicion.Size = new System.Drawing.Size(84, 17);
             this.lblDptoDisposicion.TabIndex = 16;
             this.lblDptoDisposicion.Text = "Disposicion:";
             // 
             // lblDptoBanios
             // 
             this.lblDptoBanios.AutoSize = true;
-            this.lblDptoBanios.Location = new System.Drawing.Point(25, 203);
+            this.lblDptoBanios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDptoBanios.ForeColor = System.Drawing.Color.White;
+            this.lblDptoBanios.Location = new System.Drawing.Point(20, 203);
             this.lblDptoBanios.Name = "lblDptoBanios";
-            this.lblDptoBanios.Size = new System.Drawing.Size(40, 13);
+            this.lblDptoBanios.Size = new System.Drawing.Size(52, 17);
             this.lblDptoBanios.TabIndex = 15;
             this.lblDptoBanios.Text = "Baños:";
             // 
             // lblDptoDormitorios
             // 
             this.lblDptoDormitorios.AutoSize = true;
-            this.lblDptoDormitorios.Location = new System.Drawing.Point(25, 176);
+            this.lblDptoDormitorios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDptoDormitorios.ForeColor = System.Drawing.Color.White;
+            this.lblDptoDormitorios.Location = new System.Drawing.Point(20, 176);
             this.lblDptoDormitorios.Name = "lblDptoDormitorios";
-            this.lblDptoDormitorios.Size = new System.Drawing.Size(62, 13);
+            this.lblDptoDormitorios.Size = new System.Drawing.Size(84, 17);
             this.lblDptoDormitorios.TabIndex = 14;
             this.lblDptoDormitorios.Text = "Dormitorios:";
             // 
             // lblDptoAmbientes
             // 
             this.lblDptoAmbientes.AutoSize = true;
-            this.lblDptoAmbientes.Location = new System.Drawing.Point(25, 150);
+            this.lblDptoAmbientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDptoAmbientes.ForeColor = System.Drawing.Color.White;
+            this.lblDptoAmbientes.Location = new System.Drawing.Point(20, 150);
             this.lblDptoAmbientes.Name = "lblDptoAmbientes";
-            this.lblDptoAmbientes.Size = new System.Drawing.Size(59, 13);
+            this.lblDptoAmbientes.Size = new System.Drawing.Size(78, 17);
             this.lblDptoAmbientes.TabIndex = 13;
             this.lblDptoAmbientes.Text = "Ambientes:";
             // 
             // lblDptoPiso
             // 
             this.lblDptoPiso.AutoSize = true;
-            this.lblDptoPiso.Location = new System.Drawing.Point(25, 123);
+            this.lblDptoPiso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDptoPiso.ForeColor = System.Drawing.Color.White;
+            this.lblDptoPiso.Location = new System.Drawing.Point(20, 123);
             this.lblDptoPiso.Name = "lblDptoPiso";
-            this.lblDptoPiso.Size = new System.Drawing.Size(30, 13);
+            this.lblDptoPiso.Size = new System.Drawing.Size(39, 17);
             this.lblDptoPiso.TabIndex = 12;
             this.lblDptoPiso.Text = "Piso:";
             // 
             // lblDptoNumero
             // 
             this.lblDptoNumero.AutoSize = true;
-            this.lblDptoNumero.Location = new System.Drawing.Point(25, 97);
+            this.lblDptoNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDptoNumero.ForeColor = System.Drawing.Color.White;
+            this.lblDptoNumero.Location = new System.Drawing.Point(20, 97);
             this.lblDptoNumero.Name = "lblDptoNumero";
-            this.lblDptoNumero.Size = new System.Drawing.Size(47, 13);
+            this.lblDptoNumero.Size = new System.Drawing.Size(62, 17);
             this.lblDptoNumero.TabIndex = 11;
             this.lblDptoNumero.Text = "Numero:";
             // 
             // lblDptoTipo
             // 
             this.lblDptoTipo.AutoSize = true;
-            this.lblDptoTipo.Location = new System.Drawing.Point(25, 70);
+            this.lblDptoTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDptoTipo.ForeColor = System.Drawing.Color.White;
+            this.lblDptoTipo.Location = new System.Drawing.Point(20, 70);
             this.lblDptoTipo.Name = "lblDptoTipo";
-            this.lblDptoTipo.Size = new System.Drawing.Size(31, 13);
+            this.lblDptoTipo.Size = new System.Drawing.Size(40, 17);
             this.lblDptoTipo.TabIndex = 10;
             this.lblDptoTipo.Text = "Tipo:";
             // 
             // lblDptoEdificio
             // 
             this.lblDptoEdificio.AutoSize = true;
-            this.lblDptoEdificio.Location = new System.Drawing.Point(25, 42);
+            this.lblDptoEdificio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDptoEdificio.ForeColor = System.Drawing.Color.White;
+            this.lblDptoEdificio.Location = new System.Drawing.Point(20, 42);
             this.lblDptoEdificio.Name = "lblDptoEdificio";
-            this.lblDptoEdificio.Size = new System.Drawing.Size(44, 13);
+            this.lblDptoEdificio.Size = new System.Drawing.Size(57, 17);
             this.lblDptoEdificio.TabIndex = 9;
             this.lblDptoEdificio.Text = "Edificio:";
             // 
@@ -692,9 +900,57 @@
             this.cmbDptoEdificio.Size = new System.Drawing.Size(140, 21);
             this.cmbDptoEdificio.TabIndex = 0;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(186)))), ((int)(((byte)(250)))));
+            this.tabPage4.Controls.Add(this.label2);
+            this.tabPage4.Controls.Add(this.label1);
+            this.tabPage4.Controls.Add(this.pictureBox3);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1021, 403);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "tabPage4";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(156)))), ((int)(((byte)(249)))));
+            this.label2.Location = new System.Drawing.Point(529, 241);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(103, 32);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "ADMIN";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 39.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
+            this.label1.Location = new System.Drawing.Point(256, 181);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(376, 60);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "ORGANISALE";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(651, 79);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(250, 250);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.btnMinimizar);
             this.panel1.Controls.Add(this.btnMaximizar);
             this.panel1.Controls.Add(this.lblTitulo);
@@ -708,10 +964,21 @@
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(21, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            // 
             // btnMinimizar
             // 
             this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimizar.BackColor = System.Drawing.Color.Navy;
+            this.btnMinimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
             this.btnMinimizar.FlatAppearance.BorderSize = 0;
             this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(150)))));
             this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(150)))));
@@ -729,7 +996,7 @@
             // btnMaximizar
             // 
             this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximizar.BackColor = System.Drawing.Color.Navy;
+            this.btnMaximizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
             this.btnMaximizar.FlatAppearance.BorderSize = 0;
             this.btnMaximizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(150)))));
             this.btnMaximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(150)))));
@@ -748,7 +1015,7 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(25, 5);
+            this.lblTitulo.Location = new System.Drawing.Point(24, 6);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(100, 13);
             this.lblTitulo.TabIndex = 8;
@@ -757,7 +1024,7 @@
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.BackColor = System.Drawing.Color.Navy;
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
@@ -774,7 +1041,8 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(90)))));
+            this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.btnDpto);
             this.panel2.Controls.Add(this.btnEdif);
             this.panel2.Controls.Add(this.btnUser);
@@ -784,66 +1052,103 @@
             this.panel2.Size = new System.Drawing.Size(183, 405);
             this.panel2.TabIndex = 2;
             // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(67)))));
+            this.panel8.Controls.Add(this.label3);
+            this.panel8.Controls.Add(this.pictureBox1);
+            this.panel8.Controls.Add(this.lbl);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(183, 77);
+            this.panel8.TabIndex = 17;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(156)))), ((int)(((byte)(249)))));
+            this.label3.Location = new System.Drawing.Point(138, 47);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "ADMIN";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(58, 65);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lbl
+            // 
+            this.lbl.AutoSize = true;
+            this.lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.ForeColor = System.Drawing.Color.White;
+            this.lbl.Location = new System.Drawing.Point(60, 29);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(115, 20);
+            this.lbl.TabIndex = 2;
+            this.lbl.Text = "ORGANISALE";
+            // 
             // btnDpto
             // 
-            this.btnDpto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDpto.FlatAppearance.BorderSize = 0;
-            this.btnDpto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
-            this.btnDpto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnDpto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(155)))));
+            this.btnDpto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(155)))));
             this.btnDpto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDpto.ForeColor = System.Drawing.Color.White;
             this.btnDpto.Image = ((System.Drawing.Image)(resources.GetObject("btnDpto.Image")));
-            this.btnDpto.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnDpto.Location = new System.Drawing.Point(0, 259);
+            this.btnDpto.Location = new System.Drawing.Point(0, 205);
             this.btnDpto.Name = "btnDpto";
-            this.btnDpto.Size = new System.Drawing.Size(183, 75);
+            this.btnDpto.Size = new System.Drawing.Size(183, 65);
             this.btnDpto.TabIndex = 16;
-            this.btnDpto.Text = "Departamento";
-            this.btnDpto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDpto.Text = "     Departamento";
+            this.btnDpto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDpto.UseVisualStyleBackColor = true;
             this.btnDpto.Click += new System.EventHandler(this.btnDpto_Click);
             // 
             // btnEdif
             // 
-            this.btnEdif.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEdif.FlatAppearance.BorderSize = 0;
-            this.btnEdif.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
-            this.btnEdif.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnEdif.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(155)))));
+            this.btnEdif.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(155)))));
             this.btnEdif.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdif.ForeColor = System.Drawing.Color.White;
             this.btnEdif.Image = ((System.Drawing.Image)(resources.GetObject("btnEdif.Image")));
-            this.btnEdif.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEdif.Location = new System.Drawing.Point(0, 151);
+            this.btnEdif.Location = new System.Drawing.Point(0, 141);
             this.btnEdif.Name = "btnEdif";
-            this.btnEdif.Size = new System.Drawing.Size(183, 75);
+            this.btnEdif.Size = new System.Drawing.Size(183, 65);
             this.btnEdif.TabIndex = 15;
-            this.btnEdif.Text = "Edificio";
-            this.btnEdif.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEdif.Text = "     Edificio";
+            this.btnEdif.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEdif.UseVisualStyleBackColor = true;
             this.btnEdif.Click += new System.EventHandler(this.btnEdif_Click);
             // 
             // btnUser
             // 
-            this.btnUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUser.FlatAppearance.BorderSize = 0;
-            this.btnUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
-            this.btnUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(130)))));
+            this.btnUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(155)))));
+            this.btnUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(155)))));
             this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUser.ForeColor = System.Drawing.Color.White;
             this.btnUser.Image = ((System.Drawing.Image)(resources.GetObject("btnUser.Image")));
-            this.btnUser.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnUser.Location = new System.Drawing.Point(0, 33);
+            this.btnUser.Location = new System.Drawing.Point(0, 77);
             this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(183, 75);
+            this.btnUser.Size = new System.Drawing.Size(183, 65);
             this.btnUser.TabIndex = 14;
-            this.btnUser.Text = "Usuario";
-            this.btnUser.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnUser.Text = "     Usuario";
+            this.btnUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUser.UseVisualStyleBackColor = true;
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(90)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(183, 421);
             this.panel3.Name = "panel3";
@@ -852,7 +1157,7 @@
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(90)))));
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel7.Location = new System.Drawing.Point(1020, 24);
             this.panel7.Name = "panel7";
@@ -890,9 +1195,16 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartamentos)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -968,5 +1280,14 @@
         private System.Windows.Forms.Button btnMaximizar;
         private System.Windows.Forms.Button btnTipoDepartamento;
         public System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

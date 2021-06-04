@@ -15,6 +15,7 @@ namespace Vistas
         public FrmMenuAdministrador()
         {
             InitializeComponent();
+            tabControl1.SelectedIndex = 3;
         }
         private void FrmMenuAdministrador_Load(object sender, EventArgs e)
         {
@@ -35,18 +36,49 @@ namespace Vistas
             load_departamento();
         }
 
+        //Boton activo
+        private Button currentButton;
+
+        private void activeButton(object btnSender)
+        {
+            if(btnSender != null)
+            {
+                if (currentButton != (Button)btnSender)
+                {
+                    disableButton();
+                    currentButton = (Button)btnSender;
+                    currentButton.BackColor = Color.FromArgb(51, 51, 155);
+                }
+            }
+        }
+
+        private void disableButton()
+        {
+            foreach(Control previousBtn in panel2.Controls){
+                if (previousBtn.GetType() == typeof(Button))
+                {
+                    previousBtn.BackColor = Color.FromArgb(50, 50, 90);
+                }
+            }
+        }
+
         //Botones del menu
+
+
         private void btnUser_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 0;
+            activeButton(sender);
         }
         private void btnEdif_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 1;
+            activeButton(sender);
         }
         private void btnDpto_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 2;
+            activeButton(sender);
         }
         private void btnMaximizar_Click(object sender, EventArgs e)
         {
@@ -492,7 +524,6 @@ namespace Vistas
         {
             m = 0;
         }
-
         
     }
 }

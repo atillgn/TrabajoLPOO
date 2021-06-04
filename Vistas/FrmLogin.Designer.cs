@@ -38,18 +38,20 @@
             this.imgUser = new System.Windows.Forms.PictureBox();
             this.imgPassword = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.imgUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPassword)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Ingresar
             // 
             this.btn_Ingresar.AutoSize = true;
             this.btn_Ingresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
-            this.btn_Ingresar.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btn_Ingresar.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.btn_Ingresar.FlatAppearance.BorderSize = 2;
             this.btn_Ingresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
             this.btn_Ingresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
@@ -68,7 +70,7 @@
             this.btn_Cancelar.AutoSize = true;
             this.btn_Cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
             this.btn_Cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_Cancelar.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btn_Cancelar.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.btn_Cancelar.FlatAppearance.BorderSize = 2;
             this.btn_Cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.btn_Cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
@@ -132,9 +134,9 @@
             this.imgUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.imgUser.ErrorImage = null;
             this.imgUser.Image = ((System.Drawing.Image)(resources.GetObject("imgUser.Image")));
-            this.imgUser.Location = new System.Drawing.Point(25, 47);
+            this.imgUser.Location = new System.Drawing.Point(25, 50);
             this.imgUser.Name = "imgUser";
-            this.imgUser.Size = new System.Drawing.Size(59, 56);
+            this.imgUser.Size = new System.Drawing.Size(59, 57);
             this.imgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgUser.TabIndex = 6;
             this.imgUser.TabStop = false;
@@ -143,10 +145,10 @@
             // 
             this.imgPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(80)))));
             this.imgPassword.Image = ((System.Drawing.Image)(resources.GetObject("imgPassword.Image")));
-            this.imgPassword.InitialImage = ((System.Drawing.Image)(resources.GetObject("imgPassword.InitialImage")));
-            this.imgPassword.Location = new System.Drawing.Point(25, 118);
+            this.imgPassword.InitialImage = null;
+            this.imgPassword.Location = new System.Drawing.Point(25, 123);
             this.imgPassword.Name = "imgPassword";
-            this.imgPassword.Size = new System.Drawing.Size(59, 60);
+            this.imgPassword.Size = new System.Drawing.Size(50, 50);
             this.imgPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgPassword.TabIndex = 7;
             this.imgPassword.TabStop = false;
@@ -154,6 +156,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -164,6 +167,16 @@
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(25, 4);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(33, 13);
+            this.lblTitulo.TabIndex = 1;
+            this.lblTitulo.Text = "Login";
             // 
             // btnSalir
             // 
@@ -180,15 +193,16 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // lblTitulo
+            // pictureBox2
             // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(4, 4);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(33, 13);
-            this.lblTitulo.TabIndex = 1;
-            this.lblTitulo.Text = "Login";
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(21, 23);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
             // 
             // FrmLogin
             // 
@@ -219,6 +233,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgPassword)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,6 +252,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.PictureBox pictureBox2;
 
     }
 }
