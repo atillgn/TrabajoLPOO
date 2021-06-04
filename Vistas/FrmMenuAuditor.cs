@@ -231,19 +231,65 @@ namespace Vistas
         {
             cmbAlqEdificio.ValueMember = "Edif_Codigo";
             cmbAlqEdificio.DisplayMember = "Edif_Nombre";
-            cmbAlqEdificio.DataSource = TrabajarAlquiler.list_edificios();
+            DataTable dt = new DataTable();
+            dt = TrabajarAlquiler.list_edificios();
+            if (dt.Rows.Count >= 1)
+            {
+                cmbAlqEdificio.DataSource = dt;
+                cmbAlqEdificio.Enabled = true;
+                cmbAlqDepartamento.Enabled = true;
+                dtpAlqDesde.Enabled = true;
+                dtpAlqHasta.Enabled = true;
+                btnAlqRegistrar.Enabled = true;
+            }
+            else
+            {
+                cmbAlqEdificio.Enabled = false;
+                cmbAlqDepartamento.Enabled = false;
+                dtpAlqDesde.Enabled = false;
+                dtpAlqHasta.Enabled = false;
+                btnAlqRegistrar.Enabled = false;
+            }
         }
         private void load_combo_departamentos(int Edif_Codigo)
         {
             cmbAlqDepartamento.ValueMember = "Dpto_Codigo";
             cmbAlqDepartamento.DisplayMember = "Info";
-            cmbAlqDepartamento.DataSource = TrabajarAlquiler.list_departamentos(Edif_Codigo);
+            DataTable dt=new DataTable();
+            dt = TrabajarAlquiler.list_departamentos(Edif_Codigo);
+            if (dt.Rows.Count >= 1)
+            {
+                cmbAlqDepartamento.DataSource = dt;
+                cmbAlqDepartamento.Enabled = true;
+                dtpAlqDesde.Enabled = true;
+                dtpAlqHasta.Enabled = true;
+                btnAlqRegistrar.Enabled = true;
+            }
+            else
+            {
+                cmbAlqDepartamento.Enabled = false;
+                dtpAlqDesde.Enabled = false;
+                dtpAlqHasta.Enabled = false;
+                btnAlqRegistrar.Enabled = false;
+            }
         }
         private void load_combo_inquilinos()
         {
             cmbAlqInquilino.ValueMember = "Inq_Codigo";
             cmbAlqInquilino.DisplayMember = "Inq_Apellido";
-            cmbAlqInquilino.DataSource = TrabajarAlquiler.list_inquilinos();
+            DataTable dt = new DataTable();
+            dt = TrabajarAlquiler.list_inquilinos();
+            if (dt.Rows.Count >= 1)
+            {
+                cmbAlqInquilino.DataSource = dt;
+                cmbAlqInquilino.Enabled = true;
+                btnAlqRegistrar.Enabled = true;
+            }
+            else
+            {
+                cmbAlqInquilino.Enabled = false;
+                btnAlqRegistrar.Enabled = false;
+            }
         }
         private void display_precioFinal()
         {

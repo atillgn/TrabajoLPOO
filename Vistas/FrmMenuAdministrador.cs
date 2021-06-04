@@ -63,8 +63,6 @@ namespace Vistas
         }
 
         //Botones del menu
-
-
         private void btnUser_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 0;
