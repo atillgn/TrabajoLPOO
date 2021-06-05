@@ -43,6 +43,7 @@ namespace Vistas
             dgvDpto.DataSource = TrabajarDepartamento.list_dpto();
             load_Disposicion();
             load_TipoDpto();
+
         }
         private void load_Disposicion() 
         {
@@ -58,14 +59,14 @@ namespace Vistas
         }
         private void dtpDesde_ValueChanged(object sender, EventArgs e)
         {
-            if (dtpDesde.Value > dtpHasta.Value) dtpHasta.Value = dtpDesde.Value;
+            if (dtpDesde.Value >= dtpHasta.Value) dtpHasta.Value = dtpDesde.Value;
             dtpHasta.Value = dtpHasta.Value.AddSeconds(59 - dtpHasta.Value.Second);
             dtpHasta.Value = dtpHasta.Value.AddHours(23 - dtpHasta.Value.Hour);
             dtpHasta.Value = dtpHasta.Value.AddMinutes(59 - dtpHasta.Value.Minute);
         }
         private void dtpHasta_ValueChanged(object sender, EventArgs e)
         {
-            if (dtpDesde.Value > dtpHasta.Value) dtpDesde.Value = dtpHasta.Value;
+            if (dtpDesde.Value >= dtpHasta.Value) dtpDesde.Value = dtpHasta.Value;
             dtpHasta.Value = dtpHasta.Value.AddSeconds(59 - dtpHasta.Value.Second);
             dtpHasta.Value = dtpHasta.Value.AddHours(23 - dtpHasta.Value.Hour);
             dtpHasta.Value = dtpHasta.Value.AddMinutes(59 - dtpHasta.Value.Minute);

@@ -145,11 +145,21 @@ namespace Vistas
         {
             if(dgvAlquileres.SelectedRows.Count == 1)
             {
-                if (MessageBox.Show("¿Desea eliminar?", "Eliminar", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                DateTime d=DateTime.Now,a=new DateTime(),b=new DateTime();
+                a = (DateTime)dgvAlquileres.CurrentRow.Cells["Fecha_desde"].Value;
+                b = (DateTime)dgvAlquileres.CurrentRow.Cells["Fecha_hasta"].Value;
+                if (d < a || d > b)
                 {
-                    ListAlquiler.delete_alquiler((int)dgvAlquileres.CurrentRow.Cells["Codigo"].Value);
-                    dgvAlquileres.DataSource = ListAlquiler.list_alquileres();
-                    MessageBox.Show("Alquiler eliminado con exito");
+                    if (MessageBox.Show("¿Desea eliminar?", "Eliminar", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                    {
+                        ListAlquiler.delete_alquiler((int)dgvAlquileres.CurrentRow.Cells["Codigo"].Value);
+                        dgvAlquileres.DataSource = ListAlquiler.list_alquileres();
+                        MessageBox.Show("Alquiler eliminado con exito");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No puede eliminar una alquiler en curso");
                 }
             }
         }
