@@ -35,7 +35,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnTipoDptoEliminar = new System.Windows.Forms.Button();
             this.btnTipoDptoEditar = new System.Windows.Forms.Button();
@@ -43,8 +42,6 @@
             this.txtTipoDptoDescripcion = new System.Windows.Forms.TextBox();
             this.lblTipoDptoDescripcion = new System.Windows.Forms.Label();
             this.dgvTipoDpto = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
@@ -60,7 +57,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(327, 22);
+            this.panel3.Size = new System.Drawing.Size(299, 22);
             this.panel3.TabIndex = 2;
             this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseDown);
             this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel3_MouseMove);
@@ -95,22 +92,13 @@
             this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(150)))));
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(252, 0);
+            this.btnSalir.Location = new System.Drawing.Point(224, 0);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 22);
-            this.btnSalir.TabIndex = 0;
+            this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "Volver";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(90)))));
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 334);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(327, 16);
-            this.panel4.TabIndex = 3;
             // 
             // panel5
             // 
@@ -122,9 +110,9 @@
             this.panel5.Controls.Add(this.txtTipoDptoDescripcion);
             this.panel5.Controls.Add(this.lblTipoDptoDescripcion);
             this.panel5.Controls.Add(this.dgvTipoDpto);
-            this.panel5.Location = new System.Drawing.Point(-7, 24);
+            this.panel5.Location = new System.Drawing.Point(-3, 21);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(340, 310);
+            this.panel5.Size = new System.Drawing.Size(288, 310);
             this.panel5.TabIndex = 4;
             // 
             // btnTipoDptoEliminar
@@ -135,10 +123,10 @@
             this.btnTipoDptoEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnTipoDptoEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTipoDptoEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnTipoDptoEliminar.Location = new System.Drawing.Point(217, 266);
+            this.btnTipoDptoEliminar.Location = new System.Drawing.Point(190, 267);
             this.btnTipoDptoEliminar.Name = "btnTipoDptoEliminar";
             this.btnTipoDptoEliminar.Size = new System.Drawing.Size(75, 27);
-            this.btnTipoDptoEliminar.TabIndex = 5;
+            this.btnTipoDptoEliminar.TabIndex = 4;
             this.btnTipoDptoEliminar.Text = "Eliminar";
             this.btnTipoDptoEliminar.UseVisualStyleBackColor = true;
             this.btnTipoDptoEliminar.Click += new System.EventHandler(this.btnTipoDptoEliminar_Click);
@@ -151,10 +139,10 @@
             this.btnTipoDptoEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(189)))), ((int)(((byte)(0)))));
             this.btnTipoDptoEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTipoDptoEditar.ForeColor = System.Drawing.Color.White;
-            this.btnTipoDptoEditar.Location = new System.Drawing.Point(51, 266);
+            this.btnTipoDptoEditar.Location = new System.Drawing.Point(45, 267);
             this.btnTipoDptoEditar.Name = "btnTipoDptoEditar";
             this.btnTipoDptoEditar.Size = new System.Drawing.Size(75, 27);
-            this.btnTipoDptoEditar.TabIndex = 4;
+            this.btnTipoDptoEditar.TabIndex = 3;
             this.btnTipoDptoEditar.Text = "Editar";
             this.btnTipoDptoEditar.UseVisualStyleBackColor = true;
             this.btnTipoDptoEditar.Click += new System.EventHandler(this.btnTipoDptoEditar_Click);
@@ -167,27 +155,27 @@
             this.btnTipoDptoGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.btnTipoDptoGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTipoDptoGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnTipoDptoGuardar.Location = new System.Drawing.Point(98, 56);
+            this.btnTipoDptoGuardar.Location = new System.Drawing.Point(81, 57);
             this.btnTipoDptoGuardar.Name = "btnTipoDptoGuardar";
             this.btnTipoDptoGuardar.Size = new System.Drawing.Size(142, 29);
-            this.btnTipoDptoGuardar.TabIndex = 3;
+            this.btnTipoDptoGuardar.TabIndex = 2;
             this.btnTipoDptoGuardar.Text = "Guardar";
             this.btnTipoDptoGuardar.UseVisualStyleBackColor = true;
             this.btnTipoDptoGuardar.Click += new System.EventHandler(this.btnTipoDptoGuardar_Click);
             // 
             // txtTipoDptoDescripcion
             // 
-            this.txtTipoDptoDescripcion.Location = new System.Drawing.Point(201, 18);
+            this.txtTipoDptoDescripcion.Location = new System.Drawing.Point(172, 21);
             this.txtTipoDptoDescripcion.Name = "txtTipoDptoDescripcion";
             this.txtTipoDptoDescripcion.Size = new System.Drawing.Size(113, 20);
-            this.txtTipoDptoDescripcion.TabIndex = 2;
+            this.txtTipoDptoDescripcion.TabIndex = 1;
             // 
             // lblTipoDptoDescripcion
             // 
             this.lblTipoDptoDescripcion.AutoSize = true;
             this.lblTipoDptoDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoDptoDescripcion.ForeColor = System.Drawing.Color.White;
-            this.lblTipoDptoDescripcion.Location = new System.Drawing.Point(27, 21);
+            this.lblTipoDptoDescripcion.Location = new System.Drawing.Point(12, 22);
             this.lblTipoDptoDescripcion.Name = "lblTipoDptoDescripcion";
             this.lblTipoDptoDescripcion.Size = new System.Drawing.Size(154, 17);
             this.lblTipoDptoDescripcion.TabIndex = 1;
@@ -218,43 +206,22 @@
             this.dgvTipoDpto.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTipoDpto.EnableHeadersVisualStyles = false;
             this.dgvTipoDpto.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
-            this.dgvTipoDpto.Location = new System.Drawing.Point(51, 91);
+            this.dgvTipoDpto.Location = new System.Drawing.Point(45, 92);
             this.dgvTipoDpto.Name = "dgvTipoDpto";
             this.dgvTipoDpto.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvTipoDpto.RowHeadersVisible = false;
             this.dgvTipoDpto.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgvTipoDpto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTipoDpto.Size = new System.Drawing.Size(241, 153);
-            this.dgvTipoDpto.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(90)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 22);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(14, 312);
-            this.panel1.TabIndex = 5;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(90)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(313, 22);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(14, 312);
-            this.panel2.TabIndex = 6;
+            this.dgvTipoDpto.Size = new System.Drawing.Size(220, 153);
+            this.dgvTipoDpto.TabIndex = 5;
             // 
             // FrmGestionTipoDpto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(90)))));
-            this.ClientSize = new System.Drawing.Size(327, 350);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(299, 335);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmGestionTipoDpto";
@@ -274,7 +241,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridView dgvTipoDpto;
         private System.Windows.Forms.Button btnSalir;
@@ -283,8 +249,6 @@
         private System.Windows.Forms.Button btnTipoDptoGuardar;
         private System.Windows.Forms.TextBox txtTipoDptoDescripcion;
         private System.Windows.Forms.Label lblTipoDptoDescripcion;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.PictureBox pictureBox2;
     }

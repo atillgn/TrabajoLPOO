@@ -38,7 +38,6 @@ namespace Vistas
 
         //Boton activo
         private Button currentButton;
-
         private void activeButton(object btnSender)
         {
             if(btnSender != null)
@@ -51,7 +50,6 @@ namespace Vistas
                 }
             }
         }
-
         private void disableButton()
         {
             foreach(Control previousBtn in panel2.Controls){

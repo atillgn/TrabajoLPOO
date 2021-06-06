@@ -187,28 +187,28 @@
             this.txtUserBuscar.Location = new System.Drawing.Point(21, 17);
             this.txtUserBuscar.Name = "txtUserBuscar";
             this.txtUserBuscar.Size = new System.Drawing.Size(446, 20);
-            this.txtUserBuscar.TabIndex = 13;
+            this.txtUserBuscar.TabIndex = 8;
             // 
             // txtUserNombreApellido
             // 
             this.txtUserNombreApellido.Location = new System.Drawing.Point(696, 213);
             this.txtUserNombreApellido.Name = "txtUserNombreApellido";
             this.txtUserNombreApellido.Size = new System.Drawing.Size(121, 20);
-            this.txtUserNombreApellido.TabIndex = 12;
+            this.txtUserNombreApellido.TabIndex = 4;
             // 
             // txtUserContra
             // 
             this.txtUserContra.Location = new System.Drawing.Point(697, 160);
             this.txtUserContra.Name = "txtUserContra";
             this.txtUserContra.Size = new System.Drawing.Size(120, 20);
-            this.txtUserContra.TabIndex = 11;
+            this.txtUserContra.TabIndex = 3;
             // 
             // txtUserNombreUsuario
             // 
             this.txtUserNombreUsuario.Location = new System.Drawing.Point(698, 106);
             this.txtUserNombreUsuario.Name = "txtUserNombreUsuario";
             this.txtUserNombreUsuario.Size = new System.Drawing.Size(121, 20);
-            this.txtUserNombreUsuario.TabIndex = 10;
+            this.txtUserNombreUsuario.TabIndex = 2;
             // 
             // lblUserNombreApellido
             // 
@@ -287,7 +287,7 @@
             this.dgvUsuarios.RowTemplate.Height = 30;
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsuarios.Size = new System.Drawing.Size(532, 218);
-            this.dgvUsuarios.TabIndex = 5;
+            this.dgvUsuarios.TabIndex = 10;
             // 
             // cmbUserRol
             // 
@@ -295,7 +295,7 @@
             this.cmbUserRol.Location = new System.Drawing.Point(697, 52);
             this.cmbUserRol.Name = "cmbUserRol";
             this.cmbUserRol.Size = new System.Drawing.Size(121, 21);
-            this.cmbUserRol.TabIndex = 4;
+            this.cmbUserRol.TabIndex = 1;
             // 
             // btnUserRegistrar
             // 
@@ -308,7 +308,7 @@
             this.btnUserRegistrar.Location = new System.Drawing.Point(645, 267);
             this.btnUserRegistrar.Name = "btnUserRegistrar";
             this.btnUserRegistrar.Size = new System.Drawing.Size(100, 27);
-            this.btnUserRegistrar.TabIndex = 3;
+            this.btnUserRegistrar.TabIndex = 5;
             this.btnUserRegistrar.Text = "Guardar Usuario";
             this.btnUserRegistrar.UseVisualStyleBackColor = true;
             this.btnUserRegistrar.Click += new System.EventHandler(this.btnUserRegistrar_Click);
@@ -324,7 +324,7 @@
             this.btnUserEliminar.Location = new System.Drawing.Point(131, 267);
             this.btnUserEliminar.Name = "btnUserEliminar";
             this.btnUserEliminar.Size = new System.Drawing.Size(75, 27);
-            this.btnUserEliminar.TabIndex = 2;
+            this.btnUserEliminar.TabIndex = 7;
             this.btnUserEliminar.Text = "Eliminar";
             this.btnUserEliminar.UseVisualStyleBackColor = true;
             this.btnUserEliminar.Click += new System.EventHandler(this.btnUserEliminar_Click);
@@ -340,7 +340,7 @@
             this.btnUserEditar.Location = new System.Drawing.Point(21, 267);
             this.btnUserEditar.Name = "btnUserEditar";
             this.btnUserEditar.Size = new System.Drawing.Size(75, 27);
-            this.btnUserEditar.TabIndex = 1;
+            this.btnUserEditar.TabIndex = 6;
             this.btnUserEditar.Text = "Editar";
             this.btnUserEditar.UseVisualStyleBackColor = true;
             this.btnUserEditar.Click += new System.EventHandler(this.btnUserEditar_Click);
@@ -356,7 +356,7 @@
             this.btnUserBuscar.Location = new System.Drawing.Point(478, 13);
             this.btnUserBuscar.Name = "btnUserBuscar";
             this.btnUserBuscar.Size = new System.Drawing.Size(75, 27);
-            this.btnUserBuscar.TabIndex = 0;
+            this.btnUserBuscar.TabIndex = 9;
             this.btnUserBuscar.Text = "Buscar";
             this.btnUserBuscar.UseVisualStyleBackColor = true;
             this.btnUserBuscar.Click += new System.EventHandler(this.btnUserBuscar_Click);
@@ -449,7 +449,7 @@
             this.btnEdifAgregar.Location = new System.Drawing.Point(76, 237);
             this.btnEdifAgregar.Name = "btnEdifAgregar";
             this.btnEdifAgregar.Size = new System.Drawing.Size(91, 27);
-            this.btnEdifAgregar.TabIndex = 7;
+            this.btnEdifAgregar.TabIndex = 5;
             this.btnEdifAgregar.Text = "Confirmar Datos";
             this.btnEdifAgregar.UseVisualStyleBackColor = true;
             this.btnEdifAgregar.Click += new System.EventHandler(this.btnEdifAgregar_Click);
@@ -481,7 +481,7 @@
             this.btnEdifEliminar.Location = new System.Drawing.Point(686, 237);
             this.btnEdifEliminar.Name = "btnEdifEliminar";
             this.btnEdifEliminar.Size = new System.Drawing.Size(75, 27);
-            this.btnEdifEliminar.TabIndex = 5;
+            this.btnEdifEliminar.TabIndex = 7;
             this.btnEdifEliminar.Text = "Eliminar";
             this.btnEdifEliminar.UseVisualStyleBackColor = true;
             this.btnEdifEliminar.Click += new System.EventHandler(this.btnEdifEliminar_Click);
@@ -492,14 +492,14 @@
             this.cmbEdifAdministrador.Location = new System.Drawing.Point(121, 137);
             this.cmbEdifAdministrador.Name = "cmbEdifAdministrador";
             this.cmbEdifAdministrador.Size = new System.Drawing.Size(121, 21);
-            this.cmbEdifAdministrador.TabIndex = 4;
+            this.cmbEdifAdministrador.TabIndex = 3;
             // 
             // txtEdifTelefono
             // 
             this.txtEdifTelefono.Location = new System.Drawing.Point(121, 190);
             this.txtEdifTelefono.Name = "txtEdifTelefono";
             this.txtEdifTelefono.Size = new System.Drawing.Size(121, 20);
-            this.txtEdifTelefono.TabIndex = 3;
+            this.txtEdifTelefono.TabIndex = 4;
             // 
             // txtEdifDireccion
             // 
@@ -557,7 +557,7 @@
             this.dgvEdificio.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvEdificio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEdificio.Size = new System.Drawing.Size(504, 202);
-            this.dgvEdificio.TabIndex = 0;
+            this.dgvEdificio.TabIndex = 8;
             // 
             // tabPage3
             // 
@@ -616,7 +616,7 @@
             this.btnTipoDepartamento.Location = new System.Drawing.Point(302, 286);
             this.btnTipoDepartamento.Name = "btnTipoDepartamento";
             this.btnTipoDepartamento.Size = new System.Drawing.Size(145, 27);
-            this.btnTipoDepartamento.TabIndex = 25;
+            this.btnTipoDepartamento.TabIndex = 13;
             this.btnTipoDepartamento.Text = "Gestion Tipo Departamento";
             this.btnTipoDepartamento.UseVisualStyleBackColor = true;
             this.btnTipoDepartamento.Click += new System.EventHandler(this.btnTipoDepartamento_Click);
@@ -628,7 +628,7 @@
             this.optDisposicion.Location = new System.Drawing.Point(630, 15);
             this.optDisposicion.Name = "optDisposicion";
             this.optDisposicion.Size = new System.Drawing.Size(79, 17);
-            this.optDisposicion.TabIndex = 23;
+            this.optDisposicion.TabIndex = 15;
             this.optDisposicion.TabStop = true;
             this.optDisposicion.Text = "Disposicion";
             this.optDisposicion.UseVisualStyleBackColor = true;
@@ -645,7 +645,7 @@
             this.btnDptoEliminar.Location = new System.Drawing.Point(705, 286);
             this.btnDptoEliminar.Name = "btnDptoEliminar";
             this.btnDptoEliminar.Size = new System.Drawing.Size(75, 27);
-            this.btnDptoEliminar.TabIndex = 21;
+            this.btnDptoEliminar.TabIndex = 12;
             this.btnDptoEliminar.Text = "Eliminar";
             this.btnDptoEliminar.UseVisualStyleBackColor = true;
             this.btnDptoEliminar.Click += new System.EventHandler(this.btnDptoEliminar_Click);
@@ -657,7 +657,7 @@
             this.optAmbiente.Location = new System.Drawing.Point(378, 15);
             this.optAmbiente.Name = "optAmbiente";
             this.optAmbiente.Size = new System.Drawing.Size(69, 17);
-            this.optAmbiente.TabIndex = 22;
+            this.optAmbiente.TabIndex = 14;
             this.optAmbiente.TabStop = true;
             this.optAmbiente.Text = "Ambiente";
             this.optAmbiente.UseVisualStyleBackColor = true;
@@ -674,7 +674,7 @@
             this.btnDptoEditar.Location = new System.Drawing.Point(595, 286);
             this.btnDptoEditar.Name = "btnDptoEditar";
             this.btnDptoEditar.Size = new System.Drawing.Size(75, 27);
-            this.btnDptoEditar.TabIndex = 20;
+            this.btnDptoEditar.TabIndex = 11;
             this.btnDptoEditar.Text = "Editar";
             this.btnDptoEditar.UseVisualStyleBackColor = true;
             this.btnDptoEditar.Click += new System.EventHandler(this.btnDptoEditar_Click);
@@ -711,7 +711,7 @@
             this.dgvDepartamentos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgvDepartamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDepartamentos.Size = new System.Drawing.Size(506, 229);
-            this.dgvDepartamentos.TabIndex = 19;
+            this.dgvDepartamentos.TabIndex = 16;
             // 
             // btnDptoRegistrar
             // 
@@ -724,7 +724,7 @@
             this.btnDptoRegistrar.Location = new System.Drawing.Point(87, 286);
             this.btnDptoRegistrar.Name = "btnDptoRegistrar";
             this.btnDptoRegistrar.Size = new System.Drawing.Size(94, 27);
-            this.btnDptoRegistrar.TabIndex = 18;
+            this.btnDptoRegistrar.TabIndex = 10;
             this.btnDptoRegistrar.Text = "Confirmar Datos";
             this.btnDptoRegistrar.UseVisualStyleBackColor = true;
             this.btnDptoRegistrar.Click += new System.EventHandler(this.btnDptoRegistrar_Click);
@@ -833,7 +833,7 @@
             this.txtDptoPrecio.Location = new System.Drawing.Point(108, 253);
             this.txtDptoPrecio.Name = "txtDptoPrecio";
             this.txtDptoPrecio.Size = new System.Drawing.Size(140, 20);
-            this.txtDptoPrecio.TabIndex = 8;
+            this.txtDptoPrecio.TabIndex = 9;
             this.txtDptoPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDptoPrecio_KeyPress);
             // 
             // txtDptoBaños
@@ -882,7 +882,7 @@
             this.cmbDptoDisposicion.Location = new System.Drawing.Point(108, 226);
             this.cmbDptoDisposicion.Name = "cmbDptoDisposicion";
             this.cmbDptoDisposicion.Size = new System.Drawing.Size(140, 21);
-            this.cmbDptoDisposicion.TabIndex = 2;
+            this.cmbDptoDisposicion.TabIndex = 8;
             // 
             // cmbDptoTipo
             // 
@@ -890,7 +890,7 @@
             this.cmbDptoTipo.Location = new System.Drawing.Point(108, 67);
             this.cmbDptoTipo.Name = "cmbDptoTipo";
             this.cmbDptoTipo.Size = new System.Drawing.Size(140, 21);
-            this.cmbDptoTipo.TabIndex = 1;
+            this.cmbDptoTipo.TabIndex = 2;
             // 
             // cmbDptoEdificio
             // 
@@ -898,7 +898,7 @@
             this.cmbDptoEdificio.Location = new System.Drawing.Point(108, 39);
             this.cmbDptoEdificio.Name = "cmbDptoEdificio";
             this.cmbDptoEdificio.Size = new System.Drawing.Size(140, 21);
-            this.cmbDptoEdificio.TabIndex = 0;
+            this.cmbDptoEdificio.TabIndex = 1;
             // 
             // tabPage4
             // 
@@ -988,7 +988,7 @@
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(0);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(30, 23);
-            this.btnMinimizar.TabIndex = 10;
+            this.btnMinimizar.TabIndex = 4;
             this.btnMinimizar.Text = "__";
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
@@ -1007,7 +1007,7 @@
             this.btnMaximizar.Margin = new System.Windows.Forms.Padding(0);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(30, 23);
-            this.btnMaximizar.TabIndex = 9;
+            this.btnMaximizar.TabIndex = 5;
             this.btnMaximizar.UseVisualStyleBackColor = false;
             this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
             // 
@@ -1034,7 +1034,7 @@
             this.btnSalir.Margin = new System.Windows.Forms.Padding(0);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(30, 23);
-            this.btnSalir.TabIndex = 7;
+            this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "X";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
@@ -1106,7 +1106,7 @@
             this.btnDpto.Location = new System.Drawing.Point(0, 205);
             this.btnDpto.Name = "btnDpto";
             this.btnDpto.Size = new System.Drawing.Size(183, 65);
-            this.btnDpto.TabIndex = 16;
+            this.btnDpto.TabIndex = 3;
             this.btnDpto.Text = "     Departamento";
             this.btnDpto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDpto.UseVisualStyleBackColor = true;
@@ -1123,7 +1123,7 @@
             this.btnEdif.Location = new System.Drawing.Point(0, 141);
             this.btnEdif.Name = "btnEdif";
             this.btnEdif.Size = new System.Drawing.Size(183, 65);
-            this.btnEdif.TabIndex = 15;
+            this.btnEdif.TabIndex = 2;
             this.btnEdif.Text = "     Edificio";
             this.btnEdif.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEdif.UseVisualStyleBackColor = true;
@@ -1140,7 +1140,7 @@
             this.btnUser.Location = new System.Drawing.Point(0, 77);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(183, 65);
-            this.btnUser.TabIndex = 14;
+            this.btnUser.TabIndex = 1;
             this.btnUser.Text = "     Usuario";
             this.btnUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUser.UseVisualStyleBackColor = true;

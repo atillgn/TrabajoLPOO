@@ -112,7 +112,7 @@
             this.btnVolver.Location = new System.Drawing.Point(882, 0);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(75, 23);
-            this.btnVolver.TabIndex = 0;
+            this.btnVolver.TabIndex = 14;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
@@ -179,7 +179,7 @@
             this.cmbBaños.Location = new System.Drawing.Point(723, 79);
             this.cmbBaños.Name = "cmbBaños";
             this.cmbBaños.Size = new System.Drawing.Size(121, 21);
-            this.cmbBaños.TabIndex = 21;
+            this.cmbBaños.TabIndex = 7;
             // 
             // cmbAmbientes
             // 
@@ -187,7 +187,7 @@
             this.cmbAmbientes.Location = new System.Drawing.Point(723, 28);
             this.cmbAmbientes.Name = "cmbAmbientes";
             this.cmbAmbientes.Size = new System.Drawing.Size(121, 21);
-            this.cmbAmbientes.TabIndex = 20;
+            this.cmbAmbientes.TabIndex = 6;
             // 
             // lblOrdenar
             // 
@@ -208,7 +208,7 @@
             this.rdbBanios.Location = new System.Drawing.Point(318, 414);
             this.rdbBanios.Name = "rdbBanios";
             this.rdbBanios.Size = new System.Drawing.Size(66, 21);
-            this.rdbBanios.TabIndex = 18;
+            this.rdbBanios.TabIndex = 13;
             this.rdbBanios.TabStop = true;
             this.rdbBanios.Text = "Baños";
             this.rdbBanios.UseVisualStyleBackColor = true;
@@ -222,7 +222,7 @@
             this.rdbAmbientes.Location = new System.Drawing.Point(211, 415);
             this.rdbAmbientes.Name = "rdbAmbientes";
             this.rdbAmbientes.Size = new System.Drawing.Size(92, 21);
-            this.rdbAmbientes.TabIndex = 17;
+            this.rdbAmbientes.TabIndex = 12;
             this.rdbAmbientes.TabStop = true;
             this.rdbAmbientes.Text = "Ambientes";
             this.rdbAmbientes.UseVisualStyleBackColor = true;
@@ -236,7 +236,7 @@
             this.rdbPrecio.Location = new System.Drawing.Point(128, 414);
             this.rdbPrecio.Name = "rdbPrecio";
             this.rdbPrecio.Size = new System.Drawing.Size(66, 21);
-            this.rdbPrecio.TabIndex = 16;
+            this.rdbPrecio.TabIndex = 11;
             this.rdbPrecio.TabStop = true;
             this.rdbPrecio.Text = "Precio";
             this.rdbPrecio.UseVisualStyleBackColor = true;
@@ -369,7 +369,7 @@
             this.btnAlquilar.Location = new System.Drawing.Point(723, 412);
             this.btnAlquilar.Name = "btnAlquilar";
             this.btnAlquilar.Size = new System.Drawing.Size(121, 27);
-            this.btnAlquilar.TabIndex = 7;
+            this.btnAlquilar.TabIndex = 10;
             this.btnAlquilar.Text = "Alquilar";
             this.btnAlquilar.UseVisualStyleBackColor = true;
             this.btnAlquilar.Click += new System.EventHandler(this.btnAlquilar_Click);
@@ -380,14 +380,14 @@
             this.cmbDisposicion.Location = new System.Drawing.Point(491, 79);
             this.cmbDisposicion.Name = "cmbDisposicion";
             this.cmbDisposicion.Size = new System.Drawing.Size(121, 21);
-            this.cmbDisposicion.TabIndex = 6;
+            this.cmbDisposicion.TabIndex = 5;
             // 
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(125, 83);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(200, 20);
-            this.txtPrecio.TabIndex = 4;
+            this.txtPrecio.TabIndex = 3;
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // cmbTipoDpto
@@ -396,14 +396,14 @@
             this.cmbTipoDpto.Location = new System.Drawing.Point(491, 29);
             this.cmbTipoDpto.Name = "cmbTipoDpto";
             this.cmbTipoDpto.Size = new System.Drawing.Size(121, 21);
-            this.cmbTipoDpto.TabIndex = 2;
+            this.cmbTipoDpto.TabIndex = 4;
             // 
             // dtpHasta
             // 
             this.dtpHasta.Location = new System.Drawing.Point(125, 44);
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(200, 20);
-            this.dtpHasta.TabIndex = 1;
+            this.dtpHasta.TabIndex = 2;
             this.dtpHasta.ValueChanged += new System.EventHandler(this.dtpHasta_ValueChanged);
             // 
             // dtpDesde
@@ -411,7 +411,7 @@
             this.dtpDesde.Location = new System.Drawing.Point(125, 18);
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(200, 20);
-            this.dtpDesde.TabIndex = 0;
+            this.dtpDesde.TabIndex = 1;
             this.dtpDesde.ValueChanged += new System.EventHandler(this.dtpDesde_ValueChanged);
             // 
             // FrmBuscarDepartamento

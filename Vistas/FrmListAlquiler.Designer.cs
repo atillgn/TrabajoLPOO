@@ -242,7 +242,7 @@
             this.btnVolver.Location = new System.Drawing.Point(998, 0);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(77, 23);
-            this.btnVolver.TabIndex = 14;
+            this.btnVolver.TabIndex = 12;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
@@ -285,7 +285,7 @@
             this.btnAlqEliminar.Location = new System.Drawing.Point(36, 349);
             this.btnAlqEliminar.Name = "btnAlqEliminar";
             this.btnAlqEliminar.Size = new System.Drawing.Size(75, 27);
-            this.btnAlqEliminar.TabIndex = 14;
+            this.btnAlqEliminar.TabIndex = 10;
             this.btnAlqEliminar.Text = "Eliminar";
             this.btnAlqEliminar.UseVisualStyleBackColor = true;
             this.btnAlqEliminar.Click += new System.EventHandler(this.btnAlqEliminar_Click);
@@ -295,7 +295,7 @@
             this.txtAlqCantidad.Location = new System.Drawing.Point(890, 352);
             this.txtAlqCantidad.Name = "txtAlqCantidad";
             this.txtAlqCantidad.Size = new System.Drawing.Size(149, 20);
-            this.txtAlqCantidad.TabIndex = 17;
+            this.txtAlqCantidad.TabIndex = 11;
             // 
             // lblAlqCantidad
             // 
