@@ -39,6 +39,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.cmbBaños = new System.Windows.Forms.ComboBox();
+            this.cmbAmbientes = new System.Windows.Forms.ComboBox();
             this.lblOrdenar = new System.Windows.Forms.Label();
             this.rdbBanios = new System.Windows.Forms.RadioButton();
             this.rdbAmbientes = new System.Windows.Forms.RadioButton();
@@ -53,9 +55,7 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnAlquilar = new System.Windows.Forms.Button();
             this.cmbDisposicion = new System.Windows.Forms.ComboBox();
-            this.txtBaños = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
-            this.txtAmbientes = new System.Windows.Forms.TextBox();
             this.cmbTipoDpto = new System.Windows.Forms.ComboBox();
             this.dtpHasta = new System.Windows.Forms.DateTimePicker();
             this.dtpDesde = new System.Windows.Forms.DateTimePicker();
@@ -148,6 +148,8 @@
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(90)))));
+            this.panel5.Controls.Add(this.cmbBaños);
+            this.panel5.Controls.Add(this.cmbAmbientes);
             this.panel5.Controls.Add(this.lblOrdenar);
             this.panel5.Controls.Add(this.rdbBanios);
             this.panel5.Controls.Add(this.rdbAmbientes);
@@ -162,9 +164,7 @@
             this.panel5.Controls.Add(this.btnBuscar);
             this.panel5.Controls.Add(this.btnAlquilar);
             this.panel5.Controls.Add(this.cmbDisposicion);
-            this.panel5.Controls.Add(this.txtBaños);
             this.panel5.Controls.Add(this.txtPrecio);
-            this.panel5.Controls.Add(this.txtAmbientes);
             this.panel5.Controls.Add(this.cmbTipoDpto);
             this.panel5.Controls.Add(this.dtpHasta);
             this.panel5.Controls.Add(this.dtpDesde);
@@ -173,12 +173,28 @@
             this.panel5.Size = new System.Drawing.Size(866, 448);
             this.panel5.TabIndex = 4;
             // 
+            // cmbBaños
+            // 
+            this.cmbBaños.FormattingEnabled = true;
+            this.cmbBaños.Location = new System.Drawing.Point(723, 79);
+            this.cmbBaños.Name = "cmbBaños";
+            this.cmbBaños.Size = new System.Drawing.Size(121, 21);
+            this.cmbBaños.TabIndex = 21;
+            // 
+            // cmbAmbientes
+            // 
+            this.cmbAmbientes.FormattingEnabled = true;
+            this.cmbAmbientes.Location = new System.Drawing.Point(723, 28);
+            this.cmbAmbientes.Name = "cmbAmbientes";
+            this.cmbAmbientes.Size = new System.Drawing.Size(121, 21);
+            this.cmbAmbientes.TabIndex = 20;
+            // 
             // lblOrdenar
             // 
             this.lblOrdenar.AutoSize = true;
             this.lblOrdenar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOrdenar.ForeColor = System.Drawing.Color.White;
-            this.lblOrdenar.Location = new System.Drawing.Point(16, 127);
+            this.lblOrdenar.Location = new System.Drawing.Point(19, 417);
             this.lblOrdenar.Name = "lblOrdenar";
             this.lblOrdenar.Size = new System.Drawing.Size(90, 17);
             this.lblOrdenar.TabIndex = 19;
@@ -189,7 +205,7 @@
             this.rdbBanios.AutoSize = true;
             this.rdbBanios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbBanios.ForeColor = System.Drawing.Color.White;
-            this.rdbBanios.Location = new System.Drawing.Point(309, 125);
+            this.rdbBanios.Location = new System.Drawing.Point(318, 414);
             this.rdbBanios.Name = "rdbBanios";
             this.rdbBanios.Size = new System.Drawing.Size(66, 21);
             this.rdbBanios.TabIndex = 18;
@@ -203,7 +219,7 @@
             this.rdbAmbientes.AutoSize = true;
             this.rdbAmbientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbAmbientes.ForeColor = System.Drawing.Color.White;
-            this.rdbAmbientes.Location = new System.Drawing.Point(208, 125);
+            this.rdbAmbientes.Location = new System.Drawing.Point(211, 415);
             this.rdbAmbientes.Name = "rdbAmbientes";
             this.rdbAmbientes.Size = new System.Drawing.Size(92, 21);
             this.rdbAmbientes.TabIndex = 17;
@@ -217,7 +233,7 @@
             this.rdbPrecio.AutoSize = true;
             this.rdbPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbPrecio.ForeColor = System.Drawing.Color.White;
-            this.rdbPrecio.Location = new System.Drawing.Point(125, 124);
+            this.rdbPrecio.Location = new System.Drawing.Point(128, 414);
             this.rdbPrecio.Name = "rdbPrecio";
             this.rdbPrecio.Size = new System.Drawing.Size(66, 21);
             this.rdbPrecio.TabIndex = 16;
@@ -231,7 +247,7 @@
             this.lblBanios.AutoSize = true;
             this.lblBanios.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBanios.ForeColor = System.Drawing.Color.White;
-            this.lblBanios.Location = new System.Drawing.Point(642, 85);
+            this.lblBanios.Location = new System.Drawing.Point(642, 80);
             this.lblBanios.Name = "lblBanios";
             this.lblBanios.Size = new System.Drawing.Size(52, 17);
             this.lblBanios.TabIndex = 15;
@@ -334,9 +350,9 @@
             this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(156)))), ((int)(((byte)(249)))));
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(769, 121);
+            this.btnBuscar.Location = new System.Drawing.Point(723, 121);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 27);
+            this.btnBuscar.Size = new System.Drawing.Size(121, 27);
             this.btnBuscar.TabIndex = 8;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -350,9 +366,9 @@
             this.btnAlquilar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.btnAlquilar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlquilar.ForeColor = System.Drawing.Color.White;
-            this.btnAlquilar.Location = new System.Drawing.Point(769, 412);
+            this.btnAlquilar.Location = new System.Drawing.Point(723, 412);
             this.btnAlquilar.Name = "btnAlquilar";
-            this.btnAlquilar.Size = new System.Drawing.Size(75, 27);
+            this.btnAlquilar.Size = new System.Drawing.Size(121, 27);
             this.btnAlquilar.TabIndex = 7;
             this.btnAlquilar.Text = "Alquilar";
             this.btnAlquilar.UseVisualStyleBackColor = true;
@@ -366,14 +382,6 @@
             this.cmbDisposicion.Size = new System.Drawing.Size(121, 21);
             this.cmbDisposicion.TabIndex = 6;
             // 
-            // txtBaños
-            // 
-            this.txtBaños.Location = new System.Drawing.Point(723, 82);
-            this.txtBaños.Name = "txtBaños";
-            this.txtBaños.Size = new System.Drawing.Size(121, 20);
-            this.txtBaños.TabIndex = 5;
-            this.txtBaños.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBaños_KeyPress);
-            // 
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(125, 83);
@@ -381,14 +389,6 @@
             this.txtPrecio.Size = new System.Drawing.Size(200, 20);
             this.txtPrecio.TabIndex = 4;
             this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
-            // 
-            // txtAmbientes
-            // 
-            this.txtAmbientes.Location = new System.Drawing.Point(723, 29);
-            this.txtAmbientes.Name = "txtAmbientes";
-            this.txtAmbientes.Size = new System.Drawing.Size(121, 20);
-            this.txtAmbientes.TabIndex = 3;
-            this.txtAmbientes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmbientes_KeyPress);
             // 
             // cmbTipoDpto
             // 
@@ -452,9 +452,7 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnAlquilar;
         private System.Windows.Forms.ComboBox cmbDisposicion;
-        private System.Windows.Forms.TextBox txtBaños;
         private System.Windows.Forms.TextBox txtPrecio;
-        private System.Windows.Forms.TextBox txtAmbientes;
         private System.Windows.Forms.ComboBox cmbTipoDpto;
         private System.Windows.Forms.DateTimePicker dtpHasta;
         private System.Windows.Forms.DateTimePicker dtpDesde;
@@ -470,5 +468,7 @@
         private System.Windows.Forms.RadioButton rdbPrecio;
         private System.Windows.Forms.Label lblOrdenar;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ComboBox cmbBaños;
+        private System.Windows.Forms.ComboBox cmbAmbientes;
     }
 }

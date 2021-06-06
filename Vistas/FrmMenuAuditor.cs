@@ -305,7 +305,7 @@ namespace Vistas
                 meses++;
                 desde = desde.AddMonths(1);
             }
-            int dias = 0;
+            int dias = 1;
             while (desde.AddDays(1) < hasta)
             {
                 dias++;
@@ -322,13 +322,13 @@ namespace Vistas
         private void dtpAlqDesde_ValueChanged(object sender, EventArgs e)
         {
             if (dtpAlqDesde.Value <= DateTime.Now) dtpAlqDesde.Value = DateTime.Now;
-            if (dtpAlqDesde.Value >= dtpAlqHasta.Value) dtpAlqHasta.Value = dtpAlqDesde.Value.AddDays(1);
+            if (dtpAlqDesde.Value > dtpAlqHasta.Value) dtpAlqHasta.Value = dtpAlqDesde.Value.AddDays(1);
             display_precioFinal();
         }
         private void dtpAlqHasta_ValueChanged(object sender, EventArgs e)
         {
             if (dtpAlqHasta.Value <= DateTime.Now) dtpAlqHasta.Value = DateTime.Now;
-            if (dtpAlqDesde.Value >= dtpAlqHasta.Value) dtpAlqDesde.Value = dtpAlqHasta.Value.AddDays(-1);
+            if (dtpAlqDesde.Value > dtpAlqHasta.Value) dtpAlqDesde.Value = dtpAlqHasta.Value.AddDays(-1);
             display_precioFinal();
         }
         private void cmbAlqDepartamento_SelectedIndexChanged(object sender, EventArgs e)
@@ -494,7 +494,19 @@ namespace Vistas
         {
             cmbEdifAdministrador.ValueMember = "Nombre_de_usuario";
             cmbEdifAdministrador.DisplayMember = "Apellido_y_Nombre";
-            cmbEdifAdministrador.DataSource = TrabajarEdificios.list_admin();
+            DataTable dt = new DataTable();
+            dt = TrabajarEdificios.list_admin();
+            if (dt.Rows.Count >= 1)
+            {
+                cmbEdifAdministrador.DataSource = dt;
+                cmbEdifAdministrador.Enabled = true;
+                btnEdifAgregar.Enabled = true;
+            }
+            else
+            {
+                cmbEdifAdministrador.Enabled = false;
+                btnEdifAgregar.Enabled = false;
+            }
         }
         private void load_edificio()
         {
@@ -601,13 +613,37 @@ namespace Vistas
         {
             cmbDptoTipo.ValueMember = "TipoD_Codigo";
             cmbDptoTipo.DisplayMember = "TipoD_Descripcion";
-            cmbDptoTipo.DataSource = TrabajarDepartamento.list_tipo_departamento();
+            DataTable dt = new DataTable();
+            dt = TrabajarDepartamento.list_tipo_departamento();
+            if (dt.Rows.Count >= 1)
+            {
+                cmbDptoTipo.DataSource = dt;
+                cmbDptoTipo.Enabled = true;
+                btnDptoRegistrar.Enabled = true;
+            }
+            else
+            {
+                cmbDptoTipo.Enabled = false;
+                btnDptoRegistrar.Enabled = false;
+            }
         }
         private void load_combo_edif()
         {
             cmbDptoEdificio.ValueMember = "Edif_Codigo";
             cmbDptoEdificio.DisplayMember = "Edif_Nombre";
-            cmbDptoEdificio.DataSource = TrabajarDepartamento.list_edificios();
+            DataTable dt = new DataTable();
+            dt = TrabajarDepartamento.list_edificios();
+            if (dt.Rows.Count >= 1)
+            {
+                cmbDptoEdificio.DataSource = dt;
+                cmbDptoTipo.Enabled = true;
+                btnDptoRegistrar.Enabled = true;
+            }
+            else
+            {
+                cmbDptoEdificio.Enabled = false;
+                btnDptoRegistrar.Enabled = false;
+            }
         }
         private void load_combo_disposicon()
         {

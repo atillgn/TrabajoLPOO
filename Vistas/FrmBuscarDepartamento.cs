@@ -43,7 +43,10 @@ namespace Vistas
             dgvDpto.DataSource = TrabajarDepartamento.list_dpto();
             load_Disposicion();
             load_TipoDpto();
-
+            load_Ambientes();
+            load_Banios();
+            cmbAmbientes.SelectedText = "1";
+            cmbBaños.SelectedText = "1";
         }
         private void load_Disposicion() 
         {
@@ -57,9 +60,36 @@ namespace Vistas
             cmbTipoDpto.DisplayMember = "TipoD_Descripcion";
             cmbTipoDpto.DataSource = TrabajarAlquiler.list_tipoDepartamento();
         }
+        private void load_Banios()
+        {
+            cmbBaños.Items.Add(1);
+            cmbBaños.Items.Add(2);
+            cmbBaños.Items.Add(3);
+            cmbBaños.Items.Add(4);
+            cmbBaños.Items.Add(5);
+            cmbBaños.Items.Add(6);
+            cmbBaños.Items.Add(7);
+            cmbBaños.Items.Add(8);
+            cmbBaños.Items.Add(9);
+            cmbBaños.Items.Add(10);
+        }
+        private void load_Ambientes()
+        {
+            cmbAmbientes.Items.Add(1);
+            cmbAmbientes.Items.Add(2);
+            cmbAmbientes.Items.Add(3);
+            cmbAmbientes.Items.Add(4);
+            cmbAmbientes.Items.Add(5);
+            cmbAmbientes.Items.Add(6);
+            cmbAmbientes.Items.Add(7);
+            cmbAmbientes.Items.Add(8);
+            cmbAmbientes.Items.Add(9);
+            cmbAmbientes.Items.Add(10);
+        }
         private void dtpDesde_ValueChanged(object sender, EventArgs e)
         {
             if (dtpDesde.Value >= dtpHasta.Value) dtpHasta.Value = dtpDesde.Value;
+            if (dtpDesde.Value <= DateTime.Now) dtpDesde.Value = DateTime.Now;
             dtpHasta.Value = dtpHasta.Value.AddSeconds(59 - dtpHasta.Value.Second);
             dtpHasta.Value = dtpHasta.Value.AddHours(23 - dtpHasta.Value.Hour);
             dtpHasta.Value = dtpHasta.Value.AddMinutes(59 - dtpHasta.Value.Minute);
@@ -67,6 +97,7 @@ namespace Vistas
         private void dtpHasta_ValueChanged(object sender, EventArgs e)
         {
             if (dtpDesde.Value >= dtpHasta.Value) dtpDesde.Value = dtpHasta.Value;
+            if (dtpHasta.Value <= DateTime.Now) dtpHasta.Value = DateTime.Now;
             dtpHasta.Value = dtpHasta.Value.AddSeconds(59 - dtpHasta.Value.Second);
             dtpHasta.Value = dtpHasta.Value.AddHours(23 - dtpHasta.Value.Hour);
             dtpHasta.Value = dtpHasta.Value.AddMinutes(59 - dtpHasta.Value.Minute);
@@ -77,7 +108,7 @@ namespace Vistas
             {
                 try
                 {
-                    dgvDpto.DataSource = ListAlquiler.list_dptoParaAlquilar(dtpDesde.Value.Date, dtpHasta.Value, cmbTipoDpto.Text, Int32.Parse(txtAmbientes.Text), Int32.Parse(txtPrecio.Text), cmbDisposicion.Text, Int32.Parse(txtBaños.Text));
+                    dgvDpto.DataSource = ListAlquiler.list_dptoParaAlquilar(dtpDesde.Value.Date, dtpHasta.Value, cmbTipoDpto.Text, Int32.Parse(cmbAmbientes.Text), Int32.Parse(txtPrecio.Text), cmbDisposicion.Text, Int32.Parse(cmbBaños.Text));
                 }
                 catch (Exception a) 
                 {
@@ -122,24 +153,10 @@ namespace Vistas
         }
         private bool validarBusqueda() 
         {
-            return txtAmbientes.Text != String.Empty && txtBaños.Text != String.Empty && txtPrecio.Text != String.Empty;
+            return txtPrecio.Text != String.Empty;
         }
 
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-        private void txtAmbientes_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-        private void txtBaños_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {

@@ -277,7 +277,7 @@ namespace Vistas
                 meses++;
                 desde = desde.AddMonths(1);
             }
-            int dias = 0;
+            int dias = 1;
             while (desde.AddDays(1) < hasta)
             {
                 dias++;

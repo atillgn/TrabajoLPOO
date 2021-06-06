@@ -741,7 +741,7 @@
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(90)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(155)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -1581,6 +1581,7 @@
             this.btnDpto.Size = new System.Drawing.Size(183, 65);
             this.btnDpto.TabIndex = 13;
             this.btnDpto.Text = "     Departamento";
+            this.btnDpto.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnDpto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDpto.UseVisualStyleBackColor = true;
             this.btnDpto.Click += new System.EventHandler(this.btnDpto_Click);
