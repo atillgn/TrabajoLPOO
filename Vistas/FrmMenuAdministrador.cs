@@ -247,7 +247,7 @@ namespace Vistas
                     {
                         try
                         {
-                            oEdif.Edif_Codigo = (int)dgvEdificio.CurrentRow.Cells["Edif_Codigo"].Value;
+                            oEdif.Edif_Codigo = (int)dgvEdificio.CurrentRow.Cells["Codigo"].Value;
                             TrabajarEdificios.edit_edificio(oEdif);
                         }
                         catch (Exception a)
@@ -292,7 +292,7 @@ namespace Vistas
                 {
                     try
                     {
-                        TrabajarEdificios.delete_edificio((int)dgvEdificio.CurrentRow.Cells["Edif_Codigo"].Value);
+                        TrabajarEdificios.delete_edificio((int)dgvEdificio.CurrentRow.Cells["Codigo"].Value);
                         load_edificio();
                     }
                     catch (Exception a)
@@ -312,10 +312,10 @@ namespace Vistas
             if (dgvEdificio.SelectedRows.Count == 1)
             {
                 editEdif = true;
-                txtEdifNombre.Text = dgvEdificio.CurrentRow.Cells["Edif_Nombre"].Value.ToString();
-                txtEdifDireccion.Text = dgvEdificio.CurrentRow.Cells["Edif_Direccion"].Value.ToString();
-                txtEdifTelefono.Text = dgvEdificio.CurrentRow.Cells["Edif_Telefono"].Value.ToString();
-                cmbEdifAdministrador.SelectedValue = dgvEdificio.CurrentRow.Cells["Edif_Administrador"].Value.ToString();
+                txtEdifNombre.Text = dgvEdificio.CurrentRow.Cells["Nombre"].Value.ToString();
+                txtEdifDireccion.Text = dgvEdificio.CurrentRow.Cells["Direccion"].Value.ToString();
+                txtEdifTelefono.Text = dgvEdificio.CurrentRow.Cells["Telefono"].Value.ToString();
+                cmbEdifAdministrador.SelectedValue = dgvEdificio.CurrentRow.Cells["Administrador"].Value.ToString();
             }
             else
             {

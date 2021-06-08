@@ -15,25 +15,31 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_1874BD2E40E7432294F63800C57E7F41"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_228351D753D243A2947C04EEB193A489"
+        "MsmKey" = "8:_141256C3D85B45F98EEF64BF33116C3A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_28532930488287187D9F145294C89EF5"
-        "OwnerKey" = "8:_89EBC3DD7EF24F9583AD2B78EC11EFD1"
+        "OwnerKey" = "8:_DD325DAC66A745649548624AAEB279C9"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_89EBC3DD7EF24F9583AD2B78EC11EFD1"
+        "MsmKey" = "8:_AFCAA167756E4C55B5AD1902D68D4E3A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CB61C8A1267641DDB6FCC1F069E98F8D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_DD325DAC66A745649548624AAEB279C9"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -46,7 +52,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_89EBC3DD7EF24F9583AD2B78EC11EFD1"
+        "OwnerKey" = "8:_DD325DAC66A745649548624AAEB279C9"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -67,6 +73,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -83,6 +97,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -112,27 +134,7 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1874BD2E40E7432294F63800C57E7F41"
-            {
-            "SourcePath" = "8:..\\datos.mdf"
-            "TargetName" = "8:datos.mdf"
-            "Tag" = "8:"
-            "Folder" = "8:_FC43C59641C5454B871F8D02873D57E3"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_228351D753D243A2947C04EEB193A489"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_141256C3D85B45F98EEF64BF33116C3A"
             {
             "SourcePath" = "8:..\\datos_log.LDF"
             "TargetName" = "8:datos_log.LDF"
@@ -183,6 +185,46 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AFCAA167756E4C55B5AD1902D68D4E3A"
+            {
+            "SourcePath" = "8:..\\imagenes\\logoDef.ico"
+            "TargetName" = "8:logoDef.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_ED68F7FD095A449DA91D4D00FAD09386"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_CB61C8A1267641DDB6FCC1F069E98F8D"
+            {
+            "SourcePath" = "8:..\\datos.mdf"
+            "TargetName" = "8:datos.mdf"
+            "Tag" = "8:"
+            "Folder" = "8:_FC43C59641C5454B871F8D02873D57E3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -210,6 +252,17 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_ED68F7FD095A449DA91D4D00FAD09386"
+                    {
+                    "Name" = "8:icono"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_A95C5C6389D34EEDB2C4AADD36A73C7A"
+                        "Folders"
+                        {
+                        }
+                    }
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_FC43C59641C5454B871F8D02873D57E3"
                     {
                     "Name" = "8:DB"
@@ -371,18 +424,18 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_248DC2B914024D0288E0ADB01C66D2F6"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_306D55B02CDE44EF8E734B112502194D"
             {
-            "Name" = "8:Sistema Gestion de Alquileres"
+            "Name" = "8:Gestion de Alquileres"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_89EBC3DD7EF24F9583AD2B78EC11EFD1"
+            "Target" = "8:_DD325DAC66A745649548624AAEB279C9"
             "Folder" = "8:_717ADB2626CF484488FB72EB687298A6"
             "WorkingFolder" = "8:_A928790FD8114AFCA4BC983148CA2709"
-            "Icon" = "8:"
+            "Icon" = "8:_AFCAA167756E4C55B5AD1902D68D4E3A"
             "Feature" = "8:"
             }
         }
@@ -727,7 +780,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_89EBC3DD7EF24F9583AD2B78EC11EFD1"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_DD325DAC66A745649548624AAEB279C9"
             {
             "SourcePath" = "8:..\\Vistas\\obj\\x86\\Debug\\Vistas.exe"
             "TargetName" = "8:"
