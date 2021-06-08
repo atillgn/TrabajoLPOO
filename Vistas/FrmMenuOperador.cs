@@ -158,10 +158,17 @@ namespace Vistas
         {
             if (dgvInquilinos.SelectedRows.Count == 1)
             {
-                editInq = true;
-                txtInqApellido.Text = dgvInquilinos.CurrentRow.Cells["Apellido"].Value.ToString();
-                txtInqNombre.Text = dgvInquilinos.CurrentRow.Cells["Nombre"].Value.ToString();
-                txtInqTelefono.Text = dgvInquilinos.CurrentRow.Cells["Telefono"].Value.ToString();
+                if (dgvInquilinos.RowCount > 1)
+                {
+                    editInq = true;
+                    txtInqApellido.Text = dgvInquilinos.CurrentRow.Cells["Apellido"].Value.ToString();
+                    txtInqNombre.Text = dgvInquilinos.CurrentRow.Cells["Nombre"].Value.ToString();
+                    txtInqTelefono.Text = dgvInquilinos.CurrentRow.Cells["Telefono"].Value.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("La tabla esta vacia");
+                }
             }
             else
             {
@@ -176,8 +183,15 @@ namespace Vistas
                 {
                     try
                     {
-                        TrabajarInquilinos.delete_inquilino((int)dgvInquilinos.CurrentRow.Cells["Codigo"].Value);
-                        load_inquilinos();
+                        if (dgvInquilinos.RowCount > 1)
+                        {
+                            TrabajarInquilinos.delete_inquilino((int)dgvInquilinos.CurrentRow.Cells["Codigo"].Value);
+                            load_inquilinos();
+                        }
+                        else
+                        {
+                            MessageBox.Show("La tabla esta vacia");
+                        }
                     }
                     catch (Exception a)
                     {

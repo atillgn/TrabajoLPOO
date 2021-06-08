@@ -94,8 +94,15 @@ namespace Vistas
         {
             if (dgvTipoDpto.SelectedRows.Count == 1)
             {
-                edit = true;
-                txtTipoDptoDescripcion.Text = dgvTipoDpto.CurrentRow.Cells["TipoD_Descripcion"].Value.ToString();
+                if (dgvTipoDpto.RowCount > 1)
+                {
+                    edit = true;
+                    txtTipoDptoDescripcion.Text = dgvTipoDpto.CurrentRow.Cells["TipoD_Descripcion"].Value.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("La tabla esta vacia");
+                }
             }
             else
             {
@@ -110,8 +117,14 @@ namespace Vistas
                 {
                     try
                     {
-                        TrabajarTipoDepartamento.delete_tipoDpto((int)dgvTipoDpto.CurrentRow.Cells["TipoD_Codigo"].Value);
-                        load_TipoDpto();
+                        if (dgvTipoDpto.RowCount > 1) {
+                            TrabajarTipoDepartamento.delete_tipoDpto((int)dgvTipoDpto.CurrentRow.Cells["TipoD_Codigo"].Value);
+                            load_TipoDpto();
+                        }
+                        else
+                        {
+                            MessageBox.Show("La tabla esta vacia");
+                        }
                     }
                     catch (Exception a)
                     {

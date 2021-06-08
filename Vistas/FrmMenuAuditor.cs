@@ -185,10 +185,17 @@ namespace Vistas
         {
             if (dgvInquilinos.SelectedRows.Count == 1)
             {
-                editInq = true;
-                txtInqApellido.Text = dgvInquilinos.CurrentRow.Cells["Apellido"].Value.ToString();
-                txtInqNombre.Text = dgvInquilinos.CurrentRow.Cells["Nombre"].Value.ToString();
-                txtInqTelefono.Text = dgvInquilinos.CurrentRow.Cells["Telefono"].Value.ToString();
+                if (dgvInquilinos.RowCount > 1)
+                {
+                    editInq = true;
+                    txtInqApellido.Text = dgvInquilinos.CurrentRow.Cells["Apellido"].Value.ToString();
+                    txtInqNombre.Text = dgvInquilinos.CurrentRow.Cells["Nombre"].Value.ToString();
+                    txtInqTelefono.Text = dgvInquilinos.CurrentRow.Cells["Telefono"].Value.ToString();
+                }
+                else 
+                {
+                    MessageBox.Show("La tabla esta vacia");
+                }
             }
             else
             {
@@ -203,8 +210,15 @@ namespace Vistas
                 {
                     try
                     {
-                        TrabajarInquilinos.delete_inquilino((int)dgvInquilinos.CurrentRow.Cells["Codigo"].Value);
-                        load_inquilinos();
+                        if (dgvInquilinos.RowCount > 1)
+                        {
+                            TrabajarInquilinos.delete_inquilino((int)dgvInquilinos.CurrentRow.Cells["Codigo"].Value);
+                            load_inquilinos();
+                        }
+                        else 
+                        {
+                            MessageBox.Show("La tabla esta vacia");
+                        }
                     }
                     catch (Exception a) 
                     {
@@ -470,11 +484,18 @@ namespace Vistas
         {
             if (dgvUsuarios.SelectedRows.Count == 1)
             {
-                editUser = true;
-                txtUserNombreUsuario.Text = dgvUsuarios.CurrentRow.Cells["Nombre_de_usuario"].Value.ToString();
-                txtUserContra.Text = dgvUsuarios.CurrentRow.Cells["Contrasenia"].Value.ToString();
-                txtUserNombreApellido.Text = dgvUsuarios.CurrentRow.Cells["Apellido_y_Nombre"].Value.ToString();
-                cmbUserRol.SelectedValue = dgvUsuarios.CurrentRow.Cells["Rol_ID"].Value;
+                if (dgvUsuarios.RowCount > 1)
+                {
+                    editUser = true;
+                    txtUserNombreUsuario.Text = dgvUsuarios.CurrentRow.Cells["Nombre_de_usuario"].Value.ToString();
+                    txtUserContra.Text = dgvUsuarios.CurrentRow.Cells["Contrasenia"].Value.ToString();
+                    txtUserNombreApellido.Text = dgvUsuarios.CurrentRow.Cells["Apellido_y_Nombre"].Value.ToString();
+                    cmbUserRol.SelectedValue = dgvUsuarios.CurrentRow.Cells["Rol_ID"].Value;
+                }
+                else 
+                {
+                    MessageBox.Show("La tabla esta vacia");
+                }
             }
             else
             {
@@ -489,8 +510,15 @@ namespace Vistas
                 {
                     try
                     {
-                        TrabajarUsuario.delete_usuario((int)dgvUsuarios.CurrentRow.Cells["ID"].Value);
-                        load_usuarios();
+                        if (dgvUsuarios.RowCount > 1)
+                        {
+                            TrabajarUsuario.delete_usuario((int)dgvUsuarios.CurrentRow.Cells["ID"].Value);
+                            load_usuarios();
+                        }
+                        else 
+                        {
+                            MessageBox.Show("La tabla esta vacia");
+                        }
                     }
                     catch (Exception a) 
                     {
@@ -593,8 +621,15 @@ namespace Vistas
                 {
                     try
                     {
-                        TrabajarEdificios.delete_edificio((int)dgvEdificio.CurrentRow.Cells["Codigo"].Value);
-                        load_edificio();
+                        if (dgvEdificio.RowCount > 1)
+                        {
+                            TrabajarEdificios.delete_edificio((int)dgvEdificio.CurrentRow.Cells["Codigo"].Value);
+                            load_edificio();
+                        }
+                        else
+                        {
+                            MessageBox.Show("La tabla esta vacia");
+                        }
                     }
                     catch (Exception a) 
                     {
@@ -612,11 +647,18 @@ namespace Vistas
         {
             if (dgvEdificio.SelectedRows.Count == 1)
             {
-                editEdif = true;
-                txtEdifNombre.Text = dgvEdificio.CurrentRow.Cells["Nombre"].Value.ToString();
-                txtEdifDireccion.Text = dgvEdificio.CurrentRow.Cells["Direccion"].Value.ToString();
-                txtEdifTelefono.Text = dgvEdificio.CurrentRow.Cells["Telefono"].Value.ToString();
-                cmbEdifAdministrador.SelectedValue = dgvEdificio.CurrentRow.Cells["Administrador"].Value.ToString();
+                if (dgvEdificio.RowCount > 1)
+                {
+                    editEdif = true;
+                    txtEdifNombre.Text = dgvEdificio.CurrentRow.Cells["Nombre"].Value.ToString();
+                    txtEdifDireccion.Text = dgvEdificio.CurrentRow.Cells["Direccion"].Value.ToString();
+                    txtEdifTelefono.Text = dgvEdificio.CurrentRow.Cells["Telefono"].Value.ToString();
+                    cmbEdifAdministrador.SelectedValue = dgvEdificio.CurrentRow.Cells["Administrador"].Value.ToString();
+                }
+                else 
+                {
+                    MessageBox.Show("La tabla esta vacia");
+                }
             }
             else
             {
@@ -743,8 +785,15 @@ namespace Vistas
                 {
                     try
                     {
-                        TrabajarDepartamento.delete_depto((int)dgvDepartamentos.CurrentRow.Cells["Codigo"].Value);
-                        load_departamento();
+                        if (dgvDepartamentos.RowCount > 1)
+                        {
+                            TrabajarDepartamento.delete_depto((int)dgvDepartamentos.CurrentRow.Cells["Codigo"].Value);
+                            load_departamento();
+                        }
+                        else 
+                        {
+                            MessageBox.Show("La tabla esta vacia");
+                        }
                     }
                     catch (Exception a) 
                     {
@@ -762,16 +811,23 @@ namespace Vistas
         {
             if (dgvDepartamentos.SelectedRows.Count == 1)
             {
-                editDpto = true;
-                cmbDptoEdificio.SelectedValue = dgvDepartamentos.CurrentRow.Cells["Codigo_Edificio"].Value;
-                txtDptoNumero.Text = dgvDepartamentos.CurrentRow.Cells["Numero"].Value.ToString();
-                txtDptoDormitorios.Text = dgvDepartamentos.CurrentRow.Cells["Dormitorios"].Value.ToString();
-                txtDptoBaños.Text = dgvDepartamentos.CurrentRow.Cells["Banios"].Value.ToString();
-                txtDptoPiso.Text = dgvDepartamentos.CurrentRow.Cells["Piso"].Value.ToString();
-                txtDptoAmbientes.Text = dgvDepartamentos.CurrentRow.Cells["Ambientes"].Value.ToString();
-                txtDptoPrecio.Text = dgvDepartamentos.CurrentRow.Cells["Precio"].Value.ToString();
-                cmbDptoDisposicion.SelectedValue = dgvDepartamentos.CurrentRow.Cells["Disposicion"].Value;
-                cmbDptoTipo.SelectedValue = dgvDepartamentos.CurrentRow.Cells["Tipo"].Value;
+                if (dgvDepartamentos.RowCount > 1)
+                {
+                    editDpto = true;
+                    cmbDptoEdificio.SelectedValue = dgvDepartamentos.CurrentRow.Cells["Codigo_Edificio"].Value;
+                    txtDptoNumero.Text = dgvDepartamentos.CurrentRow.Cells["Numero"].Value.ToString();
+                    txtDptoDormitorios.Text = dgvDepartamentos.CurrentRow.Cells["Dormitorios"].Value.ToString();
+                    txtDptoBaños.Text = dgvDepartamentos.CurrentRow.Cells["Banios"].Value.ToString();
+                    txtDptoPiso.Text = dgvDepartamentos.CurrentRow.Cells["Piso"].Value.ToString();
+                    txtDptoAmbientes.Text = dgvDepartamentos.CurrentRow.Cells["Ambientes"].Value.ToString();
+                    txtDptoPrecio.Text = dgvDepartamentos.CurrentRow.Cells["Precio"].Value.ToString();
+                    cmbDptoDisposicion.SelectedValue = dgvDepartamentos.CurrentRow.Cells["Disposicion"].Value;
+                    cmbDptoTipo.SelectedValue = dgvDepartamentos.CurrentRow.Cells["Tipo"].Value;
+                }
+                else 
+                {
+                    MessageBox.Show("La tabla esta vacia");
+                }
             }
             else
             {
