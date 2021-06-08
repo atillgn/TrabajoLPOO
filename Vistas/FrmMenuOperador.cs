@@ -28,7 +28,14 @@ namespace Vistas
             //alquiler
             txtAlqPreciofinal.Enabled = false;
             load_combo_edificios();
-            load_combo_departamentos((int)cmbAlqEdificio.SelectedValue);
+            if (cmbAlqEdificio.SelectedValue == null)
+            {
+                load_combo_departamentos(0);
+            }
+            else
+            {
+                load_combo_departamentos((int)cmbAlqEdificio.SelectedValue);
+            }
             load_combo_inquilinos();
             dtpAlqDesde.Value = DateTime.Now;
             display_precioFinal();
@@ -269,23 +276,31 @@ namespace Vistas
         }
         private double precioFinal()
         {
-            Departamento dpto = TrabajarAlquiler.get_departamento((int)cmbAlqDepartamento.SelectedValue);
-            int meses = 0;
-            DateTime desde = dtpAlqDesde.Value, hasta = dtpAlqHasta.Value;
-            while (desde.AddMonths(1) < hasta)
+            Departamento dpto;
+            try
             {
-                meses++;
-                desde = desde.AddMonths(1);
+                dpto = TrabajarAlquiler.get_departamento((int)cmbAlqDepartamento.SelectedValue);
+                int meses = 0;
+                DateTime desde = dtpAlqDesde.Value, hasta = dtpAlqHasta.Value;
+                while (desde.AddMonths(1) < hasta)
+                {
+                    meses++;
+                    desde = desde.AddMonths(1);
+                }
+                int dias = 1;
+                while (desde.AddDays(1) < hasta)
+                {
+                    dias++;
+                    desde = desde.AddDays(1);
+                }
+                double ret = dpto.Dpto_Precio * meses;
+                ret += dpto.Dpto_Precio * dias / 31;
+                return Math.Round(ret, 2);
             }
-            int dias = 1;
-            while (desde.AddDays(1) < hasta)
+            catch (Exception a)
             {
-                dias++;
-                desde = desde.AddDays(1);
+                return 0;
             }
-            double ret = dpto.Dpto_Precio * meses;
-            ret += dpto.Dpto_Precio * dias / 31;
-            return Math.Round(ret, 2);
         }
         private void cmbAlqEdificio_SelectedIndexChanged(object sender, EventArgs e)
         {

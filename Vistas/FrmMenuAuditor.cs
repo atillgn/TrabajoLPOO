@@ -28,7 +28,14 @@ namespace Vistas
             //alquiler
             txtAlqPreciofinal.Enabled = false;
             load_combo_edificios();
-            load_combo_departamentos((int)cmbAlqEdificio.SelectedValue);
+            if (cmbAlqEdificio.SelectedValue == null)
+            {
+                load_combo_departamentos(0);
+            }
+            else 
+            {
+                load_combo_departamentos((int)cmbAlqEdificio.SelectedValue);
+            }
             load_combo_inquilinos();
             dtpAlqDesde.Value = DateTime.Now;
             display_precioFinal();
@@ -256,21 +263,28 @@ namespace Vistas
             cmbAlqDepartamento.ValueMember = "Dpto_Codigo";
             cmbAlqDepartamento.DisplayMember = "Info";
             DataTable dt=new DataTable();
-            dt = TrabajarAlquiler.list_departamentos(Edif_Codigo);
-            if (dt.Rows.Count >= 1)
-            {
-                cmbAlqDepartamento.DataSource = dt;
-                cmbAlqDepartamento.Enabled = true;
-                dtpAlqDesde.Enabled = true;
-                dtpAlqHasta.Enabled = true;
-                btnAlqRegistrar.Enabled = true;
+            try
+            {   
+                dt = TrabajarAlquiler.list_departamentos(Edif_Codigo);
+                if (dt.Rows.Count >= 1)
+                {
+                    cmbAlqDepartamento.DataSource = dt;
+                    cmbAlqDepartamento.Enabled = true;
+                    dtpAlqDesde.Enabled = true;
+                    dtpAlqHasta.Enabled = true;
+                    btnAlqRegistrar.Enabled = true;
+                }
+                else
+                {
+                    cmbAlqDepartamento.Enabled = false;
+                    dtpAlqDesde.Enabled = false;
+                    dtpAlqHasta.Enabled = false;
+                    btnAlqRegistrar.Enabled = false;
+                }
             }
-            else
-            {
-                cmbAlqDepartamento.Enabled = false;
-                dtpAlqDesde.Enabled = false;
-                dtpAlqHasta.Enabled = false;
-                btnAlqRegistrar.Enabled = false;
+            catch (Exception a)
+            { 
+                
             }
         }
         private void load_combo_inquilinos()
@@ -297,23 +311,30 @@ namespace Vistas
         }
         private double precioFinal()
         {
-            Departamento dpto = TrabajarAlquiler.get_departamento((int)cmbAlqDepartamento.SelectedValue);
-            int meses = 0;
-            DateTime desde = dtpAlqDesde.Value, hasta = dtpAlqHasta.Value;
-            while (desde.AddMonths(1) < hasta)
+            Departamento dpto;
+            try
             {
-                meses++;
-                desde = desde.AddMonths(1);
+                dpto = TrabajarAlquiler.get_departamento((int)cmbAlqDepartamento.SelectedValue);
+                int meses = 0;
+                DateTime desde = dtpAlqDesde.Value, hasta = dtpAlqHasta.Value;
+                while (desde.AddMonths(1) < hasta)
+                {
+                    meses++;
+                    desde = desde.AddMonths(1);
+                }
+                int dias = 1;
+                while (desde.AddDays(1) < hasta)
+                {
+                    dias++;
+                    desde = desde.AddDays(1);
+                }
+                double ret = dpto.Dpto_Precio * meses;
+                ret += dpto.Dpto_Precio * dias / 31;
+                return Math.Round(ret, 2);
             }
-            int dias = 1;
-            while (desde.AddDays(1) < hasta)
-            {
-                dias++;
-                desde = desde.AddDays(1);
+            catch(Exception a){
+                return 0;
             }
-            double ret = dpto.Dpto_Precio * meses;
-            ret += dpto.Dpto_Precio * dias / 31;
-            return Math.Round(ret, 2);
         }
         private void cmbAlqEdificio_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -617,6 +638,7 @@ namespace Vistas
             dt = TrabajarDepartamento.list_tipo_departamento();
             if (dt.Rows.Count >= 1)
             {
+                
                 cmbDptoTipo.DataSource = dt;
                 cmbDptoTipo.Enabled = true;
                 btnDptoRegistrar.Enabled = true;

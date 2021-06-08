@@ -47,18 +47,62 @@ namespace Vistas
             load_Banios();
             cmbAmbientes.SelectedText = "1";
             cmbBaños.SelectedText = "1";
+            if (dgvDpto.RowCount == 1)
+            {
+                btnAlquilar.Enabled = false;
+            }
+            else 
+            {
+                btnAlquilar.Enabled = true;
+            }
         }
         private void load_Disposicion() 
         {
             cmbDisposicion.ValueMember = "Disp_Codigo";
             cmbDisposicion.DisplayMember = "Disp_Descripcion";
-            cmbDisposicion.DataSource = TrabajarDepartamento.list_disposicion();
+            DataTable dt = new DataTable();
+            dt = TrabajarDepartamento.list_disposicion();
+            if (dt.Rows.Count >= 1)
+            {
+                cmbDisposicion.DataSource = dt;
+                dtpDesde.Enabled = true;
+                dtpHasta.Enabled = true;
+                cmbTipoDpto.Enabled = true;
+                cmbDisposicion.Enabled = true;
+                btnBuscar.Enabled = true;
+            }
+            else
+            {
+                dtpDesde.Enabled = false;
+                dtpHasta.Enabled = false;
+                cmbTipoDpto.Enabled = false;
+                cmbDisposicion.Enabled = false;
+                btnBuscar.Enabled = false;
+            }
         }
         private void load_TipoDpto() 
         {
             cmbTipoDpto.ValueMember = "TipoD_Codigo";
             cmbTipoDpto.DisplayMember = "TipoD_Descripcion";
-            cmbTipoDpto.DataSource = TrabajarAlquiler.list_tipoDepartamento();
+            DataTable dt = new DataTable();
+            dt = TrabajarAlquiler.list_tipoDepartamento();
+            if (dt.Rows.Count >= 1)
+            {
+                cmbTipoDpto.DataSource = dt;
+                dtpDesde.Enabled = true;
+                dtpHasta.Enabled = true;
+                cmbTipoDpto.Enabled = true;
+                cmbDisposicion.Enabled = true;
+                btnBuscar.Enabled = true;
+            }
+            else
+            {
+                dtpDesde.Enabled = false;
+                dtpHasta.Enabled = false;
+                cmbTipoDpto.Enabled = false;
+                cmbDisposicion.Enabled = false;
+                btnBuscar.Enabled = false;
+            }
         }
         private void load_Banios()
         {

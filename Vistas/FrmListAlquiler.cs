@@ -31,20 +31,48 @@ namespace Vistas
             dtpHasta.Enabled = b;
             txtAlqCantidad.Enabled = false;
             display_cantidad();
+            if (dgvAlquileres.RowCount == 1)
+            {
+                btnAlqEliminar.Enabled = false;
+            }
+            else
+            {
+                btnAlqEliminar.Enabled = true;
+            }
         }
 
         private void load_combo_edificios()
         {
             cmbEdifList.ValueMember = "Edif_Codigo";
             cmbEdifList.DisplayMember = "Edif_Nombre";
-            cmbEdifList.DataSource = ListAlquiler.list_edificios();
+            DataTable dt = new DataTable();
+            dt = ListAlquiler.list_edificios();
+            if (dt.Rows.Count >= 1)
+            {
+                cmbEdifList.DataSource = dt;
+                btnAlqBuscar.Enabled = true;
+            }
+            else
+            {
+                btnAlqBuscar.Enabled = false;
+            }
         }
 
         private void load_combo_tipo_departamento()
         {
             cmbAlqTipoDpto.ValueMember = "TipoD_Codigo";
             cmbAlqTipoDpto.DisplayMember = "TipoD_Descripcion";
-            cmbAlqTipoDpto.DataSource = TrabajarAlquiler.list_tipoDepartamento();
+            DataTable dt = new DataTable();
+            dt = TrabajarAlquiler.list_tipoDepartamento();
+            if (dt.Rows.Count >= 1)
+            {
+                cmbAlqTipoDpto.DataSource = dt;
+                btnAlqBuscar.Enabled = true;
+            }
+            else
+            {
+                btnAlqBuscar.Enabled = false;
+            }
         }
 
         private void btnAlqBuscar_Click(object sender, EventArgs e)
