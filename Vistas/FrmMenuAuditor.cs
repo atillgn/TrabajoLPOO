@@ -372,34 +372,41 @@ namespace Vistas
         }
         private void btnAlqRegistrar_Click(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
-            dt = TrabajarAlquiler.valid_fechas(dtpAlqDesde.Value,dtpAlqHasta.Value,(int)cmbAlqDepartamento.SelectedValue);
-            if (dt.Rows.Count == 0)
+            if (validarAlquiler())
             {
-                Alquiler alq = new Alquiler();
-                alq.Dpto_Codigo = (int)cmbAlqDepartamento.SelectedValue;
-                alq.Inq_Codigo = (int)cmbAlqInquilino.SelectedValue;
-                alq.Alq_FechaDesde = dtpAlqDesde.Value.Date;
-                dtpAlqHasta.Value = dtpAlqHasta.Value.AddSeconds(59-dtpAlqHasta.Value.Second);
-                dtpAlqHasta.Value = dtpAlqHasta.Value.AddMinutes(59-dtpAlqHasta.Value.Minute);
-                dtpAlqHasta.Value = dtpAlqHasta.Value.AddHours(23-dtpAlqHasta.Value.Hour);
-                alq.Alq_FechaHasta = dtpAlqHasta.Value;
-                alq.Alq_Precio = precioFinal();
-                if (MessageBox.Show("Confirmar datos", "¿Seguro que quieres registrar este alquiler?", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                DataTable dt = new DataTable();
+                dt = TrabajarAlquiler.valid_fechas(dtpAlqDesde.Value, dtpAlqHasta.Value, (int)cmbAlqDepartamento.SelectedValue);
+                if (dt.Rows.Count == 0)
                 {
-                    TrabajarAlquiler.insert_alquiler(alq);
-                    load_combo_edificios();
-                    load_combo_departamentos((int)cmbAlqEdificio.SelectedValue);
-                    load_combo_inquilinos();
-                    dtpAlqDesde.Value = DateTime.Now;
-                    dtpAlqHasta.Value = DateTime.Now.AddDays(1);
-                    display_precioFinal();
+                    Alquiler alq = new Alquiler();
+                    alq.Dpto_Codigo = (int)cmbAlqDepartamento.SelectedValue;
+                    alq.Inq_Codigo = (int)cmbAlqInquilino.SelectedValue;
+                    alq.Alq_FechaDesde = dtpAlqDesde.Value.Date;
+                    dtpAlqHasta.Value = dtpAlqHasta.Value.AddSeconds(59 - dtpAlqHasta.Value.Second);
+                    dtpAlqHasta.Value = dtpAlqHasta.Value.AddMinutes(59 - dtpAlqHasta.Value.Minute);
+                    dtpAlqHasta.Value = dtpAlqHasta.Value.AddHours(23 - dtpAlqHasta.Value.Hour);
+                    alq.Alq_FechaHasta = dtpAlqHasta.Value;
+                    alq.Alq_Precio = precioFinal();
+                    if (MessageBox.Show("Confirmar datos", "¿Seguro que quieres registrar este alquiler?", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                    {
+                        TrabajarAlquiler.insert_alquiler(alq);
+                        load_combo_edificios();
+                        load_combo_departamentos((int)cmbAlqEdificio.SelectedValue);
+                        load_combo_inquilinos();
+                        dtpAlqDesde.Value = DateTime.Now;
+                        dtpAlqHasta.Value = DateTime.Now.AddDays(1);
+                        display_precioFinal();
+                    }
+                    load_everything();
                 }
-                load_everything();
+                else
+                {
+                    MessageBox.Show("Ya hay un alquiler en el rango de fechas ingresado");
+                }
             }
-            else 
+            else
             {
-                MessageBox.Show("Ya hay un alquiler en el rango de fechas ingresado");
+                MessageBox.Show("Llenar todos los campos");
             }
         }
         private void btnAlqRegistro_Click(object sender, EventArgs e)
@@ -413,6 +420,10 @@ namespace Vistas
             FrmBuscarDepartamento oFrmListAlquiler = new FrmBuscarDepartamento(1);
             oFrmListAlquiler.Show();
             this.Close();
+        }
+        private bool validarAlquiler() 
+        {
+            return cmbAlqDepartamento.SelectedValue != null && cmbAlqEdificio.SelectedValue != null && cmbAlqInquilino.SelectedValue != null;
         }
 
         //Usuarios
@@ -534,7 +545,7 @@ namespace Vistas
         }
         private bool validarUser() 
         {
-            return txtUserContra.Text != String.Empty && txtUserNombreApellido.Text != String.Empty && txtUserNombreUsuario.Text != String.Empty;
+            return txtUserContra.Text != String.Empty && txtUserNombreApellido.Text != String.Empty && txtUserNombreUsuario.Text != String.Empty && cmbUserRol.SelectedValue != null;
         }
 
         //Edificios
@@ -667,7 +678,7 @@ namespace Vistas
         }
         private bool validarEdif() 
         {
-            return txtEdifDireccion.Text != String.Empty && txtEdifNombre.Text != String.Empty && txtEdifTelefono.Text != String.Empty;
+            return txtEdifDireccion.Text != String.Empty && txtEdifNombre.Text != String.Empty && txtEdifTelefono.Text != String.Empty && cmbEdifAdministrador.SelectedValue!=null;
         }
 
         //Departamentos
@@ -815,14 +826,14 @@ namespace Vistas
                 {
                     editDpto = true;
                     cmbDptoEdificio.SelectedValue = dgvDepartamentos.CurrentRow.Cells["Codigo_Edificio"].Value;
-                    txtDptoNumero.Text = dgvDepartamentos.CurrentRow.Cells["Numero"].Value.ToString();
+                    txtDptoNumero.Text = dgvDepartamentos.CurrentRow.Cells["Departamento"].Value.ToString();
                     txtDptoDormitorios.Text = dgvDepartamentos.CurrentRow.Cells["Dormitorios"].Value.ToString();
                     txtDptoBaños.Text = dgvDepartamentos.CurrentRow.Cells["Banios"].Value.ToString();
                     txtDptoPiso.Text = dgvDepartamentos.CurrentRow.Cells["Piso"].Value.ToString();
                     txtDptoAmbientes.Text = dgvDepartamentos.CurrentRow.Cells["Ambientes"].Value.ToString();
                     txtDptoPrecio.Text = dgvDepartamentos.CurrentRow.Cells["Precio"].Value.ToString();
-                    cmbDptoDisposicion.SelectedValue = dgvDepartamentos.CurrentRow.Cells["Disposicion"].Value;
-                    cmbDptoTipo.SelectedValue = dgvDepartamentos.CurrentRow.Cells["Tipo"].Value;
+                    cmbDptoDisposicion.SelectedValue = dgvDepartamentos.CurrentRow.Cells["Disposicion_Codigo"].Value;
+                    cmbDptoTipo.SelectedValue = dgvDepartamentos.CurrentRow.Cells["Codigo_Tipo"].Value;
                 }
                 else 
                 {
@@ -886,7 +897,7 @@ namespace Vistas
         }
         private bool validarDpto() 
         {
-            return txtDptoAmbientes.Text != String.Empty && txtDptoBaños.Text != String.Empty && txtDptoDormitorios.Text != String.Empty && txtDptoNumero.Text != String.Empty && txtDptoPiso.Text != String.Empty && txtDptoPrecio.Text != String.Empty;
+            return txtDptoAmbientes.Text != String.Empty && txtDptoBaños.Text != String.Empty && txtDptoDormitorios.Text != String.Empty && txtDptoNumero.Text != String.Empty && txtDptoPiso.Text != String.Empty && txtDptoPrecio.Text != String.Empty && cmbDptoEdificio.SelectedValue != null && cmbDptoTipo.SelectedValue != null && cmbDptoDisposicion.SelectedValue != null;
         }
         private void btnTipoDepartamento_Click(object sender, EventArgs e)
         {
@@ -914,9 +925,5 @@ namespace Vistas
         {
             m = 0;
         }
-
-        
-
-        
     }
 }

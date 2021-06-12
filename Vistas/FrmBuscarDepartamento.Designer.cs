@@ -338,6 +338,9 @@
             this.dgvDpto.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvDpto.RowHeadersVisible = false;
             this.dgvDpto.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dgvDpto.RowTemplate.Height = 30;
+            this.dgvDpto.RowTemplate.ReadOnly = true;
+            this.dgvDpto.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDpto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDpto.Size = new System.Drawing.Size(825, 254);
             this.dgvDpto.TabIndex = 9;

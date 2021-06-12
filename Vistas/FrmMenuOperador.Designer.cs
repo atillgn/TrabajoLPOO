@@ -295,6 +295,9 @@
             this.dgvInquilinos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvInquilinos.RowHeadersVisible = false;
             this.dgvInquilinos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dgvInquilinos.RowTemplate.Height = 30;
+            this.dgvInquilinos.RowTemplate.ReadOnly = true;
+            this.dgvInquilinos.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvInquilinos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInquilinos.Size = new System.Drawing.Size(445, 230);
             this.dgvInquilinos.TabIndex = 10;

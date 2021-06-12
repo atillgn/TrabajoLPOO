@@ -171,9 +171,9 @@ namespace Vistas
         }
         private void btnAlqEliminar_Click(object sender, EventArgs e)
         {
-            if(dgvAlquileres.SelectedRows.Count == 1)
+            if (dgvAlquileres.SelectedRows.Count == 1 && dgvAlquileres.RowCount > 1)
             {
-                DateTime d=DateTime.Now,a=new DateTime(),b=new DateTime();
+                DateTime d = DateTime.Now, a = new DateTime(), b = new DateTime();
                 a = (DateTime)dgvAlquileres.CurrentRow.Cells["Fecha_desde"].Value;
                 b = (DateTime)dgvAlquileres.CurrentRow.Cells["Fecha_hasta"].Value;
                 if (d < a || d > b)
@@ -189,6 +189,10 @@ namespace Vistas
                 {
                     MessageBox.Show("No puede eliminar una alquiler en curso");
                 }
+            }
+            else 
+            {
+                MessageBox.Show("Seleccione una fila por favor");
             }
         }
 

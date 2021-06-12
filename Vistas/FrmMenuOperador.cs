@@ -338,23 +338,42 @@ namespace Vistas
         }
         private void btnAlqRegistrar_Click(object sender, EventArgs e)
         {
-            Alquiler alq = new Alquiler();
-            alq.Dpto_Codigo = (int)cmbAlqDepartamento.SelectedValue;
-            alq.Inq_Codigo = (int)cmbAlqInquilino.SelectedValue;
-            alq.Alq_FechaDesde = dtpAlqDesde.Value;
-            alq.Alq_FechaHasta = dtpAlqHasta.Value;
-            alq.Alq_Precio = precioFinal();
-            if (MessageBox.Show("Confirmar datos", "¿Seguro que quieres registrar este alquiler?", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+            if (validarAlquiler())
             {
-                TrabajarAlquiler.insert_alquiler(alq);
-                load_combo_edificios();
-                load_combo_departamentos((int)cmbAlqEdificio.SelectedValue);
-                load_combo_inquilinos();
-                dtpAlqDesde.Value = DateTime.Now;
-                dtpAlqHasta.Value = DateTime.Now.AddDays(1);
-                display_precioFinal();
+                DataTable dt = new DataTable();
+                dt = TrabajarAlquiler.valid_fechas(dtpAlqDesde.Value, dtpAlqHasta.Value, (int)cmbAlqDepartamento.SelectedValue);
+                if (dt.Rows.Count == 0)
+                {
+                    Alquiler alq = new Alquiler();
+                    alq.Dpto_Codigo = (int)cmbAlqDepartamento.SelectedValue;
+                    alq.Inq_Codigo = (int)cmbAlqInquilino.SelectedValue;
+                    alq.Alq_FechaDesde = dtpAlqDesde.Value.Date;
+                    dtpAlqHasta.Value = dtpAlqHasta.Value.AddSeconds(59 - dtpAlqHasta.Value.Second);
+                    dtpAlqHasta.Value = dtpAlqHasta.Value.AddMinutes(59 - dtpAlqHasta.Value.Minute);
+                    dtpAlqHasta.Value = dtpAlqHasta.Value.AddHours(23 - dtpAlqHasta.Value.Hour);
+                    alq.Alq_FechaHasta = dtpAlqHasta.Value;
+                    alq.Alq_Precio = precioFinal();
+                    if (MessageBox.Show("Confirmar datos", "¿Seguro que quieres registrar este alquiler?", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                    {
+                        TrabajarAlquiler.insert_alquiler(alq);
+                        load_combo_edificios();
+                        load_combo_departamentos((int)cmbAlqEdificio.SelectedValue);
+                        load_combo_inquilinos();
+                        dtpAlqDesde.Value = DateTime.Now;
+                        dtpAlqHasta.Value = DateTime.Now.AddDays(1);
+                        display_precioFinal();
+                    }
+                    load_everything();
+                }
+                else
+                {
+                    MessageBox.Show("Ya hay un alquiler en el rango de fechas ingresado");
+                }
             }
-            load_everything();
+            else
+            {
+                MessageBox.Show("Llenar todos los campos");
+            }
         }
         private void btnAlqRegistro_Click(object sender, EventArgs e)
         {
@@ -367,6 +386,10 @@ namespace Vistas
             FrmBuscarDepartamento oFrmListAlquiler = new FrmBuscarDepartamento(2);
             oFrmListAlquiler.Show();
             this.Close();
+        }
+        private bool validarAlquiler()
+        {
+            return cmbAlqDepartamento.SelectedValue != null && cmbAlqEdificio.SelectedValue != null && cmbAlqInquilino.SelectedValue != null;
         }
 
         //permite mover el formulario
@@ -388,7 +411,5 @@ namespace Vistas
         {
             m = 0;
         }
-
-        
     }
 }

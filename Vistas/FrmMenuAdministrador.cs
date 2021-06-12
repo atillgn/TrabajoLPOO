@@ -218,7 +218,7 @@ namespace Vistas
         }
         private bool validarUser()
         {
-            return txtUserContra.Text != String.Empty && txtUserNombreApellido.Text != String.Empty && txtUserNombreUsuario.Text != String.Empty;
+            return txtUserContra.Text != String.Empty && txtUserNombreApellido.Text != String.Empty && txtUserNombreUsuario.Text != String.Empty && cmbUserRol.SelectedValue != null;
         }
 
         //Edificios
@@ -350,7 +350,7 @@ namespace Vistas
         }
         private bool validarEdif()
         {
-            return txtEdifDireccion.Text != String.Empty && txtEdifNombre.Text != String.Empty && txtEdifTelefono.Text != String.Empty;
+            return txtEdifDireccion.Text != String.Empty && txtEdifNombre.Text != String.Empty && txtEdifTelefono.Text != String.Empty && cmbEdifAdministrador.SelectedValue != null;
         }
 
         //Departamentos
@@ -497,14 +497,14 @@ namespace Vistas
                 {
                     editDpto = true;
                     cmbDptoEdificio.SelectedValue = dgvDepartamentos.CurrentRow.Cells["Codigo_Edificio"].Value;
-                    txtDptoNumero.Text = dgvDepartamentos.CurrentRow.Cells["Numero"].Value.ToString();
+                    txtDptoNumero.Text = dgvDepartamentos.CurrentRow.Cells["Departamento"].Value.ToString();
                     txtDptoDormitorios.Text = dgvDepartamentos.CurrentRow.Cells["Dormitorios"].Value.ToString();
                     txtDptoBaños.Text = dgvDepartamentos.CurrentRow.Cells["Banios"].Value.ToString();
                     txtDptoPiso.Text = dgvDepartamentos.CurrentRow.Cells["Piso"].Value.ToString();
                     txtDptoAmbientes.Text = dgvDepartamentos.CurrentRow.Cells["Ambientes"].Value.ToString();
                     txtDptoPrecio.Text = dgvDepartamentos.CurrentRow.Cells["Precio"].Value.ToString();
-                    cmbDptoDisposicion.SelectedValue = dgvDepartamentos.CurrentRow.Cells["Disposicion"].Value;
-                    cmbDptoTipo.SelectedValue = dgvDepartamentos.CurrentRow.Cells["Tipo"].Value;
+                    cmbDptoDisposicion.SelectedValue = dgvDepartamentos.CurrentRow.Cells["Disposicion_Codigo"].Value;
+                    cmbDptoTipo.SelectedValue = dgvDepartamentos.CurrentRow.Cells["Codigo_Tipo"].Value;
                 }
                 else
                 {
@@ -568,7 +568,7 @@ namespace Vistas
         }
         private bool validarDpto()
         {
-            return txtDptoAmbientes.Text != String.Empty && txtDptoBaños.Text != String.Empty && txtDptoDormitorios.Text != String.Empty && txtDptoNumero.Text != String.Empty && txtDptoPiso.Text != String.Empty && txtDptoPrecio.Text != String.Empty;
+            return txtDptoAmbientes.Text != String.Empty && txtDptoBaños.Text != String.Empty && txtDptoDormitorios.Text != String.Empty && txtDptoNumero.Text != String.Empty && txtDptoPiso.Text != String.Empty && txtDptoPrecio.Text != String.Empty && cmbDptoEdificio.SelectedValue != null && cmbDptoTipo.SelectedValue != null && cmbDptoDisposicion.SelectedValue != null;
         }
         private void btnTipoDepartamento_Click(object sender, EventArgs e)
         {
@@ -596,6 +596,5 @@ namespace Vistas
         {
             m = 0;
         }
-        
     }
 }

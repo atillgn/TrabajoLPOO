@@ -211,6 +211,9 @@
             this.dgvTipoDpto.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvTipoDpto.RowHeadersVisible = false;
             this.dgvTipoDpto.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dgvTipoDpto.RowTemplate.Height = 30;
+            this.dgvTipoDpto.RowTemplate.ReadOnly = true;
+            this.dgvTipoDpto.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTipoDpto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTipoDpto.Size = new System.Drawing.Size(220, 153);
             this.dgvTipoDpto.TabIndex = 5;

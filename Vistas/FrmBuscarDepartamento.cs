@@ -166,7 +166,7 @@ namespace Vistas
         }
         private void btnAlquilar_Click(object sender, EventArgs e)
         {
-            if(dgvDpto.SelectedRows.Count == 1)
+            if(dgvDpto.SelectedRows.Count == 1 && dgvDpto.RowCount > 1)
             {
                 if (aux == 1)
                 {

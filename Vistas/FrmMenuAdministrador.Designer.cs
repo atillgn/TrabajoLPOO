@@ -285,6 +285,8 @@
             this.dgvUsuarios.RowHeadersVisible = false;
             this.dgvUsuarios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgvUsuarios.RowTemplate.Height = 30;
+            this.dgvUsuarios.RowTemplate.ReadOnly = true;
+            this.dgvUsuarios.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsuarios.Size = new System.Drawing.Size(532, 218);
             this.dgvUsuarios.TabIndex = 10;
@@ -555,6 +557,9 @@
             this.dgvEdificio.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(155)))));
             this.dgvEdificio.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvEdificio.RowTemplate.Height = 30;
+            this.dgvEdificio.RowTemplate.ReadOnly = true;
+            this.dgvEdificio.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvEdificio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEdificio.Size = new System.Drawing.Size(504, 202);
             this.dgvEdificio.TabIndex = 8;
@@ -709,6 +714,9 @@
             this.dgvDepartamentos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvDepartamentos.RowHeadersVisible = false;
             this.dgvDepartamentos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dgvDepartamentos.RowTemplate.Height = 30;
+            this.dgvDepartamentos.RowTemplate.ReadOnly = true;
+            this.dgvDepartamentos.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDepartamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDepartamentos.Size = new System.Drawing.Size(506, 229);
             this.dgvDepartamentos.TabIndex = 16;
