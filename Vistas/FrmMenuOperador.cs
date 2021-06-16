@@ -130,6 +130,7 @@ namespace Vistas
                             MessageBox.Show("Los usuarios no pueden tener datos repetidos");
                         }
                         editInq = false;
+                        btnInqEliminar.Enabled = true;
                     }
                     else
                     {
@@ -164,6 +165,7 @@ namespace Vistas
                     txtInqApellido.Text = dgvInquilinos.CurrentRow.Cells["Apellido"].Value.ToString();
                     txtInqNombre.Text = dgvInquilinos.CurrentRow.Cells["Nombre"].Value.ToString();
                     txtInqTelefono.Text = dgvInquilinos.CurrentRow.Cells["Telefono"].Value.ToString();
+                    btnInqEliminar.Enabled = false;
                 }
                 else
                 {

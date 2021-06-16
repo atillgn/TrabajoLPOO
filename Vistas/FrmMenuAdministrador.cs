@@ -134,6 +134,7 @@ namespace Vistas
                         {
                             MessageBox.Show("Los usuarios no pueden tener datos repetidos");
                         }
+                        btnUserEliminar.Enabled = true;
                         editUser = false;
                     }
                     else
@@ -175,6 +176,7 @@ namespace Vistas
                     txtUserContra.Text = dgvUsuarios.CurrentRow.Cells["Contrasenia"].Value.ToString();
                     txtUserNombreApellido.Text = dgvUsuarios.CurrentRow.Cells["Apellido_y_Nombre"].Value.ToString();
                     cmbUserRol.SelectedValue = dgvUsuarios.CurrentRow.Cells["Rol_ID"].Value;
+                    btnUserEliminar.Enabled = false;
                 }
                 else
                 {
@@ -267,6 +269,7 @@ namespace Vistas
                         {
                             MessageBox.Show("Los usuarios no pueden tener datos repetidos");
                         }
+                        btnEdifEliminar.Enabled = true;
                         editEdif = false;
                     }
                     else
@@ -337,6 +340,7 @@ namespace Vistas
                     txtEdifDireccion.Text = dgvEdificio.CurrentRow.Cells["Direccion"].Value.ToString();
                     txtEdifTelefono.Text = dgvEdificio.CurrentRow.Cells["Telefono"].Value.ToString();
                     cmbEdifAdministrador.SelectedValue = dgvEdificio.CurrentRow.Cells["Administrador"].Value.ToString();
+                    btnEdifEliminar.Enabled = false;
                 }
                 else
                 {
@@ -428,6 +432,7 @@ namespace Vistas
                         {
                             MessageBox.Show("Los departamentos no pueden tener datos repetidos");
                         }
+                        btnDptoEliminar.Enabled = true;
                         editDpto = false;
                     }
                     else
@@ -505,6 +510,7 @@ namespace Vistas
                     txtDptoPrecio.Text = dgvDepartamentos.CurrentRow.Cells["Precio"].Value.ToString();
                     cmbDptoDisposicion.SelectedValue = dgvDepartamentos.CurrentRow.Cells["Disposicion_Codigo"].Value;
                     cmbDptoTipo.SelectedValue = dgvDepartamentos.CurrentRow.Cells["Codigo_Tipo"].Value;
+                    btnDptoEliminar.Enabled = false;
                 }
                 else
                 {

@@ -69,6 +69,7 @@ namespace Vistas
                             MessageBox.Show("Los Tipos de Departamento no pueden tener datos repetidos");
                         }
                         edit = false;
+                        btnTipoDptoEliminar.Enabled = true;
                     }
                     else
                     {
@@ -98,6 +99,7 @@ namespace Vistas
                 {
                     edit = true;
                     txtTipoDptoDescripcion.Text = dgvTipoDpto.CurrentRow.Cells["TipoD_Descripcion"].Value.ToString();
+                    btnTipoDptoEliminar.Enabled = false;
                 }
                 else
                 {
